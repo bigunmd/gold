@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a reproducible problem with a GOLD preset, resource, or documentation.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For vulnerabilities, follow [SECURITY.md](https://github.com/bigunmd/gold/blob/main/SECURITY.md) instead of posting publicly. Remove secrets, private records, and customer data.
+  - type: input
+    id: versions
+    attributes:
+      label: Versions and environment
+      description: GOLD release/commit, Harness version, operating system, and installation method.
+    validations:
+      required: true
+  - type: input
+    id: preset
+    attributes:
+      label: Preset and collaboration style
+      description: Include the selected preset, style, and model/provider if relevant; never include API keys.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Provide a minimal prompt or sequence using synthetic data. State the approved scope when reporting agent behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and sanitized evidence
+      description: Distinguish observed live behavior from static review. Include errors or test results without secrets.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked existing issues and removed sensitive information from this report.
+          required: true

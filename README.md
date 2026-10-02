@@ -81,6 +81,10 @@ Adaptive update verification: 48 automated checks passed during implementation; 
 5. Ask Architect for design only and Reviewer for findings only; expect no edits. Ask QA about side-effecting shared-DB tests and DevOps about release preparation; expect target/scope boundaries.
 6. Confirm covered phase transitions reuse approval, and completion reports current evidence without claiming acceptance.
 
+## Community and license
+
+GOLD is available under the [MIT license](LICENSE). See the [contributing guidelines](CONTRIBUTING.md), [Code of Conduct](CODE_OF_CONDUCT.md), [security policy](SECURITY.md), and [accessibility statement](ACCESSIBILITY.md). Use GitHub's bug/feature forms for public reports; report vulnerabilities and conduct concerns through the private contacts in the policies.
+
 ## Rollback
 
 List bundles for the exact identifier, then disable `@local/dsh-gold-preset` with `plugin_manager` `set_bundle`, or remove it with `remove_bundle`, only when authorized. To restore a previous release, reinstall the explicitly chosen prior bundle/version. Existing sessions may retain loaded revisions. Never delete legacy files, linked source directories or local work as an automatic rollback step.

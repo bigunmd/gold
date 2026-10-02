@@ -2,6 +2,7 @@
   "name": "@local/dsh-gold-preset",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "GOLD Auto and engineering specialists with shared guidelines and adaptive collaboration",
   "files": ["cordis.patch.yml", "skills", "README.md"],

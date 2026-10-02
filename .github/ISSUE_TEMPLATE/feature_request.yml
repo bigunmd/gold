@@ -1,0 +1,30 @@
+name: Feature request
+description: Propose an improvement to GOLD presets, guidelines, or collaboration.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or intended outcome
+      description: Who needs this, and what is difficult today? Use sanitized examples.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe what users should experience, including when the agent should ask versus proceed.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Could existing presets, playbooks, or project instructions address the need?
+  - type: textarea
+    id: validation
+    attributes:
+      label: Acceptance criteria and risks
+      description: How could this be validated? Note compatibility, context cost, scope, or authorization implications.
+    validations:
+      required: true
