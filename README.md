@@ -1,6 +1,12 @@
 # GOLD engineering presets
 
-Installable Cordis bundle `@local/dsh-gold-preset`: one shared engineering core, selectable specialties, and adaptive collaboration. This checkout contains an **unreleased adaptive update**; the existing `v1.0.0` tag is the older single-preset release.
+Installable Cordis bundle `@local/dsh-gold-preset`: one shared engineering core, selectable specialties, and adaptive collaboration. Version **1.1.0** adds adaptive presets; `v1.0.0` is the older single-preset release.
+
+## Documentation
+
+Start with the [user guide](https://github.com/bigunmd/gold/blob/main/docs/README.md), [quick start](https://github.com/bigunmd/gold/blob/main/docs/user-guide/quick-start.md), or [six task recipes](https://github.com/bigunmd/gold/blob/main/docs/user-guide/recipes.md). See [validation and limitations](https://github.com/bigunmd/gold/blob/main/docs/validation.md), the [changelog](https://github.com/bigunmd/gold/blob/main/CHANGELOG.md), and the [release checklist](https://github.com/bigunmd/gold/blob/main/docs/maintainers/releases.md).
+
+These links target default-branch documentation, which may describe unreleased features. In a source checkout, the same guides are under `docs/`. Guides are hosted in the repository rather than bundled into the runtime package.
 
 ## Choose a starting point
 
@@ -52,7 +58,7 @@ Local records are a cache, not proof of approval. They do not travel through Git
 
 Use the Harness `plugin_manager` tool: `action: install_bundle`, `target` set to the absolute directory containing the reviewed bundle. Do not hand-edit profile manifests or install dependencies in the profile. Select the desired GOLD preset in a **new session** after activation; existing sessions retain their preset revision. Restart DSH when needed after package replacement.
 
-For GitHub distribution, install an explicitly published release tag from https://github.com/bigunmd/gold. The older `github:bigunmd/gold#v1.0.0` does not contain this adaptive update. There is no automatic Git synchronization; `private: true` prevents accidental npm publication, not Git installation.
+For GitHub distribution, install `github:bigunmd/gold#v1.1.0` from https://github.com/bigunmd/gold. The older `github:bigunmd/gold#v1.0.0` does not contain this adaptive update. There is no automatic Git synchronization; `private: true` prevents accidental npm publication, not Git installation.
 
 Local installations can link directly to the source directory. Keep that directory in place, and develop changes in an isolated workspace rather than accidentally modifying the installed source. Integration and activation are separate authorized actions. Skill paths resolve from the installed package identity, not an author's workstation path.
 
@@ -64,6 +70,8 @@ Maintainers edit `preset-src/core-persona.txt`, `preset-src/roles.mjs` and `pres
 npm run build:presets
 npm test
 npm run check:presets
+npm run check:docs
+npm run check:package
 npm pack --dry-run --json
 ```
 
@@ -71,7 +79,7 @@ npm pack --dry-run --json
 
 Tests cover generation behavior, stale checks, package contracts, bounded resources and relative links. `tests/scenarios.md` defines instruction evaluation cases. Distinguish structural tests, static consumer simulations and fresh-session runtime evidence: none alone proves model compliance or enforcement.
 
-Adaptive update verification: 48 automated checks passed during implementation; the DSH 0.2.0-rc.2 Loader parsed all five declarations and their shared plugin configuration matched the original. Static consumer simulation covered ten adaptive interactions. The adaptive update has **not been installed or live-session validated** by this work. Further final-review/packaging evidence belongs in the delivery summary, not an inferred release claim.
+Historical adaptive-update evidence at `e57a29d`: 48 automated checks passed, the DSH 0.2.0-rc.2 Loader parsed all five declarations, and shared configuration matched the original. Independent static review covered 41 scenario cases. This is not proof of later-revision CI or live-session behavior; fresh-session validation remains unrecorded. The validation guide separates historical, local, remote CI and live evidence.
 
 ### Fresh-session smoke checklist after authorized activation
 1. Verify five selectable GOLD entries and no change to the global default.

@@ -1,0 +1,38 @@
+name: Validate GOLD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 24]
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Test contracts and generated freshness
+        run: npm test
+      - name: Check documentation links
+        run: npm run check:docs
+      - name: Check package contents
+        run: npm run check:package
+      - name: Check post-test working-tree cleanliness
+        run: |
+          git diff --check
+          git diff --exit-code

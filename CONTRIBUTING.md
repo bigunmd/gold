@@ -17,6 +17,8 @@ Use a supported Node.js version compatible with your target Harness release. The
 npm run build:presets
 npm test
 npm run check:presets
+npm run check:docs
+npm run check:package
 npm pack --dry-run --json
 git diff --check
 ```
@@ -33,6 +35,10 @@ Local Harness installations may link directly to this checkout. Use a separate b
 - Before release, parse the generated patch using the target Harness Loader. The dependency-free generator does not fully validate arbitrary shared YAML.
 - Inspect the package allowlist: include runtime resources and the MIT license; exclude local state, secrets, tests and generator sources.
 - Validate changed runtime discovery in fresh sessions after explicitly authorized installation. Registration alone does not prove model compliance.
+
+## Documentation and releases
+
+Start with the [documentation index](docs/README.md). Keep examples explicitly illustrative and distinguish unreleased/default-branch behavior from tagged releases. The local link checker covers repository-relative Markdown links, not external URL availability or full rendering. Follow the [release checklist](docs/maintainers/releases.md) for actual Loader parsing, fresh-session evidence and separately authorized publication. CI validates contracts, documentation links and package contents; it does not publish or activate the bundle.
 
 ## Pull requests
 

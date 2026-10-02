@@ -1,6 +1,6 @@
 {
   "name": "@local/dsh-gold-preset",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "license": "MIT",
   "type": "module",
@@ -9,6 +9,8 @@
   "scripts": {
     "build:presets": "node scripts/build-presets.mjs",
     "check:presets": "node scripts/build-presets.mjs --check",
+    "check:docs": "node scripts/check-release.mjs docs",
+    "check:package": "node scripts/check-release.mjs package",
     "test": "node scripts/build-presets.mjs --check && node --test tests/*.test.mjs"
   },
   "dsh": {"bundle": {"patch": "./cordis.patch.yml"}}
