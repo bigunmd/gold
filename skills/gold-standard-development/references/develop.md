@@ -1,0 +1,12 @@
+# Develop
+
+1. Orient: read repository instructions, relevant code/tests, accepted ADRs and architecture. When authorized to persist local state, follow `artifacts.md` and read only the active iteration and relevant memory. Existing tracked historical iteration records may be read; do not relocate/delete them.
+2. Brief ONE small deliverable using `../templates/brief.md`: work type, goal, testable acceptance criteria, approach/alternatives, scope/non-goals, affected decisions, tests and safety/rollback. Present it in chat. Gate 1 requires explicit approval before product code, scaffolding or dependency installation. Discovery is allowed before approval. Persist the brief only when writing local state is permitted.
+3. Implement: follow `quality.md`, red/green/refactor for behavior changes. Use `debug.md` inside this iteration when failures arise. Record deviations as they occur; scope/acceptance/architectural changes invalidating the brief reopen Gate 1. Keep task breakdowns local and short. Do not commit just because a delegated skill says so.
+4. Verify: run the promised layers and existing relevant/full suites plus static checks as scoped in the brief. Missing tools, credentials, unavailable services or excessive suite costs are explicit limitations, not passing checks; obtain acceptance of any reduced verification. Review changes for correctness, security and unintended scope. Use independent review for substantial changes when available.
+5. Close: apply `architecture.md` and `quality.md` DoD. Update authorized shared docs/runbooks and consequential ADRs. Persist evidence and record under the active local iteration; promote important shared facts into tracked docs or a PR summary. Present acceptance criteria, commands/results, unresolved limitations and C4 assessment. Status remains awaiting-acceptance until Gate 2. Do not start another delivery iteration until accepted or explicitly abandoned.
+
+## Special work types
+- Spike: time-box a specific uncertainty; present findings and uncertainty. Throwaway experiments are labeled; keeping code requires a delivery brief. Write an ADR only for an actual consequential decision, not every experiment.
+- Release: verify scope, compatibility and rollback; propose SemVer from actual public impact, not commit labels alone. Prepare changelog/version edits if approved. Tags, publication and deployment require explicit authorization.
+- Refactor: preserve observable behavior and prove it; architectural changes still require appropriate decisions/documentation.

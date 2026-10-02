@@ -1,0 +1,10 @@
+{
+  "name": "@local/dsh-gold-preset",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "GOLD Development: development, investigation and issue resolution with private iteration memory and shared architecture documentation",
+  "files": ["cordis.patch.yml", "skills", "README.md"],
+  "scripts": {"test": "node --test tests/*.test.mjs"},
+  "dsh": {"bundle": {"patch": "./cordis.patch.yml"}}
+}
