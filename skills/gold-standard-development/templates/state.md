@@ -1,6 +1,11 @@
 # Active state
 Iteration id: <unique id>
-Scenario/work type: <...>
+Entry point: <selected GOLD preset; not permission>
+Active focus: <current specialty/phases>
+Scenario/work type: <requested outcome and work type>
+Collaboration style: Guided | Balanced | Delegated
+Scope boundaries: <approved actions/targets and exclusions>
+Next checkpoint: <decision or evidence milestone>
 Status: proposed | approved | implementing | investigating | verifying | awaiting-acceptance | accepted | abandoned | inconclusive
 Session/workstream: <identity>
 Repository/worktree/cwd: <resolved paths>

@@ -26,6 +26,7 @@ Create only needed files:
 Use collision-resistant ids; do not overwrite existing files or another session's active state. Keep one active delivery iteration per workstream. Separate parallel workstreams by session/branch/worktree identity. Explicitly close or abandon an iteration before replacing it in the active index.
 
 ## During work
+For substantial tasks, retain entry point, active focus, scenario, collaboration style, scope boundaries and next checkpoint alongside approval provenance. Use `collaboration.md` for preference precedence and handoffs. These are optional fields in authorized records, not permission to create files for read-only work or a promise of cross-session settings.
 Persist scope, acceptance criteria and approval provenance in the brief/state as soon as authorized. After meaningful progress update state, next action, blockers and evidence; do not wait for closure. Evidence records exact commands, cwd, environment, tested revision, dirty state and exit/results; trim logs without hiding failures. Do not store secrets, access tokens, customer data or unredacted sensitive logs. Gitignore is not a security boundary.
 
 ## Resume and memory

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {existsSync,readFileSync} from 'node:fs';
 const root=new URL('../skills/gold-standard-development/',import.meta.url);
 const read=p=>readFileSync(new URL(p,root),'utf8');
-for (const name of ['develop','debug','resolve-issue','artifacts','architecture','quality']) test(`playbook ${name} exists and is bounded`,()=>{
+for (const name of ['develop','debug','resolve-issue','artifacts','architecture','quality','collaboration','plan-design','review-audit','test-validate','release-operate','architecture-planning','software-development','testing-qa','devops-reliability','security-privacy']) test(`playbook ${name} exists and is bounded`,()=>{
  assert.ok(existsSync(new URL(`references/${name}.md`,root)),`missing ${name} playbook`);
  assert.ok(read(`references/${name}.md`).length<8192);
 });

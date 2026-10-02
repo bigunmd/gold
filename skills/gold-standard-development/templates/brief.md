@@ -1,5 +1,10 @@
 # Iteration brief: <id — title>
-Scenario: Develop | Resolve issue
+Entry point: <selected GOLD preset; not permission>
+Active focus: <current specialty/phases>
+Scenario: <requested outcome>
+Collaboration style: Guided | Balanced | Delegated
+Scope boundaries: <actions/targets and exclusions>
+Next checkpoint: <decision or evidence milestone>
 Type: feature | fix | refactor | spike | release
 Status: proposed | approved
 Approval provenance: <conversation artifact/message and scope; never infer>

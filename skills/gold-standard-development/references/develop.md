@@ -8,5 +8,5 @@
 
 ## Special work types
 - Spike: time-box a specific uncertainty; present findings and uncertainty. Throwaway experiments are labeled; keeping code requires a delivery brief. Write an ADR only for an actual consequential decision, not every experiment.
-- Release: verify scope, compatibility and rollback; propose SemVer from actual public impact, not commit labels alone. Prepare changelog/version edits if approved. Tags, publication and deployment require explicit authorization.
+- Release: use `release-operate.md` for preparation, publication, deployment and recovery. Propose SemVer from actual public impact, not commit labels alone; ordinary code changes within that scope still use this development cycle.
 - Refactor: preserve observable behavior and prove it; architectural changes still require appropriate decisions/documentation.

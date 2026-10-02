@@ -16,9 +16,9 @@ test('GOLD uses current composition and installed package resource root', () => 
   assert.ok(existsSync(new URL('cordis.patch.yml', root)), 'preset declaration must exist');
   const s = text('cordis.patch.yml');
   assert.match(s, /id: preset-gold/);
-  assert.match(s, /name: GOLD Development/);
-  assert.match(s, /id: gold\n/);
-  assert.match(s, /prefix: \|/);
+  assert.match(s, /name: "GOLD Development"/);
+  assert.match(s, /id: "gold"\n/);
+  assert.match(s, /prefix: "/);
   assert.match(s, /workflow-ptc/);
   assert.doesNotMatch(s, /workflow-worker-thread|\.agent-presets/);
   assert.match(s, /resolve\('@local\/dsh-gold-preset\/package.json'\)/);

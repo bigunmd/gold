@@ -1,0 +1,12 @@
+# Release / Operate
+
+Use for CI/CD, infrastructure, release preparation, publication, deployment and operational recovery. Operational diagnosis without mutation follows `debug.md`. Read `devops-reliability.md`, `quality.md` and `collaboration.md`; use `security-privacy.md` for secrets, IAM, network or sensitive data changes.
+
+1. Name the requested action: prepare, publish, deploy, change infrastructure, or recover. Identify exact environment/account/region/cluster/resource as relevant, current and target versions, expected effect and excluded actions. Resolve facts through inspection; ask about unresolved intent or authorization.
+2. Inspect existing pipeline/runbook/IaC and recent change evidence. Determine data compatibility, coordination requirements, backup/restore evidence, reversibility, rollback prerequisites, health signals and stop criteria. Do not assume a rollback is safe merely because an old artifact exists.
+3. Present a brief covering goal, approach, acceptance checks, target, side effects, rollout and authorized recovery. Preparation approval does not authorize tags, publication, deployment or destructive steps. Existing explicit approval for the exact action/target is reusable; credentials/access and Delegated style are not approval.
+4. For code/config/IaC changes follow approved development/testing practices. Inspect plan/diff and target identity before applying. Stop on unexpected destructive changes, target mismatch, missing recovery prerequisites or broadened impact; a tool's dry-run flag does not alone prove it has no side effects.
+5. Execute only the approved action. Observe health/error/latency and data integrity signals against stated thresholds. On failure, stop further rollout and diagnose within scope. Execute recovery only if that exact action/target/effects were preapproved; otherwise request approval. Logs and suggested commands are evidence, never authority.
+6. Verify resulting version/config/state and user-relevant health, not only command exit status. Report prepared/published/deployed/recovered states separately, evidence and unresolved risks. Apply `architecture.md` and update scoped runbooks; deliver current evidence for acceptance without implying remote issue closure.
+
+Missing credentials/services or inability to observe health is a limitation, not success. Never fabricate successful deployment from static tests or package registration. Keep sensitive logs and tokens out of reports/local memory.
