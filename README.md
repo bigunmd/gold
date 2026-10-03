@@ -8,6 +8,12 @@ Start with the [user guide](https://github.com/bigunmd/gold/blob/main/docs/READM
 
 These links target default-branch documentation, which may describe unreleased features. In a source checkout, the same guides are under `docs/`. Guides are hosted in the repository rather than bundled into the runtime package.
 
+## Version 1.2.0: Git discipline and domain specialties
+
+This source revision adds precise Conventional Commit/branch guidance, no-model-authorship rules and eight on-demand specialties: Git & Release, Security, API & Contracts, Database & Migrations, Performance, Documentation, Accessibility, and Incident Investigation. They do not add presets, permissions or automatic agents. See the repository's specialty and Git-conventions guides under `docs/`. Candidate Git metadata checks are available with `npm run check:git -- --base BASE_SHA --head HEAD_SHA`; branch naming is advisory in CI, and unknown identities/consent cannot be mechanically proven.
+
+Selected specialty material is adapted from a pinned VoltAgent revision. [Third-party notices](THIRD_PARTY_NOTICES.md) ship with the runtime package. Required legal attribution and explicitly approved human coauthors are distinct from prohibited model authorship. These additions are included in v1.2.0, not in the earlier v1.1.0 tag.
+
 ## Choose a starting point
 
 | Preset | ID | Use for |
@@ -58,7 +64,7 @@ Local records are a cache, not proof of approval. They do not travel through Git
 
 Use the Harness `plugin_manager` tool: `action: install_bundle`, `target` set to the absolute directory containing the reviewed bundle. Do not hand-edit profile manifests or install dependencies in the profile. Select the desired GOLD preset in a **new session** after activation; existing sessions retain their preset revision. Restart DSH when needed after package replacement.
 
-For GitHub distribution, install `github:bigunmd/gold#v1.1.0` from https://github.com/bigunmd/gold. The older `github:bigunmd/gold#v1.0.0` does not contain this adaptive update. There is no automatic Git synchronization; `private: true` prevents accidental npm publication, not Git installation.
+For GitHub distribution, install `github:bigunmd/gold#v1.2.0` from https://github.com/bigunmd/gold. The older `github:bigunmd/gold#v1.0.0` does not contain this adaptive update. There is no automatic Git synchronization; `private: true` prevents accidental npm publication, not Git installation.
 
 Local installations can link directly to the source directory. Keep that directory in place, and develop changes in an isolated workspace rather than accidentally modifying the installed source. Integration and activation are separate authorized actions. Skill paths resolve from the installed package identity, not an author's workstation path.
 

@@ -1,6 +1,7 @@
 # Iteration brief: <id — title>
 Entry point: <selected GOLD preset; not permission>
 Active focus: <current specialty/phases>
+Domain specialty (optional): <primary specialty when relevant; no permission change>
 Scenario: <requested outcome>
 Collaboration style: Guided | Balanced | Delegated
 Scope boundaries: <actions/targets and exclusions>

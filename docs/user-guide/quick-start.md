@@ -4,7 +4,7 @@ Goal: get a useful repository overview without accidentally authorizing changes.
 
 ## 1. Install the intended version
 
-The `v1.0.0` tag contains the original single GOLD Development preset. Auto and specialists are included in version 1.1.0; use `github:bigunmd/gold#v1.1.0` as the plugin-manager installation target for that release. Do not assume an old release tag contains the latest documentation's features.
+The `v1.0.0` tag contains the original single GOLD Development preset. Auto and preset entry points were added in 1.1.0. Version 1.2.0 adds Git discipline and eight on-demand domain specialties; use `github:bigunmd/gold#v1.2.0` as the installation target. Do not assume an old release tag contains the latest documentation's features.
 
 Clone or obtain a reviewed checkout, then ask a management-enabled Harness agent:
 

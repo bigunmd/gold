@@ -9,7 +9,7 @@ test('installable private bundle excludes local state', () => {
   assert.equal(p.name, '@local/dsh-gold-preset');
   assert.equal(p.private, true);
   assert.equal(p.dsh.bundle.patch, './cordis.patch.yml');
-  assert.deepEqual(p.files, ['cordis.patch.yml', 'skills', 'README.md']);
+  assert.deepEqual(p.files, ['cordis.patch.yml', 'skills', 'README.md', 'THIRD_PARTY_NOTICES.md']);
   assert.ok(text('.gitignore').split('\n').includes('/.gold/'));
 });
 test('GOLD uses current composition and installed package resource root', () => {

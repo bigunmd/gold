@@ -13,6 +13,8 @@ List exact commands/results and distinguish automated tests, static instruction 
 ## Checklist
 
 - [ ] I read the contributing guidelines and code of conduct.
+- [ ] PR title and candidate commits follow Git conventions; no model authorship or generated-by-model footers were added.
+- [ ] Approved human attribution and required third-party notices are preserved; adapted sources are pinned and documented.
 - [ ] Changes are focused and preserve applicable scope/approval and safety boundaries.
 - [ ] I regenerated the preset artifact if shared sources changed and checked freshness.
 - [ ] I ran the relevant tests and full suite, or explained why I could not.

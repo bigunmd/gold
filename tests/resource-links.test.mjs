@@ -17,7 +17,7 @@ for (const file of markdownFiles(root)) {
     assert.ok(text.length < 8192, 'resource would be pruned');
     // Templates describe target-project artifacts, not packaged resource dependencies.
     if (relative(root, file).startsWith(`templates${sep}`)) return;
-    for (const [, link] of text.matchAll(/`((?:(?:references|templates)\/|\.\.\/templates\/)?[a-z][a-z0-9-]*\.md)`/g)) {
+    for (const [, link] of text.matchAll(/`((?:(?:references|templates|specialties)\/|\.\.\/(?:templates\/)?)?[a-z][a-z0-9-]*\.md)`/g)) {
       const target = resolve(dirname(file), link);
       const rel = relative(root, target);
       assert.ok(rel !== '..' && !rel.startsWith(`..${sep}`), `escaped skill root: ${link}`);

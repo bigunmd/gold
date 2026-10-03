@@ -2,6 +2,7 @@
 Iteration id: <unique id>
 Entry point: <selected GOLD preset; not permission>
 Active focus: <current specialty/phases>
+Domain specialty (optional): <primary specialty when relevant; no permission change>
 Scenario/work type: <requested outcome and work type>
 Collaboration style: Guided | Balanced | Delegated
 Scope boundaries: <approved actions/targets and exclusions>

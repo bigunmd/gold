@@ -11,7 +11,11 @@ GOLD provides engineering presets for DeepSeek Harness. Start with the user guid
 - [Troubleshooting and recovery](user-guide/troubleshooting.md): discovery, repeated questions, stale notes and oversteps.
 - [Validation and limitations](validation.md): what tests establish and what remains unverified.
 
+- [Domain specialties](user-guide/specialties.md): eight on-demand perspectives without extra permissions (since 1.2.0).
+
 ## Maintain GOLD
+- [Git conventions](maintainers/git-conventions.md)
+- [Specialty provenance](maintainers/specialty-provenance.md)
 - [Contributing](../CONTRIBUTING.md)
 - [Release checklist](maintainers/releases.md)
 - [Architecture](architecture/c4.md)

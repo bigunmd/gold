@@ -12,8 +12,9 @@ test('documentation links resolve files, reference definitions and heading ancho
  writeFileSync(join(root,'README.md'),'[Missing](docs/absent.md)\n[Anchor](docs/guide.md#absent)\n[Outside](../../secret.md)\n');assert.equal(checkMarkdown(root,['README.md']).length,3);
 });
 test('package policy requires runtime/license and rejects private or development files',async()=>{
- const {checkPackage}=await api();const files=['package.json','README.md','LICENSE','cordis.patch.yml','skills/gold-standard-development/SKILL.md'];
+ const {checkPackage}=await api();const files=['package.json','README.md','LICENSE','THIRD_PARTY_NOTICES.md','cordis.patch.yml','skills/gold-standard-development/SKILL.md'];
  assert.deepEqual(checkPackage(files),[]);assert.ok(checkPackage(files.filter(x=>x!=='LICENSE')).length);
+ assert.ok(checkPackage(files.filter(x=>x!=='THIRD_PARTY_NOTICES.md')).length,'adapted runtime requires upstream notices');
  const resource='skills/gold-standard-development/references/collaboration.md';
  assert.deepEqual(checkPackage([...files,resource],[resource]),[]);
  assert.ok(checkPackage(files,[resource]).some(error=>error.includes(resource)),'missing packaged referenced resource must fail');

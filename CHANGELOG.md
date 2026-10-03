@@ -2,6 +2,13 @@
 
 User-visible changes are recorded here. Unreleased entries are not a published tag, installation result or promise of compatibility.
 
+## 1.2.0
+
+- Precise Git discipline: Conventional Commits/branches, identity/signing safeguards and no model authorship, preserving approved human attribution and legal notices.
+- Candidate commit/PR metadata checks, safe event/range handling and advisory branch naming in CI.
+- Eight on-demand domain specialties selectively adapted from pinned VoltAgent definitions, with bundled MIT notices and provenance.
+- Specialty chooser, Git conventions and expanded behavioral/regression coverage. No new top-level presets, model switches or permissions.
+
 ## 1.1.0
 
 ### Added

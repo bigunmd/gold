@@ -31,6 +31,10 @@ The CI workflow runs these checks on its declared Node versions. A locally passi
 
 The local link checker intentionally handles this repository's inline/reference links and simple ATX headings; it is not a full CommonMark/GitHub renderer. It skips fenced examples and external URLs. Review rendered docs manually for complex markup.
 
+## Candidate Git metadata (since 1.2.0)
+
+Run `npm run check:git -- --base BASE_SHA --head HEAD_SHA` with resolved full SHAs. CI also reads the GitHub event file for PR title/body and candidate-range validation. See [Git conventions](maintainers/git-conventions.md) for root/new-branch/manual-dispatch behavior and exceptions. Branch naming is advisory; workflow presence alone does not configure required branch protection. The detector catches known model/provider metadata patterns, not every invented identity or contributor consent. Human attribution and required legal notices/disclosures remain valid. Git fixtures test real ranges and treat shell-like metadata as data; they do not mutate the user's Git identity.
+
 ## Release-only runtime verification
 
 Use the [release checklist](maintainers/releases.md) to record actual Loader parsing and fresh-session checks on the intended Harness version. Full YAML validation is not part of the dependency-free portable generator: trusted maintainer YAML with malformed nested content can otherwise pass freshness checks. Do not skip the Loader gate.

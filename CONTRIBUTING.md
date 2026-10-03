@@ -40,6 +40,12 @@ Local Harness installations may link directly to this checkout. Use a separate b
 
 Start with the [documentation index](docs/README.md). Keep examples explicitly illustrative and distinguish unreleased/default-branch behavior from tagged releases. The local link checker covers repository-relative Markdown links, not external URL availability or full rendering. Follow the [release checklist](docs/maintainers/releases.md) for actual Loader parsing, fresh-session evidence and separately authorized publication. CI validates contracts, documentation links and package contents; it does not publish or activate the bundle.
 
+## Git and adapted material
+
+Follow [Git conventions](docs/maintainers/git-conventions.md): Conventional Commits, conventional new branch names and explicit action/target scope. Do not add model authors/committers/coauthors/signatories or generated-by footers. Preserve approved real human attribution, required disclosures and [third-party notices](THIRD_PARTY_NOTICES.md); never invent sign-offs or bypass signing/hooks. CI checks candidate commits and PR metadata; branch naming is advisory for forks/automation. Run `npm run check:git -- --base BASE_SHA --head HEAD_SHA` with resolved full SHAs.
+
+Consult [specialty provenance](docs/maintainers/specialty-provenance.md) before adapting upstream content. Pin revisions, retain licenses, remove unavailable tooling assumptions and verify behavior. No automatic upstream synchronization.
+
 ## Pull requests
 
 Use the pull-request template. Describe scope, motivation, compatibility impact, validation commands/results and remaining limitations. Update user-facing documentation and architecture views when the change affects them. Preserve the existing `gold` identity unless a separately discussed migration requires otherwise.

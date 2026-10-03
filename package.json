@@ -1,16 +1,17 @@
 {
   "name": "@local/dsh-gold-preset",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "license": "MIT",
   "type": "module",
   "description": "GOLD Auto and engineering specialists with shared guidelines and adaptive collaboration",
-  "files": ["cordis.patch.yml", "skills", "README.md"],
+  "files": ["cordis.patch.yml", "skills", "README.md", "THIRD_PARTY_NOTICES.md"],
   "scripts": {
     "build:presets": "node scripts/build-presets.mjs",
     "check:presets": "node scripts/build-presets.mjs --check",
     "check:docs": "node scripts/check-release.mjs docs",
     "check:package": "node scripts/check-release.mjs package",
+    "check:git": "node scripts/check-git.mjs",
     "test": "node scripts/build-presets.mjs --check && node --test tests/*.test.mjs"
   },
   "dsh": {"bundle": {"patch": "./cordis.patch.yml"}}
