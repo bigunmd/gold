@@ -36,6 +36,6 @@ When local writes are authorized, store the contract in the brief/state; otherwi
 
 ## Handoffs and delegation
 
-Handoff output: objective; approved scope and provenance; repository/revision/dirty state; decisions/findings; current evidence and limits; unresolved risks; next authorized action. A specialist's recommendation is not user approval. Delegate only useful independent work consistent with the agreed execution method; no automatic team per phase. Pass scope and safety constraints to children; they cannot approve expansion.
+Handoff output: objective; approved scope and provenance; repository and tested content identity; decisions/findings; criterion-linked evidence and limits; unresolved risks; next authorized action. A specialist's recommendation is not user approval. Delegate only useful independent work consistent with the agreed execution method; no automatic team per phase. Before dispatch/integration read `delegation.md` for ownership and assignment/result/parent contracts. For multi-milestone envelopes, budgets and outstanding child/job reconciliation read `execution.md`; style never silently waives gates.
 
 Common mistakes: repeated style polls; treating focus changes as runtime preset switches; silently creating local records during review; interpreting “be autonomous” as deployment approval; asking again for a phase already covered by the approved brief.

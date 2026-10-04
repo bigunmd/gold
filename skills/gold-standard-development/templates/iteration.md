@@ -5,7 +5,9 @@ Approval/acceptance provenance: <explicit references; none if pending>
 Goal and acceptance criteria: <...>
 Changes or findings: <files/components; do not claim fixes for diagnosis>
 Decisions: <shared ADRs or none with reason>
-Verification: <exact commands/results/revision; evidence.md link; limitations>
+Verification: <criterion-to-evidence mapping; exact commands/results/tested content identity; evidence.md link; uncovered criteria>
+Execution reconciliation: <child/job results collected; cancelled work confirmed; remaining effects/limitations; budget consumed>
+Milestone / gate disposition: <informational vs human acceptance; explicit process-change provenance or none>
 Deviations: <scope reopening and approval if needed>
 
 ## C4 assessment

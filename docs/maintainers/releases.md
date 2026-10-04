@@ -34,7 +34,11 @@ git diff --check
 - [ ] Parse the **packaged** declaration, reject parse errors, confirm five unique preset ids and retained `!!js` expression markers, and compare shared tools/isolation to the intended source.
 - [ ] Record runtime version, parser/API used and exact result. Parser success is not activation success. If the runtime is unavailable, leave this gate pending rather than marking it passed.
 
-The last implementation check used the installed `@deepseek-ai/dsh-app-boot` `loadOptionalPatches` export under DSH 0.2.0-rc.2. Verify that API again for the runtime being released against. Portable tests do not fully validate arbitrary shared YAML.
+Use `npm run check:runtime -- --runtime /installed/dsh/root --package /extracted/package/root` following the [runtime gate](runtime-check.md). It verifies the installed `@deepseek-ai/dsh-app-boot` parser contract, GOLD declarations, audited expressions, module resolution and packaged skill identity; it does not mount plugins. Record its exact artifact hashes. Portable tests alone do not fully validate arbitrary shared YAML.
+
+- [ ] Run [behavioral evaluations](behavior-evals.md) against baseline and candidate where the selected adapter is available; inspect failed assertions and raw transcripts, then publish sanitized evidence and limitations.
+- [ ] Capture `npm run fingerprint` before/after final validation with writers stopped; record coverage and separately identify packed artifact SHA-256.
+- [ ] Leave mounted-session checks below explicitly pending when no authorized test profile was used; a CLI-adapter evaluation does not satisfy them.
 
 ## 4. Authorized activation and fresh-session smoke tests
 

@@ -11,9 +11,12 @@ function anchors(text){
   const n=counts.get(base)||0;counts.set(base,n+1);return n?`${base}-${n}`:base;
  }));
 }
-/** Repository-local Markdown links only; no network requests or full Markdown parser. */
-export function checkMarkdown(root,files){
+/** Local Markdown links only; packageFiles optionally limits targets to npm's inventory. No network requests. */
+export function checkMarkdown(root,files,{packageFiles}={}){
  const errors=[];
+ const packaged=packageFiles?new Set(packageFiles):null;
+ // npm omits directory records, but packed files make their parent directories available.
+ if(packaged)for(const file of packageFiles){let parent=dirname(file);while(parent!=='.'){packaged.add(parent);parent=dirname(parent);}packaged.add('');}
  for(const file of files){
   const text=stripCode(readFileSync(resolve(root,file),'utf8'));
   const links=[...text.matchAll(/!?\[[^\]\n]*\]\(<?([^\s)>]+)>?(?:\s+"[^"]*")?\)/g)].map(m=>m[1]);
@@ -23,7 +26,9 @@ export function checkMarkdown(root,files){
    if(/^[a-z][a-z0-9+.-]*:|^\/\//i.test(link))continue;
    try{
     const [path,fragment]=link.split('#');const target=path?resolve(dirname(resolve(root,file)),decodeURIComponent(path)):resolve(root,file);
-    if(outside(relative(resolve(root),target)))throw Error('outside repository');
+    const local=relative(resolve(root),target);
+     if(outside(local))throw Error('outside repository');
+     if(packaged&&!packaged.has(local.split(sep).join('/')))throw Error('target not packaged');
     if(!existsSync(target))throw Error('missing target');
     if(fragment&&target.endsWith('.md')&&statSync(target).isFile()&&!anchors(readFileSync(target,'utf8')).has(decodeURIComponent(fragment)))throw Error('missing heading anchor');
    }catch(error){errors.push(`${file}: ${link}: ${error.message}`);}
@@ -52,7 +57,8 @@ if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
    errors=checkMarkdown(root,[...new Set(files)].filter(p=>p.endsWith('.md')));
   }else if(mode==='package'){
    const data=JSON.parse(run('npm',['pack','--dry-run','--json','--ignore-scripts'],root));const pack=Array.isArray(data)?data[0]:Object.values(data)[0];
-   errors=checkPackage(pack.files.map(f=>f.path),resourceInventory(root));
+   const files=pack.files.map(f=>f.path);
+   errors=[...checkPackage(files,resourceInventory(root)),...checkMarkdown(root,files.filter(p=>/\.md$/i.test(p)),{packageFiles:files})];
   }else throw Error('Usage: node scripts/check-release.mjs docs|package');
   if(errors.length)throw Error(errors.join('\n'));console.log(`${mode} checks passed.`);
  }catch(error){console.error(error.message);process.exitCode=1;}

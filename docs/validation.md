@@ -6,7 +6,9 @@ GOLD is instruction-driven. Distinguish evidence classes rather than treating ev
 |---|---|---|
 | Automated tests | Generator contracts, stale-artifact detection, resource bounds/links and validation helpers | Model compliance, runtime permissions or production safety |
 | Documentation check | Supported repository-relative link forms and Markdown heading destinations exist | External website availability, full Markdown rendering or accessibility conformance |
-| Package check | Required runtime/license files included; development/private paths excluded | Trusted code, successful activation or live skill discovery |
+| Package check | Required runtime/license files included; development/private paths excluded; packaged local Markdown links resolve in inventory | Trusted code, successful activation, external URLs or live skill discovery |
+| Codex behavioral adapter | Observed model/tool actions, workspace changes and heuristic grades in disposable fixtures | Mounted DSH behavior, sandbox-independent compliance, complete shell/side-effect analysis |
+| Content fingerprint | Working bytes/modes of tracked and nonignored untracked files in declared coverage | Atomic snapshots, ignored/external inputs, correctness or authorization |
 | Actual Harness Loader parse | The generated declarations parse in the tested runtime; expressions remain represented | Plugin activation or agent behavior |
 | Static consumer evaluation | Instructions support expected/prohibited actions for selected scenarios | Empirical success rate or repeated model compliance |
 | Fresh-session smoke tests | Observed behavior/discovery for the exact runtime, model and revision tested | Universal compliance across models/platforms |
@@ -16,6 +18,10 @@ GOLD is instruction-driven. Distinguish evidence classes rather than treating ev
 At commit `e57a29d`, implementation evidence recorded 48 passing automated tests, DSH 0.2.0-rc.2 Loader parsing of five presets, preserved shared tool/isolation configuration, and unpacked package resource resolution. Independent static review covered 18 original and 23 adaptive scenario cases with no Critical/Important findings. These are historical results, not claims that later revisions or every environment passed.
 
 No fresh-session behavioral validation was recorded as part of that implementation. Later merging/pushing the files does not establish activation or compliance. The older `v1.0.0` tag contains only the original single preset.
+
+## Reliable-execution validation (1.3.0)
+
+See [release evidence](releases/1.3.0.md) for measured runs and known gaps. The opt-in Codex adapter exercises real models/tools but not mounted DSH sessions. Baseline/candidate repeated runs retain failed automatic assertions and independent semantic review separately; the suite is not an all-green compliance certification. The final runtime gate remains parse/expression/resolution only. Run budgets and ownership contracts are guidance, not enforced locks.
 
 ## Run local checks
 

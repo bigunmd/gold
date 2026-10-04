@@ -2,6 +2,22 @@
 
 User-visible changes are recorded here. Unreleased entries are not a published tag, installation result or promise of compatibility.
 
+## 1.3.0
+
+### Added
+- On-demand delegation assignment/result/integration contracts, execution envelopes, budgets and outstanding child/job reconciliation.
+- Criterion-linked verification with explicit content identity and a source-checkout SHA-256 fingerprint helper.
+- Seven executable behavioral cases with repeated baseline/candidate runs, event/filesystem evidence and explicit heuristic/adapter limitations.
+- Opt-in packaged Harness Loader/expression/module-resolution gate; no profile activation implied.
+- Reliable-execution and evaluation maintainer documentation; Node >=22.16.0 declared for modern runtime APIs.
+
+### Fixed
+- Git mutation fixtures isolate inherited repository routing, config, hooks, templates and identities; hostile-environment sentinel regressions cover containment.
+- Package validation checks Markdown links against actual packaged inventory; README guides/policies use version-pinned hosted URLs.
+
+### Preserved
+- Five preset IDs, Standard tool composition, runtime permission policy, approval provenance and human acceptance boundaries. No new automatic agents, production actions or profile changes.
+
 ## 1.2.0
 
 - Precise Git discipline: Conventional Commits/branches, identity/signing safeguards and no model authorship, preserving approved human attribution and legal notices.

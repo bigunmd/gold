@@ -13,7 +13,11 @@ GOLD provides engineering presets for DeepSeek Harness. Start with the user guid
 
 - [Domain specialties](user-guide/specialties.md): eight on-demand perspectives without extra permissions (since 1.2.0).
 
+- [Reliable execution](user-guide/reliable-execution.md): delegation, budgets, milestones, resume and evidence identity (since 1.3.0).
+
 ## Maintain GOLD
+- [Behavioral evaluations](maintainers/behavior-evals.md)
+- [Packaged runtime gate](maintainers/runtime-check.md)
 - [Git conventions](maintainers/git-conventions.md)
 - [Specialty provenance](maintainers/specialty-provenance.md)
 - [Contributing](../CONTRIBUTING.md)

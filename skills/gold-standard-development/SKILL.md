@@ -1,6 +1,6 @@
 ---
 name: gold-standard-development
-description: Use when working under GOLD on architecture, planning, software development, debugging, issue resolution, code review, testing, CI/CD, infrastructure, releases, or operational diagnosis.
+description: This skill should be used when working under GOLD on architecture, planning, software development, debugging, issue resolution, code review, testing, CI/CD, infrastructure, releases, operational diagnosis, delegation or execution resume.
 ---
 # GOLD scenario router
 
@@ -34,6 +34,11 @@ These instructions do not override higher-priority policy, runtime plan mode, re
 
 ## Git and domain specialties
 Before authorized Git mutations or publication read `references/git-policy.md`. For explicit specialties or focused Git/release, security, API/contracts, database/migration, performance, documentation, accessibility or incident tasks, read `references/specialties.md`, then only the matching specialty. Specialty selection does not change tools/models/permissions or require a subagent. Reuse approved scope; no extra gate for a focus change alone.
+
+## Execution guidance: load only on trigger
+- Multi-milestone delivery, open-ended budgets, child/job tracking or resume: `references/execution.md`; distinguish internal steps, informational milestones and human acceptance without silently waiving gates.
+- Assigning independent work or integrating child results: `references/delegation.md`; use explicit ownership, scope and result contracts, then parent verification.
+- Recording or reusing verification: `references/evidence.md`; bind each criterion to actual evidence and tested content identity, not only HEAD/dirty labels.
 
 ## Engineering guidance: load only on trigger
 - New boundaries, contracts or consequential design: `references/architecture-planning.md`.

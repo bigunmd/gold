@@ -40,3 +40,5 @@ jobs:
         run: |
           git diff --check
           git diff --exit-code
+          git diff --cached --exit-code
+          test -z "$(git ls-files --others --exclude-standard)"

@@ -1,12 +1,22 @@
 # GOLD engineering presets
 
-Installable Cordis bundle `@local/dsh-gold-preset`: one shared engineering core, selectable specialties, and adaptive collaboration. Version **1.1.0** adds adaptive presets; `v1.0.0` is the older single-preset release.
+Installable Cordis bundle `@local/dsh-gold-preset`: one shared engineering core, selectable specialties, and adaptive collaboration. Version **1.3.0** adds reliable execution contracts and empirical evaluation tooling; all five existing preset identities remain compatible.
 
 ## Documentation
 
-Start with the [user guide](https://github.com/bigunmd/gold/blob/main/docs/README.md), [quick start](https://github.com/bigunmd/gold/blob/main/docs/user-guide/quick-start.md), or [six task recipes](https://github.com/bigunmd/gold/blob/main/docs/user-guide/recipes.md). See [validation and limitations](https://github.com/bigunmd/gold/blob/main/docs/validation.md), the [changelog](https://github.com/bigunmd/gold/blob/main/CHANGELOG.md), and the [release checklist](https://github.com/bigunmd/gold/blob/main/docs/maintainers/releases.md).
+Start with the [user guide](https://github.com/bigunmd/gold/blob/v1.3.0/docs/README.md), [quick start](https://github.com/bigunmd/gold/blob/v1.3.0/docs/user-guide/quick-start.md), or [six task recipes](https://github.com/bigunmd/gold/blob/v1.3.0/docs/user-guide/recipes.md). See [validation and limitations](https://github.com/bigunmd/gold/blob/v1.3.0/docs/validation.md), the [changelog](https://github.com/bigunmd/gold/blob/v1.3.0/CHANGELOG.md), and the [release checklist](https://github.com/bigunmd/gold/blob/v1.3.0/docs/maintainers/releases.md).
 
-These links target default-branch documentation, which may describe unreleased features. In a source checkout, the same guides are under `docs/`. Guides are hosted in the repository rather than bundled into the runtime package.
+These links target version-pinned documentation. In a source checkout, the same guides are under `docs/`. Guides are hosted in the repository rather than bundled into the runtime package.
+
+## Version 1.3.0: reliable execution
+
+- On-demand assignment/result contracts with parent integration checks, bounded execution budgets and explicit milestone policies.
+- Resume and closure reconcile outstanding children/jobs and uncertain effects before restarting work or claiming completion.
+- Verification ties acceptance criteria to content identities, including repeated uncommitted edits; maintainer fingerprint tooling excludes ignored inputs explicitly.
+- Real-model behavioral evaluation cases capture tool events, workspace differences, duration and provider-reported token usage. The initial adapter uses Codex CLI, **not mounted DSH sessions**; heuristics and sandbox effects require transcript review.
+- Git fixture isolation, packaged Markdown-link validation and an opt-in exact-package/runtime Loader gate. No new runtime plugins, permissions, or automatic agents.
+
+See [reliable execution](https://github.com/bigunmd/gold/blob/v1.3.0/docs/user-guide/reliable-execution.md), [behavioral evaluations](https://github.com/bigunmd/gold/blob/v1.3.0/docs/maintainers/behavior-evals.md), and [runtime gate](https://github.com/bigunmd/gold/blob/v1.3.0/docs/maintainers/runtime-check.md).
 
 ## Version 1.2.0: Git discipline and domain specialties
 
@@ -64,7 +74,7 @@ Local records are a cache, not proof of approval. They do not travel through Git
 
 Use the Harness `plugin_manager` tool: `action: install_bundle`, `target` set to the absolute directory containing the reviewed bundle. Do not hand-edit profile manifests or install dependencies in the profile. Select the desired GOLD preset in a **new session** after activation; existing sessions retain their preset revision. Restart DSH when needed after package replacement.
 
-For GitHub distribution, install `github:bigunmd/gold#v1.2.0` from https://github.com/bigunmd/gold. The older `github:bigunmd/gold#v1.0.0` does not contain this adaptive update. There is no automatic Git synchronization; `private: true` prevents accidental npm publication, not Git installation.
+For GitHub distribution, install `github:bigunmd/gold#v1.3.0` from https://github.com/bigunmd/gold. The older `github:bigunmd/gold#v1.0.0` does not contain this adaptive update. There is no automatic Git synchronization; `private: true` prevents accidental npm publication, not Git installation.
 
 Local installations can link directly to the source directory. Keep that directory in place, and develop changes in an isolated workspace rather than accidentally modifying the installed source. Integration and activation are separate authorized actions. Skill paths resolve from the installed package identity, not an author's workstation path.
 
@@ -85,7 +95,7 @@ npm pack --dry-run --json
 
 Tests cover generation behavior, stale checks, package contracts, bounded resources and relative links. `tests/scenarios.md` defines instruction evaluation cases. Distinguish structural tests, static consumer simulations and fresh-session runtime evidence: none alone proves model compliance or enforcement.
 
-Historical adaptive-update evidence at `e57a29d`: 48 automated checks passed, the DSH 0.2.0-rc.2 Loader parsed all five declarations, and shared configuration matched the original. Independent static review covered 41 scenario cases. This is not proof of later-revision CI or live-session behavior; fresh-session validation remains unrecorded. The validation guide separates historical, local, remote CI and live evidence.
+The [1.3.0 evidence record](https://github.com/bigunmd/gold/blob/v1.3.0/docs/releases/1.3.0.md) separates structural/runtime parsing checks from 28 repeated Codex-adapter model/tool runs. Strict regrading passed 11/14 runs for both baseline and initial candidate; semantic review retains command-scope and causal-RED gaps rather than claiming perfect compliance. Mounted DSH fresh-session behavior remains unverified. Historical evidence and current limitations are distinct.
 
 ### Fresh-session smoke checklist after authorized activation
 1. Verify five selectable GOLD entries and no change to the global default.
@@ -97,7 +107,7 @@ Historical adaptive-update evidence at `e57a29d`: 48 automated checks passed, th
 
 ## Community and license
 
-GOLD is available under the [MIT license](LICENSE). See the [contributing guidelines](CONTRIBUTING.md), [Code of Conduct](CODE_OF_CONDUCT.md), [security policy](SECURITY.md), and [accessibility statement](ACCESSIBILITY.md). Use GitHub's bug/feature forms for public reports; report vulnerabilities and conduct concerns through the private contacts in the policies.
+GOLD is available under the [MIT license](LICENSE). See the [contributing guidelines](https://github.com/bigunmd/gold/blob/v1.3.0/CONTRIBUTING.md), [Code of Conduct](https://github.com/bigunmd/gold/blob/v1.3.0/CODE_OF_CONDUCT.md), [security policy](https://github.com/bigunmd/gold/blob/v1.3.0/SECURITY.md), and [accessibility statement](https://github.com/bigunmd/gold/blob/v1.3.0/ACCESSIBILITY.md). Use GitHub's bug/feature forms for public reports; report vulnerabilities and conduct concerns through the private contacts in the policies.
 
 ## Rollback
 

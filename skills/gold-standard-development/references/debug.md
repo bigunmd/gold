@@ -2,7 +2,7 @@
 
 Outcome: supported diagnosis or explicitly inconclusive findings, not an implied fix. Use the available systematic-debugging skill for technique, subject to these authorization boundaries.
 
-1. Define expected vs actual behavior, impact, environment/version, frequency, earliest known occurrence and reproduction inputs. Separate observations from claims. Inspect errors and recent changes before guessing. State investigation scope and a stopping/time budget for an open-ended search.
+1. Define expected vs actual behavior, impact, environment/version, frequency, earliest known occurrence and reproduction inputs. Separate observations from claims. Inspect errors and recent changes before guessing. State investigation scope and a stopping/time budget for an open-ended search. Use `execution.md` to configure elapsed, retry/experiment and no-progress limits, plus concurrency/cost where relevant; carry consumption across resume and stop at the agreed limit.
 2. Prefer read-only source/log/config inspection. Before running tests, reproducers or instrumentation, check their side effects and obtain approval for state-changing experiments not already scoped. Never assume production access means mutation permission. Avoid sensitive log collection; redact before persistence.
 3. Reproduce safely when authorized; document exact environment, revision, input and observed output. If reproduction fails, vary one condition at a time and record differences. Do not substitute “could not reproduce” for evidence of correctness.
 4. Keep a hypothesis table: claim, supporting/contradicting evidence, minimal discriminating experiment, result. Trace the fault across boundaries and upstream to its source. Change one variable at a time; do not stack speculative patches.

@@ -11,7 +11,11 @@ Status: proposed | approved
 Approval provenance: <conversation artifact/message and scope; never infer>
 
 ## Goal and acceptance criteria
-- <observable criterion and evidence required>
+- AC-1: <observable criterion and evidence required; stable ID for linkage>
+## Execution contract (when needed)
+<envelope/milestones: internal step, informational milestone or human acceptance; retained gates>
+<explicit process changes and actual provenance, or none; no implied waiver>
+<budget: elapsed, retries/experiments, no-progress, concurrency/cost; units, limits, source, extension authority>
 ## Approach and alternatives
 <chosen approach, rejected alternatives, source/files affected>
 ## Decisions and architecture impact

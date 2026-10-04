@@ -1,0 +1,15 @@
+# Tested content identity and criterion evidence
+
+Load before recording verification, integrating child results or reusing evidence after resume. Use `../templates/evidence.md`; keep the brief's stable criterion IDs (for example AC-1) through reports and closure. Evidence supports a claim only for the content, environment and behavior actually exercised.
+
+## Identify what was tested
+Record repository/worktree/cwd, revision (or non-Git), environment, exact command and result, plus explicit content identity for relevant tracked modifications and untracked inputs. HEAD plus `git status --short` is insufficient: identical status text can hide changed bytes. Prefer a reproducible content digest/manifest or an immutable snapshot with explicit coverage. Record algorithm/tool, covered paths and exclusions, input manifest/digest location and limitations. Include relevant generated/config/dependency inputs; protect secrets and avoid publishing sensitive content. Missing or inaccessible inputs are coverage gaps, not an empty successful fingerprint.
+
+Capture content identity before and after verification. If relevant inputs changed during the run, quarantine that result and rerun affected checks on stable content. Account for expected generated outputs explicitly; do not broadly exclude changing source. Freeze/serialize shared writers or test an authorized isolated snapshot when needed. A matching fingerprint proves content identity within its coverage, not correctness, complete coverage, environmental equality or human acceptance.
+
+For GOLD repository maintainers only, the source-checkout helper is `node scripts/fingerprint.mjs [--root PATH]`. Consult its actual output/coverage and tests; it is not an installed GOLD command or a required tool in target projects. Target projects may use any explicit content identity appropriate to their evidence. Never claim a helper was run or is available without checking.
+
+## Bind criteria to evidence
+Give each actual run/observation an Evidence ID and each approved criterion a Criterion ID. Map every criterion to evidence IDs, exact assertions/observations and outcome (met, failed, partial, blocked or not-run), including limitations and remaining gaps. One run may cover several criteria, but name the relevant assertions; a green suite alone does not prove unrelated usability, security, architecture or production claims. Distinguish static contracts, simulation, manual inspection and live runtime evidence. Keep RED and GREEN identities separate.
+
+After edits, integration, resume or environment changes, compare tested identity and coverage to current state. Mark stale evidence, rerun affected checks, and record why any reused evidence remains applicable. Preserve failed/flaky/skipped outcomes, not only the latest green run. Report uncovered criteria explicitly; reduced verification needs explicit acceptance, not a relabeled pass. Carry the criterion-to-evidence mapping into the iteration record and Gate 2 presentation. Fingerprints and test success never grant publication or acceptance authority.

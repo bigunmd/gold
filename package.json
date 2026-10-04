@@ -1,6 +1,7 @@
 {
   "name": "@local/dsh-gold-preset",
-  "version": "1.2.0",
+  "version": "1.3.0",
+  "engines": {"node": ">=22.16.0"},
   "private": true,
   "license": "MIT",
   "type": "module",
@@ -12,6 +13,9 @@
     "check:docs": "node scripts/check-release.mjs docs",
     "check:package": "node scripts/check-release.mjs package",
     "check:git": "node scripts/check-git.mjs",
+    "check:runtime": "node scripts/check-runtime.mjs",
+    "eval:behavior": "node scripts/eval-behavior.mjs",
+    "fingerprint": "node scripts/fingerprint.mjs",
     "test": "node scripts/build-presets.mjs --check && node --test tests/*.test.mjs"
   },
   "dsh": {"bundle": {"patch": "./cordis.patch.yml"}}
