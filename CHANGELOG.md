@@ -2,6 +2,24 @@
 
 User-visible changes are recorded here. Unreleased entries are not a published tag, installation result or promise of compatibility.
 
+## 1.4.0
+
+### Added
+- Six pinned Ponytail skills for minimal complete implementations, change reviews, repository audits, shortcut debt, benchmark reference and DSH help.
+- 27 active Matt Pocock engineering/productivity skills with complete supporting resources, MIT notices and per-file upstream provenance.
+- Shared on-demand skill routing across all five presets; 16 user-only Matt Pocock entry points retain their invocation flags.
+
+### Adapted and fixed
+- GOLD/DSH integration contracts preserve scope, collaboration, plan mode, authorization, verification and C4 assessment over upstream automatic Git/remote actions and artifact defaults.
+- Working-tree Standards/Spec reviews explicitly include staged, unstaged and scoped untracked changes.
+- Wizard templates reject noninteractive execution and disable persistence/remote-write helpers pending authorized target-specific safe implementations.
+- Package validation permits skill-local script resources while still excluding root development scripts and private files.
+
+### Compatibility and verification
+- Five existing preset IDs, tools, permission boundaries and shared GOLD resources remain unchanged. No lifecycle hooks, global mode settings, project setup or automatic updates are installed.
+- 119 local tests, packaged-resource/Markdown checks and exact installed DSH 0.2.0-rc.2 Loader/expression/module-resolution checks passed during integration preparation.
+- Fresh-session mounted behavior and skill-picker smoke tests remain pending; installation of the local candidate reported restart-required. Upstream benchmark claims are not independently reproduced GOLD/DSH measurements.
+
 ## 1.3.0
 
 ### Added

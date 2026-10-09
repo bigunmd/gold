@@ -1,0 +1,266 @@
+{
+  "repository": "https://github.com/mattpocock/skills",
+  "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+  "files": [
+    {
+      "source": "skills/engineering/ask-matt/PHASE-BOUNDARIES.md",
+      "target": "skills/ask-matt/PHASE-BOUNDARIES.md",
+      "upstreamSha256": "a8aa20158609ef39e2b308b6ba0660c91066838d07a867202e63a7744a88a3ed"
+    },
+    {
+      "source": "skills/engineering/ask-matt/SKILL.md",
+      "target": "skills/ask-matt/SKILL.md",
+      "upstreamSha256": "1371f5ce005de0992a44b137748bfb960a56948aa9871b405fe9d90b24332e3c"
+    },
+    {
+      "source": "skills/engineering/code-review/SKILL.md",
+      "target": "skills/code-review/SKILL.md",
+      "upstreamSha256": "09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357"
+    },
+    {
+      "source": "skills/engineering/codebase-design/DEEPENING.md",
+      "target": "skills/codebase-design/DEEPENING.md",
+      "upstreamSha256": "f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1"
+    },
+    {
+      "source": "skills/engineering/codebase-design/SKILL.md",
+      "target": "skills/codebase-design/SKILL.md",
+      "upstreamSha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2"
+    },
+    {
+      "source": "skills/engineering/codebase-design/DESIGN-IT-TWICE.md",
+      "target": "skills/codebase-design/DESIGN-IT-TWICE.md",
+      "upstreamSha256": "52b52e75655a27aea59c6966b410bac82448968ad46ef1ebb9f07c274e3ae010"
+    },
+    {
+      "source": "skills/engineering/diagnosing-bugs/SKILL.md",
+      "target": "skills/diagnosing-bugs/SKILL.md",
+      "upstreamSha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d"
+    },
+    {
+      "source": "skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh",
+      "target": "skills/diagnosing-bugs/scripts/hitl-loop.template.sh",
+      "upstreamSha256": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503"
+    },
+    {
+      "source": "skills/engineering/domain-modeling/SKILL.md",
+      "target": "skills/domain-modeling/SKILL.md",
+      "upstreamSha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3"
+    },
+    {
+      "source": "skills/engineering/domain-modeling/GLOSSARY-FORMAT.md",
+      "target": "skills/domain-modeling/GLOSSARY-FORMAT.md",
+      "upstreamSha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801"
+    },
+    {
+      "source": "skills/engineering/domain-modeling/ADR-FORMAT.md",
+      "target": "skills/domain-modeling/ADR-FORMAT.md",
+      "upstreamSha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0"
+    },
+    {
+      "source": "skills/engineering/grill-with-docs/SKILL.md",
+      "target": "skills/grill-with-docs/SKILL.md",
+      "upstreamSha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe"
+    },
+    {
+      "source": "skills/engineering/implement/SKILL.md",
+      "target": "skills/implement/SKILL.md",
+      "upstreamSha256": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d"
+    },
+    {
+      "source": "skills/engineering/implement-spec/SKILL.md",
+      "target": "skills/implement-spec/SKILL.md",
+      "upstreamSha256": "7a22dd2e60b8fcece478ced9d2533582adf3520d695acd3ab715341535c9e56d"
+    },
+    {
+      "source": "skills/engineering/improve-codebase-architecture/SKILL.md",
+      "target": "skills/improve-codebase-architecture/SKILL.md",
+      "upstreamSha256": "552240a5ab5cec6b67c15dd1ad6e9f6962b1bca6ce870059a8c2713760c20392"
+    },
+    {
+      "source": "skills/engineering/improve-codebase-architecture/HTML-REPORT.md",
+      "target": "skills/improve-codebase-architecture/HTML-REPORT.md",
+      "upstreamSha256": "581e8bb5a521e46bbda8ca7e19b15948bed882187108092ebb90c62513b77528"
+    },
+    {
+      "source": "skills/engineering/pr/CREDITS.md",
+      "target": "skills/pr/CREDITS.md",
+      "upstreamSha256": "a7a087127665d7298a72280ef6e19c41ad8404523712a788c8dc3ab414bc2497"
+    },
+    {
+      "source": "skills/engineering/pr/SKILL.md",
+      "target": "skills/pr/SKILL.md",
+      "upstreamSha256": "ab63f1cf78647389edcd386c9427c5dfca27ed2836930c24773ffee834c19bcd"
+    },
+    {
+      "source": "skills/engineering/prototype/SKILL.md",
+      "target": "skills/prototype/SKILL.md",
+      "upstreamSha256": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3"
+    },
+    {
+      "source": "skills/engineering/prototype/UI.md",
+      "target": "skills/prototype/UI.md",
+      "upstreamSha256": "723211e878acbc7b6ff09755263f3295cde724ba902ff0064da41eed51d45ad3"
+    },
+    {
+      "source": "skills/engineering/prototype/LOGIC.md",
+      "target": "skills/prototype/LOGIC.md",
+      "upstreamSha256": "f61c7d249e786a79ef289018901c348271e1798dd0b0bc5607b5c6f4d4a01ab9"
+    },
+    {
+      "source": "skills/engineering/research/SKILL.md",
+      "target": "skills/research/SKILL.md",
+      "upstreamSha256": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4"
+    },
+    {
+      "source": "skills/engineering/retro/SKILL.md",
+      "target": "skills/retro/SKILL.md",
+      "upstreamSha256": "33fbc28568e3146f20fd908b12998bc0ab30aa4f4c87288199a40793efa94696"
+    },
+    {
+      "source": "skills/engineering/setup-matt-pocock-skills/domain.md",
+      "target": "skills/setup-matt-pocock-skills/domain.md",
+      "upstreamSha256": "593a7042218689f1d24df89df14eaf0a20e19e0d0a7d479a01947ac78f0784b9"
+    },
+    {
+      "source": "skills/engineering/setup-matt-pocock-skills/triage-labels.md",
+      "target": "skills/setup-matt-pocock-skills/triage-labels.md",
+      "upstreamSha256": "ae512af838c78b8750471c42cd2b20fa32319553e61d84c9a23d171b40ce14aa"
+    },
+    {
+      "source": "skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
+      "target": "skills/setup-matt-pocock-skills/issue-tracker-github.md",
+      "upstreamSha256": "f0653fe106dd8ee7b33be27bd7fe3104b40555896cb45f61997aed20467020c3"
+    },
+    {
+      "source": "skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md",
+      "target": "skills/setup-matt-pocock-skills/issue-tracker-local.md",
+      "upstreamSha256": "7dcda20a2eb4bdc89b95d1143423c0691309921cadae3132e6424f371030506e"
+    },
+    {
+      "source": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "target": "skills/setup-matt-pocock-skills/SKILL.md",
+      "upstreamSha256": "f148858ffb7f63c03c06fca06e6fdb1d91a35c6b293244b8fdfacd5f4cc028c4"
+    },
+    {
+      "source": "skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md",
+      "target": "skills/setup-matt-pocock-skills/issue-tracker-gitlab.md",
+      "upstreamSha256": "591a9e7057382aaccdfbed3f7ea3f2ad07e0cd29f012d18b82ee4e485fd81e24"
+    },
+    {
+      "source": "skills/engineering/tdd/tests.md",
+      "target": "skills/tdd/tests.md",
+      "upstreamSha256": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a"
+    },
+    {
+      "source": "skills/engineering/tdd/SKILL.md",
+      "target": "skills/tdd/SKILL.md",
+      "upstreamSha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0"
+    },
+    {
+      "source": "skills/engineering/tdd/mocking.md",
+      "target": "skills/tdd/mocking.md",
+      "upstreamSha256": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef"
+    },
+    {
+      "source": "skills/engineering/to-spec/SKILL.md",
+      "target": "skills/to-spec/SKILL.md",
+      "upstreamSha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088"
+    },
+    {
+      "source": "skills/engineering/to-tickets/SKILL.md",
+      "target": "skills/to-tickets/SKILL.md",
+      "upstreamSha256": "56ec23c5b2782785d4e65bff9e315b6d3aeb4ef977c174a219e99489fada1995"
+    },
+    {
+      "source": "skills/engineering/triage/OUT-OF-SCOPE.md",
+      "target": "skills/triage/OUT-OF-SCOPE.md",
+      "upstreamSha256": "1fbf9b432130c6380aa65813b55553cfda150309b27c595e183f8e335b8a190d"
+    },
+    {
+      "source": "skills/engineering/triage/SKILL.md",
+      "target": "skills/triage/SKILL.md",
+      "upstreamSha256": "917b0baf74be583e74f110857ed45df2766617f75c00baf61fd136d7af515edf"
+    },
+    {
+      "source": "skills/engineering/triage/AGENT-BRIEF.md",
+      "target": "skills/triage/AGENT-BRIEF.md",
+      "upstreamSha256": "7f5f87fed3033df1b06e083c480f3e847b1fbb0647746b8a4c6a50f9f26ef44f"
+    },
+    {
+      "source": "skills/engineering/wayfinder/SKILL.md",
+      "target": "skills/wayfinder/SKILL.md",
+      "upstreamSha256": "9be7b478c389605a24517d27752f278933588da97a1b5921b165f455edf4c5b7"
+    },
+    {
+      "source": "skills/engineering/wizard/template.sh",
+      "target": "skills/wizard/template.sh",
+      "upstreamSha256": "7c70da7da1b0cab497c469411aa92b5650d43ef24e6b88728eb3a19a63ee8be7"
+    },
+    {
+      "source": "skills/engineering/wizard/SKILL.md",
+      "target": "skills/wizard/SKILL.md",
+      "upstreamSha256": "bdf31d48211ea559878f95a4f344aeabf8d85897488ba564382bab0b000daac1"
+    },
+    {
+      "source": "skills/productivity/grill-me/SKILL.md",
+      "target": "skills/grill-me/SKILL.md",
+      "upstreamSha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637"
+    },
+    {
+      "source": "skills/productivity/grilling/SKILL.md",
+      "target": "skills/grilling/SKILL.md",
+      "upstreamSha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15"
+    },
+    {
+      "source": "skills/productivity/handoff/SKILL.md",
+      "target": "skills/handoff/SKILL.md",
+      "upstreamSha256": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3"
+    },
+    {
+      "source": "skills/productivity/teach/SKILL.md",
+      "target": "skills/teach/SKILL.md",
+      "upstreamSha256": "550482c2d674b085c9043b87bfdc14a8f2ec453c736119e7fcbb1e9332bffeba"
+    },
+    {
+      "source": "skills/productivity/teach/GLOSSARY-FORMAT.md",
+      "target": "skills/teach/GLOSSARY-FORMAT.md",
+      "upstreamSha256": "9b99859ec28437668130d8f2ce5a342938970f8a1ed4fd38c3eab4f4b5fff210"
+    },
+    {
+      "source": "skills/productivity/teach/LEARNING-RECORD-FORMAT.md",
+      "target": "skills/teach/LEARNING-RECORD-FORMAT.md",
+      "upstreamSha256": "701fa34b6748aa89e6c960ffb815257f481a7d77fb2900f9028f7edf3fdd6052"
+    },
+    {
+      "source": "skills/productivity/teach/MISSION-FORMAT.md",
+      "target": "skills/teach/MISSION-FORMAT.md",
+      "upstreamSha256": "8cacbb3c0644d3ae0ea4965564797099401a6930a23f7cf462918576587f2418"
+    },
+    {
+      "source": "skills/productivity/teach/RESOURCES-FORMAT.md",
+      "target": "skills/teach/RESOURCES-FORMAT.md",
+      "upstreamSha256": "e9cacf34026e11a8d1c8f9de88abe5bcbf654f4ebdb25cae8c0de0d5f48f44ec"
+    },
+    {
+      "source": "skills/productivity/to-questionnaire/SKILL.md",
+      "target": "skills/to-questionnaire/SKILL.md",
+      "upstreamSha256": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b"
+    },
+    {
+      "source": "skills/productivity/wait-what/SKILL.md",
+      "target": "skills/wait-what/SKILL.md",
+      "upstreamSha256": "d961bb37defd975c539427edb8f450cdbccdcdd552e213c1ece46676a7970905"
+    },
+    {
+      "source": "skills/productivity/writing-for-agents/SKILL-MECHANICS.md",
+      "target": "skills/writing-for-agents/SKILL-MECHANICS.md",
+      "upstreamSha256": "c768e6307c7c10728c401c213f2c4ba71c542127eeb7ad2956aabd15a0fa0059"
+    },
+    {
+      "source": "skills/productivity/writing-for-agents/SKILL.md",
+      "target": "skills/writing-for-agents/SKILL.md",
+      "upstreamSha256": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a"
+    }
+  ]
+}

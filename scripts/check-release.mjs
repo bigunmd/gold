@@ -36,7 +36,7 @@ export function checkMarkdown(root,files,{packageFiles}={}){
  }
  return errors;
 }
-const privatePath = path => path.split('/').some(part=>part.startsWith('.')||['node_modules','tests','scripts','preset-src'].includes(part));
+const privatePath = path => path.split('/').some((part, index)=>part.startsWith('.')||['node_modules','tests','preset-src'].includes(part)||(part==='scripts' && !(path.startsWith('skills/') && index===2)));
 export function checkPackage(files,expectedResources=[]){
  const required=['package.json','README.md','LICENSE','THIRD_PARTY_NOTICES.md','cordis.patch.yml','skills/gold-standard-development/SKILL.md',...expectedResources];
  return [...new Set(required)].filter(p=>!files.includes(p)).map(p=>`Missing packaged ${p}`).concat(files.filter(p=>privatePath(p)||(!required.includes(p)&&!p.startsWith('skills/'))).map(p=>`Unexpected packaged ${p}`));

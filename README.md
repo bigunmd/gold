@@ -1,6 +1,6 @@
 # GOLD engineering presets
 
-Installable Cordis bundle `@local/dsh-gold-preset`: one shared engineering core, selectable specialties, and adaptive collaboration. Version **1.3.0** adds reliable execution contracts and empirical evaluation tooling; all five existing preset identities remain compatible.
+Installable Cordis bundle `@local/dsh-gold-preset`: one shared engineering core, selectable specialties, and adaptive collaboration. Version **1.4.0** adds six Ponytail and 27 Matt Pocock skills with GOLD/DSH safeguards, alongside the reliable execution contracts and empirical evaluation tooling introduced in 1.3.0. All five existing preset identities remain compatible.
 
 ## Documentation
 
@@ -23,6 +23,22 @@ See [reliable execution](https://github.com/bigunmd/gold/blob/v1.3.0/docs/user-g
 This source revision adds precise Conventional Commit/branch guidance, no-model-authorship rules and eight on-demand specialties: Git & Release, Security, API & Contracts, Database & Migrations, Performance, Documentation, Accessibility, and Incident Investigation. They do not add presets, permissions or automatic agents. See the repository's specialty and Git-conventions guides under `docs/`. Candidate Git metadata checks are available with `npm run check:git -- --base BASE_SHA --head HEAD_SHA`; branch naming is advisory in CI, and unknown identities/consent cannot be mechanically proven.
 
 Selected specialty material is adapted from a pinned VoltAgent revision. [Third-party notices](THIRD_PARTY_NOTICES.md) ship with the runtime package. Required legal attribution and explicitly approved human coauthors are distinct from prohibited model authorship. These additions are included in v1.2.0, not in the earlier v1.1.0 tag.
+
+## Ponytail integration
+
+All five GOLD presets bundle `ponytail`, `ponytail-review`, `ponytail-audit`, `ponytail-debt`, `ponytail-gain` and `ponytail-help`, adapted from upstream revision `9cc65d03aa2da1db7121b912d03596409ee340b8`. Coding tasks load the core skill on demand in full mode; reviews and audits load their respective skills. GOLD scope, collaboration, authorization, verification and C4 requirements remain authoritative.
+
+Use the Harness skill picker or ask by name. Say “ponytail lite/full/ultra/off” to change conversation-local guidance. No upstream lifecycle hooks, global mode settings or automatic updates are installed. Debt reports remain read-only unless persistence is approved; local ledgers default to `.gold/`. Gain figures are upstream benchmark claims, not measured GOLD/DSH savings. Existing sessions retain their preset revision; start a new GOLD session after updating.
+
+## Matt Pocock skills integration
+
+All five presets also bundle the 27 active engineering/productivity skills from [mattpocock/skills](https://github.com/mattpocock/skills/tree/b0618bc436ad893b3c5e84e55fba86586d34a404), pinned at `b0618bc436ad893b3c5e84e55fba86586d34a404`. Experimental, deprecated and frozen miscellaneous skills are excluded. Complete supporting references/templates are retained; foreign agent metadata is excluded.
+
+Reusable disciplines load on demand: `tdd`, `diagnosing-bugs`, `codebase-design`, `domain-modeling`, `research`, `code-review`, `pr`, `prototype`, `wizard`, `grilling`, `writing-for-agents`. The 16 user-only entry points preserve their invocation flags: `ask-matt`, `grill-with-docs`, `triage`, `improve-codebase-architecture`, `setup-matt-pocock-skills`, `to-spec`, `to-tickets`, `implement`, `implement-spec`, `wayfinder`, `retro`, `grill-me`, `handoff`, `teach`, `to-questionnaire`, `wait-what`. Invoke these through the Harness skill picker; they are intentionally absent from model discovery/loading.
+
+GOLD/DSH contracts precede upstream instructions: no automatic Git/remote mutations, setup, ticket closure, repairs or notes on read-only tasks. Local artifacts default to ignored `.gold/`; approved shared glossary/ADRs stay tracked. Working-tree reviews include staged/unstaged/untracked scope. Wizard persistence/remote-write helpers are disabled until explicitly scoped safe helpers are authored; scripts are handed to humans, not run interactively through DSH. These are instruction-driven safeguards, not sandbox enforcement.
+
+For configured tracker workflows, explicitly invoke `setup-matt-pocock-skills` once per target project to review tracker, labels and domain-doc choices. Installing the bundle does not configure projects or authenticate tools. Existing GOLD/Ponytail routing remains intact. No upstream plugin hooks, automatic updates or replacement runtime tools are added.
 
 ## Choose a starting point
 
@@ -74,7 +90,7 @@ Local records are a cache, not proof of approval. They do not travel through Git
 
 Use the Harness `plugin_manager` tool: `action: install_bundle`, `target` set to the absolute directory containing the reviewed bundle. Do not hand-edit profile manifests or install dependencies in the profile. Select the desired GOLD preset in a **new session** after activation; existing sessions retain their preset revision. Restart DSH when needed after package replacement.
 
-For GitHub distribution, install `github:bigunmd/gold#v1.3.0` from https://github.com/bigunmd/gold. The older `github:bigunmd/gold#v1.0.0` does not contain this adaptive update. There is no automatic Git synchronization; `private: true` prevents accidental npm publication, not Git installation.
+For GitHub distribution, install `github:bigunmd/gold#v1.4.0` from https://github.com/bigunmd/gold. The older `github:bigunmd/gold#v1.0.0` does not contain this adaptive update. There is no automatic Git synchronization; `private: true` prevents accidental npm publication, not Git installation.
 
 Local installations can link directly to the source directory. Keep that directory in place, and develop changes in an isolated workspace rather than accidentally modifying the installed source. Integration and activation are separate authorized actions. Skill paths resolve from the installed package identity, not an author's workstation path.
 
