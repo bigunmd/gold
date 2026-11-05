@@ -1,6 +1,6 @@
 # GOLD engineering presets
 
-Installable Cordis bundle `@local/dsh-gold-preset`: one shared engineering core, selectable specialties, and adaptive collaboration. Version **1.4.0** adds six Ponytail and 27 Matt Pocock skills with GOLD/DSH safeguards, alongside the reliable execution contracts and empirical evaluation tooling introduced in 1.3.0. All five existing preset identities remain compatible.
+Installable Cordis bundle `@local/dsh-gold-preset`: one shared engineering core, selectable specialties, and adaptive collaboration. Version **1.4.1** fixes prompt assembly on newer DSH by removing the retired `{{cwd}}` suffix. Version **1.4.0** adds six Ponytail and 27 Matt Pocock skills with GOLD/DSH safeguards, alongside the reliable execution contracts and empirical evaluation tooling introduced in 1.3.0. All five existing preset identities remain compatible.
 
 ## Documentation
 
@@ -90,7 +90,7 @@ Local records are a cache, not proof of approval. They do not travel through Git
 
 Use the Harness `plugin_manager` tool: `action: install_bundle`, `target` set to the absolute directory containing the reviewed bundle. Do not hand-edit profile manifests or install dependencies in the profile. Select the desired GOLD preset in a **new session** after activation; existing sessions retain their preset revision. Restart DSH when needed after package replacement.
 
-For GitHub distribution, install `github:bigunmd/gold#v1.4.0` from https://github.com/bigunmd/gold. The older `github:bigunmd/gold#v1.0.0` does not contain this adaptive update. There is no automatic Git synchronization; `private: true` prevents accidental npm publication, not Git installation.
+For GitHub distribution, install `github:bigunmd/gold#v1.4.1` from https://github.com/bigunmd/gold. The older `github:bigunmd/gold#v1.0.0` does not contain this adaptive update. There is no automatic Git synchronization; `private: true` prevents accidental npm publication, not Git installation.
 
 Local installations can link directly to the source directory. Keep that directory in place, and develop changes in an isolated workspace rather than accidentally modifying the installed source. Integration and activation are separate authorized actions. Skill paths resolve from the installed package identity, not an author's workstation path.
 

@@ -1,10 +1,10 @@
 # Changelog
 
-## Unreleased
+User-visible changes are recorded here. Unreleased entries are not a published tag, installation result or promise of compatibility.
+
+## 1.4.1
 
 - Fix first-turn prompt assembly on newer DSH by clearing the retired `{{cwd}}` persona suffix in all five presets. The working directory is supplied by DSH runtime context. Add generated-preset regression coverage and upgrade guidance.
-
-User-visible changes are recorded here. Unreleased entries are not a published tag, installation result or promise of compatibility.
 
 ## 1.4.0
 
