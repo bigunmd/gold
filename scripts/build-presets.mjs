@@ -28,7 +28,8 @@ export function renderPatch({ roles, corePersona, sharedTools }) {
     '          - id: persona',
     "            name: '@deepseek-ai/dsh-persona'",
     '            config:',
-    '              suffix: Your working directory is {{cwd}}.',
+    // DSH supplies the working directory as runtime context; cwd is no longer a prompt variable.
+    '              suffix: ""',
     `              prefix: ${quote(corePersona.trim() + '\n' + r.focus)}`,
     sharedTools.trimEnd(),
   ].join('\n')).join('\n') + '\n';

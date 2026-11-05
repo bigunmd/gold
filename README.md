@@ -94,6 +94,8 @@ For GitHub distribution, install `github:bigunmd/gold#v1.4.0` from https://githu
 
 Local installations can link directly to the source directory. Keep that directory in place, and develop changes in an isolated workspace rather than accidentally modifying the installed source. Integration and activation are separate authorized actions. Skill paths resolve from the installed package identity, not an author's workstation path.
 
+If an upgraded DSH reports `unknown prompt variable "{{cwd}}"`, reinstall this updated bundle and start a new GOLD session. All five presets now clear the legacy working-directory suffix; DSH supplies directory context itself. This follows the [upstream prompt compatibility guidance](https://github.com/deepseek-ai/deepseek-harness/blob/master/packages/core/system-prompt/README.md#contribute-a-prompt-variable). If the error persists, remove the same legacy clause from home/profile/invocation `personaSuffix` settings or other custom preset `suffix` fields, preserving unrelated text.
+
 ## Development and verification
 
 Maintainers edit `preset-src/core-persona.txt`, `preset-src/roles.mjs` and `preset-src/shared-tools.yml`; generate the declarative artifact with:

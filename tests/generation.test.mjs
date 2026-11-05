@@ -36,6 +36,9 @@ test('generated roster has compatible gold plus four specialists sharing one too
   const output=render({roles,corePersona,sharedTools});
   assert.equal(readFileSync(join(root,'cordis.patch.yml'),'utf8'),output);
   assert.equal(output.split(sharedTools.trimEnd()).length-1,5);
+  // Newer DSH registers provider/model only; retired variables fail on the first turn.
+  assert.deepEqual([...output.matchAll(/\{\{([^}]+)\}\}/g)].map(match => match[1]), roles.map(() => 'model'));
+  assert.equal(output.split('              suffix: ""\n').length-1, roles.length);
   for(const r of roles) assert.ok(output.includes(JSON.stringify(corePersona.trim()+'\n'+r.focus)));
 });
 test('CLI check is read-only, detects stale artifacts and builds independently of cwd', async () => {
