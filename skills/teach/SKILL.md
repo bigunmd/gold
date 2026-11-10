@@ -23,7 +23,9 @@ The user has asked you to teach them something. This is a stateful request - the
 
 ## Teaching Workspace
 
-Treat the current directory as a teaching workspace. Workspace paths (`./lessons/` and the rest) resolve from the directory `/teach` was run in; only the `*-FORMAT.md` links resolve from this skill's folder. The state of their learning is captured in this directory in several files:
+When teaching inside a software project, first follow [canonical glossary discovery](../domain-modeling/GLOSSARY-DISCOVERY.md). Reuse its established meanings; do not create a competing teaching glossary or treat a learner's evolving understanding as a domain decision. [Teaching glossary guidance](GLOSSARY-FORMAT.md) applies only to an explicitly scoped standalone teaching glossary; uncertain learning notes stay separate from project authority.
+
+Treat the current directory as a teaching workspace. Workspace paths (`./lessons/` and the rest) resolve from the directory `/teach` was run in; all bundled skill-resource links (including glossary discovery and format links) resolve from this skill's folder, not the teaching workspace. The state of their learning is captured in this directory in several files:
 
 - `MISSION.md`: A document capturing the _reason_ the user is interested in the topic. This should be used to ground all teaching. Use the format in [MISSION-FORMAT.md](./MISSION-FORMAT.md).
 - `./reference/*.html`: A directory of reference materials. These are the compressed learnings from the lessons - cheat sheets, reference algorithms, syntax, yoga poses, glossaries. They are the raw units of learning. They should be beautiful documents which print out well, and are designed for quick reference.

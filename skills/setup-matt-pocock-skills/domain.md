@@ -1,51 +1,25 @@
-# Domain Docs
+# Domain docs
 
-How the engineering skills should consume this repo's domain documentation when exploring the codebase.
+Adapt this seed to the project's actual paths during authorized setup. Do not copy installed-skill-relative links into project guidance; record project-relative paths instead.
 
-## Before exploring, read these
+## Before exploring
 
-- **`GLOSSARY.md`** at the repo root, or
-- **`GLOSSARY-MAP.md`** at the repo root if it exists: it points at one `GLOSSARY.md` per context. Read each one relevant to the topic.
-- **`docs/adr/`**: read ADRs that touch the area you're about to work in. In multi-context repos, also check `src/<context>/docs/adr/` for context-scoped decisions.
+- Read the canonical project glossary identified by project instructions, documentation navigation or an existing context map. Preserve configured locations, root `GLOSSARY.md`, `GLOSSARY-MAP.md` and context-specific layouts; do not assume one universal filename.
+- If nothing establishes a location, inspect existing glossary candidates before choosing the new-file default `docs/glossary.md`. Multiple conflicting authorities or a missing configured target require clarification, not a competing glossary.
+- Read relevant ADRs in the project's established locations, commonly `docs/adr/` and context-scoped ADR folders.
 
-If any of these files don't exist, **proceed silently**. Don't flag their absence; don't suggest creating them upfront. The `/domain-modeling` skill (reached via `/grill-with-docs` and `/improve-codebase-architecture`) creates them lazily when terms or decisions actually get resolved.
+Missing glossary files do not block unrelated work. Do not create empty scaffolding or run setup merely to read vocabulary. Creation is lazy: established meanings plus approved documentation-write scope. The domain-modeling skill owns creation and maintenance; setup only records agreed conventions.
 
-## File structure
+## Use and maintain vocabulary
 
-Single-context repo (most repos):
+Use defined terms in plans, issue titles, refactor proposals, hypotheses, code, tests and docs. Distinguish true aliases from separate concepts. Read the relevant context when the same word has multiple meanings; ask if ambiguous.
 
-```
-/
-├── GLOSSARY.md
-├── docs/adr/
-│   ├── 0001-event-sourced-orders.md
-│   └── 0002-postgres-for-write-model.md
-└── src/
-```
+New glossaries use Term | Definition | Distinction, optional context headings only when meanings differ, and optional Naming notes for aliases/deprecated names. Existing formats are preserved.
 
-Multi-context repo (presence of `GLOSSARY-MAP.md` at the root):
-
-```
-/
-├── GLOSSARY-MAP.md
-├── docs/adr/                          ← system-wide decisions
-└── src/
-    ├── ordering/
-    │   ├── GLOSSARY.md
-    │   └── docs/adr/                  ← context-specific decisions
-    └── billing/
-        ├── GLOSSARY.md
-        └── docs/adr/
-```
-
-## Use the glossary's vocabulary
-
-When your output names a domain concept (in an issue title, a refactor proposal, a hypothesis, a test name), use the term as defined in `GLOSSARY.md`. Don't drift to synonyms the glossary explicitly avoids.
-
-If the concept you need isn't in the glossary yet, that's a signal: either you're inventing language the project doesn't use (reconsider) or there's a real gap (note it for `/domain-modeling`).
+During approved changes, assess affected terminology and update the canonical glossary within scope. Surface glossary/code/requirements contradictions and unresolved meanings rather than silently changing authority. Semantic changes require an explicit domain decision; routine editorial corrections within scope need no per-row approval. Read-only work proposes changes only; no automatic broad renames or migrations. Report glossary impact as updated, reviewed—no change, or unresolved, with a reason.
 
 ## Flag ADR conflicts
 
 If your output contradicts an existing ADR, surface it explicitly rather than silently overriding:
 
-> _Contradicts ADR-0007 (event-sourced orders), but worth reopening because…_
+> Contradicts ADR-0007 (event-sourced orders), but worth reopening because…

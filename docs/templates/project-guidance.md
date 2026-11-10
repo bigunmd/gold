@@ -22,6 +22,10 @@ Map changed surfaces to relevant unit, contract, integration, E2E, static and se
 
 Point to established current-system diagrams, accepted ADRs, public contracts and runbooks. Explain where new shared documentation belongs.
 
+## Project vocabulary
+
+Point to the canonical project glossary or existing context map, preserving its location and format. If none exists, GOLD defaults to `docs/glossary.md` when creation is authorized and established terms are available. New glossaries use Term | Definition | Distinction, optional context headings and optional Naming notes. Include affected glossary maintenance in delivery scope; this guidance is not standing approval for edits. Read relevant definitions before naming concepts; surface uncertain meanings and conflicts rather than silently redefining terms. See the [glossary guide](../user-guide/glossary.md).
+
 ## Sensitive systems and prohibited actions
 
 Name protected environments/resources without credentials. State which actions require separate explicit approval, including publication, deployment, data resets and recovery. Repository guidance cannot override higher-priority runtime policy.

@@ -36,7 +36,7 @@ This command is _informed_ by the project's domain model and built on a shared d
 - If the user named a direction (a module, a subsystem, a pain point), take it, and skip the inference below.
 - Otherwise, walk back a good stretch of the commit history (`git log --oneline`) to find the codebase's hot spots, the files and areas that keep coming up, and let those paths pull your attention first. If the changes are scattered with no clear hot spot, widen the net.
 
-Read the project's domain glossary (`GLOSSARY.md`) and any ADRs in the area you're touching first.
+Read relevant canonical glossary entries using [glossary discovery](../domain-modeling/GLOSSARY-DISCOVERY.md), and any ADRs in the area you're touching first. References below to the glossary mean that discovered location, not a mandatory root file.
 
 Then spawn a sub-agent with a fresh context window to walk the codebase (Harness subagent, not subagent_fork; provide scope, constraints and context pointers). Don't follow rigid heuristics; explore organically and note where you experience friction:
 
@@ -79,7 +79,7 @@ Once the user picks a candidate, call the Skill tool with "grilling" to walk the
 
 Side effects happen inline as decisions crystallize; call the Skill tool with "domain-modeling" to keep the domain model current as you go:
 
-- **Naming a deepened module after a concept not in `GLOSSARY.md`?** Add the term to `GLOSSARY.md`. Create the file lazily if it doesn't exist.
-- **Sharpening a fuzzy term during the conversation?** Update `GLOSSARY.md` right there.
+- **Naming a deepened module after a concept missing from the canonical glossary?** Establish its meaning first; add it only within approved documentation scope, creating lazily per domain-modeling when appropriate. Otherwise propose the entry.
+- **Sharpening a fuzzy term during the conversation?** Resolve semantic changes explicitly and maintain the canonical glossary within scope; do not turn inference into a settled definition.
 - **User rejects the candidate with a load-bearing reason?** Offer an ADR, framed as: _"Want me to record this as an ADR so future architecture reviews don't re-suggest it?"_ Only offer when the reason would actually be needed by a future explorer to avoid re-suggesting the same thing; skip ephemeral reasons ("not worth it right now") and self-evident ones.
 - **Want to explore alternative interfaces for the deepened module?** Call the Skill tool with "codebase-design" and use its design-it-twice parallel sub-agent pattern.

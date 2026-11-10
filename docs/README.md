@@ -7,6 +7,7 @@ GOLD provides engineering presets for DeepSeek Harness. Start with the user guid
 - [Choose a preset and style](user-guide/choosing.md): specialty, collaboration and authorization are different choices.
 - [Six task recipes](user-guide/recipes.md): copyable prompts, expected outputs and checkpoints.
 - [Adopt GOLD in a project](user-guide/project-adoption.md): existing applications, monorepos, libraries and other instruction systems.
+- [Project glossary](user-guide/glossary.md): shared vocabulary, change-driven maintenance and DSH use.
 - [Project guidance template](templates/project-guidance.md): optional content for your established instruction file, not a new configuration format.
 - [Troubleshooting and recovery](user-guide/troubleshooting.md): discovery, repeated questions, stale notes and oversteps.
 - [Validation and limitations](validation.md): what tests establish and what remains unverified.

@@ -20,6 +20,8 @@ Approval provenance: <conversation artifact/message and scope; never infer>
 <chosen approach, rejected alternatives, source/files affected>
 ## Decisions and architecture impact
 <standing ADRs; consequential proposed decisions; C4 views affected>
+## Glossary impact
+<canonical location/contexts and relevant terms; affected maintenance included in scope or proposals only; unresolved domain decisions>
 ## Tests and safety
 <commands/layers, regression RED, broader suites, NFR/security/ops checks>
 <side-effect boundaries, compatibility, migration and rollback>

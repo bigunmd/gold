@@ -18,4 +18,4 @@ GOLD governs this skill and all supporting resources. Preserve approved scope, c
 The contract above takes precedence over conflicting steps in the adapted upstream text and referenced resources.
 
 
-Wait, I don't understand where you've got to here. Re-pitch that: give me a little bit of context, talk in ASD-STE100 Simplified Technical English, and use the ubiquitous language from `GLOSSARY.md` (follow `GLOSSARY-MAP.md` to the right one if the repo has more than one).
+Wait, I don't understand where you've got to here. Re-pitch that: give me a little bit of context, talk in ASD-STE100 Simplified Technical English, and use the language from the canonical project glossary (follow [glossary discovery](../domain-modeling/GLOSSARY-DISCOVERY.md) and any existing context map).

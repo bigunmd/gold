@@ -24,6 +24,12 @@ This source revision adds precise Conventional Commit/branch guidance, no-model-
 
 Selected specialty material is adapted from a pinned VoltAgent revision. [Third-party notices](THIRD_PARTY_NOTICES.md) ship with the runtime package. Required legal attribution and explicitly approved human coauthors are distinct from prohibited model authorship. These additions are included in v1.2.0, not in the earlier v1.1.0 tag.
 
+## Project glossary integration (unreleased)
+
+All five presets read the project's canonical glossary before relevant work and maintain affected terms within approved delivery scope. Existing locations, formats and context maps are preserved; new glossaries default to `docs/glossary.md` with **Term | Definition | Distinction**, optional context headings and Naming notes. Uncertain meanings and contradictions are surfaced, not silently made authoritative. Read-only tasks propose changes only.
+
+The packaged [domain-modeling skill](skills/domain-modeling/SKILL.md) owns maintenance and [discovery rules](skills/domain-modeling/GLOSSARY-DISCOVERY.md); the [format](skills/domain-modeling/GLOSSARY-FORMAT.md) includes an example. Install/update this candidate through DSH's supported Plugins UI or plugin manager, then start a new GOLD session. Building this checkout alone does not activate it. No background synchronization, new plugin or permission change is introduced.
+
 ## Ponytail integration
 
 All five GOLD presets bundle `ponytail`, `ponytail-review`, `ponytail-audit`, `ponytail-debt`, `ponytail-gain` and `ponytail-help`, adapted from upstream revision `7801d061243d7b753bad0e0b3c057cd250b11755` (Ponytail v5.3.3, selectively adapted; no Claude band UI/hooks). Coding tasks load the core skill on demand in full mode; reviews and audits load their respective skills. GOLD scope, collaboration, authorization, verification and C4 requirements remain authoritative.

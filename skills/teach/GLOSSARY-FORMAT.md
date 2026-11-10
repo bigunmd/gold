@@ -2,6 +2,8 @@
 
 `GLOSSARY.md` is the canonical language for this teaching workspace. All explainers, exercises, and learning records should adhere to its terminology. Building it is itself part of learning: compressing a concept into a tight definition is evidence the user understands it.
 
+This format is for an explicitly scoped standalone teaching workspace, not a competing engineering glossary. In a software project, use [canonical glossary discovery](../domain-modeling/GLOSSARY-DISCOVERY.md) and [project glossary format](../domain-modeling/GLOSSARY-FORMAT.md); keep learning-state definitions in authorized local notes until established. Do not overwrite agreed project meanings as an exercise or create a duplicate root glossary.
+
 ## Structure
 
 ```md

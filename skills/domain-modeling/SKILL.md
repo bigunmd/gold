@@ -1,6 +1,6 @@
 ---
 name: domain-modeling
-description: Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a GLOSSARY.md, or recording or editing an ADR.
+description: Build and sharpen project vocabulary. Use when creating or maintaining a project glossary, resolving terminology conflicts or semantic changes, or recording or editing an ADR.
 ---
 
 ## GOLD / DSH integration contract
@@ -19,45 +19,28 @@ The contract above takes precedence over conflicting steps in the adapted upstre
 
 # Domain Modeling
 
-Actively build and sharpen the project's domain model as you design. This is the *active* discipline: challenging terms, inventing edge-case scenarios, and writing the glossary and decisions down the moment they crystallise. (Merely *reading* `GLOSSARY.md` for vocabulary is not this skill: that's a one-line habit any skill can do. This skill is for when you're changing the model, not just consuming it.)
+Maintain a curated vocabulary agreement, not an entity/class catalog, tutorial or second specification. Business and technical concepts qualify when their meaning is project-specific. Merely consuming relevant glossary entries is a lightweight habit; load this skill for creation, maintenance, ambiguity or semantic decisions. Missing setup configuration does not block glossary use or require a setup interview.
 
-## File structure
+## Discover before creating
 
-Most repos have a single context:
+Follow [GLOSSARY-DISCOVERY.md](GLOSSARY-DISCOVERY.md). Reuse the configured or existing canonical glossary, including root `GLOSSARY.md` and `GLOSSARY-MAP.md` context layouts; preserve location and format. If no glossary or convention exists, default to `docs/glossary.md`. Never create a duplicate authority or automatically migrate a glossary.
 
-```
-/
-├── GLOSSARY.md
-├── docs/
-│   └── adr/
-│       ├── 0001-event-sourced-orders.md
-│       └── 0002-postgres-for-write-model.md
-└── src/
-```
+Create lazily only when established meanings are available and approved scope covers documentation writes. Link a new glossary from existing project guidance or the documentation index when that edit is in scope; otherwise propose the link. Read-only work reports gaps or proposed entries without creating files. Do not create empty scaffolding just because a file is absent.
 
-If a `GLOSSARY-MAP.md` exists at the root, the repo has multiple contexts. The map points to where each one lives:
+## Change-driven maintenance
 
-```
-/
-├── GLOSSARY-MAP.md
-├── docs/
-│   └── adr/                          ← system-wide decisions
-├── src/
-│   ├── ordering/
-│   │   ├── GLOSSARY.md
-│   │   └── docs/adr/                 ← context-specific decisions
-│   └── billing/
-│       ├── GLOSSARY.md
-│       └── docs/adr/
-```
-
-Create files lazily: only when you have something to write. If no `GLOSSARY.md` exists, create one when the first term is resolved. If no `docs/adr/` exists, create it when the first ADR is needed.
+1. Before relevant work, read the applicable definitions and use their vocabulary in discussion, plans, code, tests and docs. Ask if the intended context is ambiguous; the same term may legitimately mean different things in different contexts.
+2. During approved delivery, check changed code, tests and docs for introduced concepts, changed meanings, renamed terms, removed concepts or newly important distinctions. Maintain only affected entries in the same change. Report unrelated drift as a follow-up, not a broad cleanup or automatic rename.
+3. Record only established meanings from accepted project documentation, explicit decisions or clarified agreement. Code is evidence, not automatic authority: an inferred meaning stays a question until established. Keep unresolved definitions in discussion or authorized local notes, never as settled glossary rows.
+4. Surface contradictions between glossary, code and requirements. Identify the competing meanings and ask for a domain decision; do not silently rewrite the glossary to match code or alter code to match the glossary.
+5. Distinguish **editorial** clarification (same meaning, clearer wording) from **semantic** change (scope, identity, boundaries or relationships change). Semantic changes require an explicit domain decision; reuse existing approval covering that decision and the edit. Editorial corrections within approved scope do not require per-row approval. Neither kind grants permission for code renames, API changes or data migration.
+6. At verification/closure report glossary impact: **updated**, **reviewed—no change**, or **unresolved**, with the affected location/terms and reason or pending decision. Absence alone does not require creation. This is task-driven maintenance, not a promise of background synchronization.
 
 ## During the session
 
 ### Challenge against the glossary
 
-When the user uses a term that conflicts with the existing language in `GLOSSARY.md`, call it out immediately. "Your glossary defines 'cancellation' as X, but you seem to mean Y. Which is it?"
+When the user uses a term that conflicts with the existing language in the canonical glossary, call it out immediately. "Your glossary defines 'cancellation' as X, but you seem to mean Y. Which is it?"
 
 ### Sharpen fuzzy language
 
@@ -71,11 +54,11 @@ When domain relationships are being discussed, stress-test them with specific sc
 
 When the user states how something works, check whether the code agrees. If you find a contradiction, surface it: "Your code cancels entire Orders, but you just said partial cancellation is possible. Which is right?"
 
-### Update GLOSSARY.md inline
+### Capture resolved terminology within scope
 
-When a term is resolved, update `GLOSSARY.md` right there. Don't batch these up: capture them as they happen. Use the format in [GLOSSARY-FORMAT.md](./GLOSSARY-FORMAT.md).
+When a term is resolved and documentation writes are authorized, update the discovered canonical glossary during that work. Otherwise propose the entry inline. Use [GLOSSARY-FORMAT.md](GLOSSARY-FORMAT.md) for new glossaries; preserve established formats without automatic migration.
 
-`GLOSSARY.md` should be totally devoid of implementation details. Do not treat `GLOSSARY.md` as a spec, a scratch pad, or a repository for implementation decisions. It is a glossary and nothing else.
+Keep implementation details and links, business-rule catalogs, unresolved speculation and scratch notes out. A glossary defines concepts; specifications and ADRs retain requirements and implementation decisions.
 
 ### Offer ADRs sparingly
 

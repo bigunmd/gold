@@ -4,6 +4,8 @@ User-visible changes are recorded here. Unreleased entries are not a published t
 
 ## Unreleased
 
+- Integrate change-driven project glossary maintenance into all five GOLD/DSH presets: canonical discovery, approved-scope updates, Term / Definition / Distinction tables, lifecycle impact reporting and compatible existing-glossary consumption. No new plugin, background process or permission change; local installation and fresh-session behavior remain separate verification steps.
+
 - Refresh the six existing Ponytail integrations to stable v5.3.3 (`7801d061243d7b753bad0e0b3c057cd250b11755`): explicit conversation-local `off`, ignore-aware debt scanning and corrected one-shot wording. Claude band UI, history imports and hooks are not installed.
 - Refresh the existing 27 Matt Pocock skills and supporting resources to `4ae2317ddb22b046e26455e4f9c9b3aaaf62212d`: fresh-context delegation, tracker target/blocker/CLI corrections, legacy glossary migration proposals and safer wizard parsing/fallbacks. New upstream collections are excluded.
 - Preserve GOLD approval/artifact contracts, user-only entry points and disabled wizard persistence/remote writes; refresh provenance and regression coverage. No preset identities, dependencies or runtime permissions change. The eight VoltAgent definitions were checked and are unchanged upstream; their original provenance pin remains.

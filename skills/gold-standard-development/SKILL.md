@@ -40,6 +40,9 @@ Before authorized Git mutations or publication read `references/git-policy.md`. 
 - Assigning independent work or integrating child results: `references/delegation.md`; use explicit ownership, scope and result contracts, then parent verification.
 - Recording or reusing verification: `references/evidence.md`; bind each criterion to actual evidence and tested content identity, not only HEAD/dirty labels.
 
+## Project vocabulary
+Before relevant work, discover and consume the canonical glossary using [glossary discovery](../domain-modeling/GLOSSARY-DISCOVERY.md). Preserve configured/existing locations and contexts. Load domain-modeling for authorized creation/maintenance or unresolved meanings; a glossary never grants implementation permission. Include affected maintenance in delivery scope and report impact at closure. Read-only scenarios propose edits only; missing setup does not require an interview.
+
 ## Engineering guidance: load only on trigger
 - New boundaries, contracts or consequential design: `references/architecture-planning.md`.
 - Implementation or refactoring: `references/software-development.md`.

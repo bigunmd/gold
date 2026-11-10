@@ -21,7 +21,7 @@ The contract above takes precedence over conflicting steps in the adapted upstre
 
 A discipline for hard bugs. Skip phases only when explicitly justified.
 
-When exploring the codebase, read `GLOSSARY.md` (if it exists) to get a clear mental model of the relevant modules, and check ADRs in the area you're touching.
+When exploring the codebase, read the relevant canonical glossary entries using [glossary discovery](../domain-modeling/GLOSSARY-DISCOVERY.md) to get a clear mental model of the relevant modules, and check ADRs in the area you're touching.
 
 ## Redact
 

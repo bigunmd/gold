@@ -10,6 +10,10 @@ Execution reconciliation: <child/job results collected; cancelled work confirmed
 Milestone / gate disposition: <informational vs human acceptance; explicit process-change provenance or none>
 Deviations: <scope reopening and approval if needed>
 
+## Glossary impact
+Status: updated | reviewed—no change | unresolved
+Location/terms, changes or no-change reason, pending domain decisions: <...>
+
 ## C4 assessment
 Status: updated | reviewed-no-change | not-applicable | update-required/deferred
 Reason/evidence and affected shared views: <...>

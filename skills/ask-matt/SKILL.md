@@ -22,7 +22,7 @@ The contract above takes precedence over conflicting steps in the adapted upstre
 
 You don't remember every skill, so ask.
 
-Before stating what a skill does or recommending a step be skipped, read that skill's SKILL.md: the summaries here are for orientation only.
+Before stating what a skill does or recommending a step be skipped, read that skill's SKILL.md: the summaries here are for orientation only. Glossary references below mean the canonical project glossary found through [discovery](../domain-modeling/GLOSSARY-DISCOVERY.md), not a mandatory root filename. Retaining terminology requires established meanings and approved write scope; read-only discussion proposes entries only.
 
 A **flow** is a path through the skills. Most paths run along one **main flow**, and two **on-ramps** merge onto it. Everything else is standalone, or a vocabulary layer that runs underneath.
 

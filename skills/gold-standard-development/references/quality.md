@@ -21,6 +21,7 @@ Read command exit codes and actual output. A stale run, partial suite, skipped c
 - Operational changes have useful logs/metrics/health signals, not sensitive payload logs.
 - User/API/config docs and runbook updated for changed contracts/operations.
 - Schema/data/config changes state backward compatibility, migration and rollback; flag coordinated deployment requirements.
+- Glossary impact reported: updated | reviewed—no change | unresolved, with affected terms/location and reason or pending decision. Check changed code/tests/docs; do not silently redefine meanings or expand into unrelated cleanup. Missing glossary does not authorize creation.
 - C4 assessment recorded; affected views updated or deferral explicitly accepted.
 - Consequential decisions recorded in shared ADRs; durable knowledge promoted out of private memory.
 - User-visible changes have a changelog entry if the project uses one.

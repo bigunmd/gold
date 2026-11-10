@@ -1,60 +1,38 @@
-# GLOSSARY.md Format
+# Project glossary format
 
-## Structure
+Reuse existing canonical locations and formats; do not migrate them just to match this example. Follow [discovery rules](GLOSSARY-DISCOVERY.md), including existing root `GLOSSARY.md` and `GLOSSARY-MAP.md` context layouts. When no convention exists, new glossaries default to `docs/glossary.md`.
 
-```md
-# {Context Name}
+## New glossary structure
 
-{One or two sentence description of what this context is and why it exists.}
+Use **Term | Definition | Distinction**. Definitions say what a concept is in this project, normally in one or two sentences. Distinction clarifies a likely confusion, not every relationship; use `—` when none is needed. No mandatory Domain column.
 
-## Language
-
-**Order**:
-{A one or two sentence description of the term}
-_Avoid_: Purchase, transaction
-
-**Invoice**:
-A request for payment sent to a customer after delivery.
-_Avoid_: Bill, payment request
-
-**Customer**:
-A person or organization that places orders.
-_Avoid_: Client, buyer, account
-```
-
-## Rules
-
-- **Be opinionated.** When multiple words exist for the same concept, pick the best one and list the others under `_Avoid_`.
-- **Keep definitions tight.** One or two sentences max. Define what it IS, not what it does.
-- **Only include terms specific to this project's context.** General programming concepts (timeouts, error types, utility patterns) don't belong even if the project uses them extensively. Before adding a term, ask: is this a concept unique to this context, or a general programming concept? Only the former belongs.
-- **Group terms under subheadings** when natural clusters emerge. If all terms belong to a single cohesive area, a flat list is fine.
-
-## Single vs multi-context repos
-
-**Single context (most repos):** One `GLOSSARY.md` at the repo root.
-
-**Multiple contexts:** A `GLOSSARY-MAP.md` at the repo root lists the contexts, where they live, and how they relate to each other:
+Illustrative example only; do not copy these meanings into a project without establishing them:
 
 ```md
-# Glossary Map
+# Project glossary
 
-## Contexts
+Shared vocabulary for the ordering application.
 
-- [Ordering](./src/ordering/GLOSSARY.md): receives and tracks customer orders
-- [Billing](./src/billing/GLOSSARY.md): generates invoices and processes payments
-- [Fulfillment](./src/fulfillment/GLOSSARY.md): manages warehouse picking and shipping
+| Term | Definition | Distinction |
+|---|---|---|
+| Customer | A person or organization that purchases from us. | Not a User: a customer can exist without a login. |
+| User | A person with a login to the application. | A user may act for a customer; the two are not synonyms. |
+| Order | A customer's accepted request to purchase goods. | Not a Cart, which is still a proposed selection. |
+| Fulfillment batch | Orders grouped for a single warehouse picking run. | — |
 
-## Relationships
+## Naming notes
 
-- **Ordering → Fulfillment**: Ordering emits `OrderPlaced` events; Fulfillment consumes them to start picking
-- **Fulfillment → Billing**: Fulfillment emits `ShipmentDispatched` events; Billing consumes them to generate invoices
-- **Ordering ↔ Billing**: Shared types for `CustomerId` and `Money`
+- “Client” is a legacy alias for Customer in older support material; prefer Customer.
+- “Buyer account” is a deprecated name for Customer; new documentation uses Customer.
 ```
 
-The skill infers which structure applies:
+## Inclusion and structure rules
 
-- If `GLOSSARY-MAP.md` exists, read it to find contexts
-- If only a root `GLOSSARY.md` exists, single context
-- If neither exists, create a root `GLOSSARY.md` lazily when the first term is resolved
+- Include established project-specific business or technical meanings. Generic programming definitions do not belong merely because the code uses them.
+- Do not enumerate every entity, class, file or API. No implementation details/links, tutorials, requirements, business-rule catalogs or speculative definitions. Uncertain meanings remain in discussion or authorized local notes until clarified; never infer a definition from a name alone.
+- **Optional context headings** are useful only when meanings genuinely differ. A flat table is fine for a single coherent vocabulary. If the same term has different meanings, label each context; ask when the intended context is ambiguous. Preserve existing multi-file maps rather than replacing them with headings automatically.
+- **Optional Naming notes** record real aliases and deprecated names only when useful. Do not label a distinct concept an alias or indiscriminately list near-synonyms as forbidden words. Keep important conceptual differences in Distinction.
+- No mandatory ownership, timestamps, per-row citations or code links. Evidence can be discussed during review without making the glossary an audit log.
+- Do not expand a settled definition into every rule involving that concept. Link through ordinary project navigation when authorized, not a second implementation index.
 
-When multiple contexts exist, infer which one the current topic relates to. If unclear, ask.
+Maintenance, semantic versus editorial changes and authorization follow [domain-modeling](SKILL.md).
