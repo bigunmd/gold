@@ -2,6 +2,13 @@
 
 User-visible changes are recorded here. Unreleased entries are not a published tag, installation result or promise of compatibility.
 
+## Unreleased
+
+- Refresh the six existing Ponytail integrations to stable v5.3.3 (`7801d061243d7b753bad0e0b3c057cd250b11755`): explicit conversation-local `off`, ignore-aware debt scanning and corrected one-shot wording. Claude band UI, history imports and hooks are not installed.
+- Refresh the existing 27 Matt Pocock skills and supporting resources to `4ae2317ddb22b046e26455e4f9c9b3aaaf62212d`: fresh-context delegation, tracker target/blocker/CLI corrections, legacy glossary migration proposals and safer wizard parsing/fallbacks. New upstream collections are excluded.
+- Preserve GOLD approval/artifact contracts, user-only entry points and disabled wizard persistence/remote writes; refresh provenance and regression coverage. No preset identities, dependencies or runtime permissions change. The eight VoltAgent definitions were checked and are unchanged upstream; their original provenance pin remains.
+- These are source-checkout updates, not a release or live-profile installation. Static instruction checks do not establish model compliance or reproduce upstream benchmark results.
+
 ## 1.4.1
 
 - Fix first-turn prompt assembly on newer DSH by clearing the retired `{{cwd}}` persona suffix in all five presets. The working directory is supplied by DSH runtime context. Add generated-preset regression coverage and upgrade guidance.

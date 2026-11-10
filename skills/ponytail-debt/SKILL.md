@@ -17,10 +17,9 @@ can't quietly become permanent.
 
 ## Scan
 
-Grep the repo for comment markers, skipping `node_modules`, `.git`, and build
-output:
+Scan the repo for comment markers, respecting all `.gitignore` rules (including nested rules and negations), not just common dependency/build directories. Never scan `.git` metadata.
 
-Use the Harness grep tool with pattern `(#|//|/[*]) ?(shortcut|ponytail):` on scoped source directories; filter dependency and build-output hits. Add comment prefixes for the project's stack.
+Use the Harness grep tool with pattern `(#|//|/[*]) ?(shortcut|ponytail):` on scoped source directories. Do not assume the tool excludes ignored files: establish the eligible paths with read-only `git ls-files --cached --others --exclude-standard`, and filter ignored paths with `git check-ignore --no-index --stdin` (including tracked-but-ignored files). Inspect content only on eligible paths. Outside a Git repo, read applicable ignore rules with Harness tools; disclose any coverage limitation rather than claiming a clean repo-wide ledger. Add comment prefixes for the project's stack.
 
 If the user names their own marker word (`/ponytail-debt TODO`), grep for that word instead.
 
@@ -46,5 +45,4 @@ End with `<N> markers, <M> with no trigger.` Nothing found: `No shortcut debt. C
 ## Boundaries
 
 Reads and reports only, changes nothing. To persist it, ask and it writes the
-ledger to a gitignored local `.gold/ponytail-debt.md` by default; use a tracked shared ledger only when explicitly requested. Never stage or commit it automatically. One-shot. "stop ponytail-debt" or
-"normal mode" to revert.
+ledger to a gitignored local `.gold/ponytail-debt.md` by default; use a tracked shared ledger only when explicitly requested. Never stage or commit it automatically. One-shot; changes no mode.

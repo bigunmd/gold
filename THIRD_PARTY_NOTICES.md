@@ -30,8 +30,8 @@ SOFTWARE.
 
 ## Ponytail
 
-The six skills under skills/ponytail* adapt DietrichGebert/ponytail at revision 9cc65d03aa2da1db7121b912d03596409ee340b8:
-https://github.com/DietrichGebert/ponytail/tree/9cc65d03aa2da1db7121b912d03596409ee340b8/skills
+The six skills under skills/ponytail* adapt DietrichGebert/ponytail at revision 7801d061243d7b753bad0e0b3c057cd250b11755:
+https://github.com/DietrichGebert/ponytail/tree/7801d061243d7b753bad0e0b3c057cd250b11755/skills
 
 GOLD adds authorization and tool guidance, local-ledger defaults and benchmark attribution, and replaces host-specific help with DSH guidance. No upstream hooks are installed. No endorsement or independent reproduction of benchmarks is implied.
 
@@ -59,8 +59,8 @@ SOFTWARE.
 
 ## Matt Pocock skills
 
-27 active engineering/productivity skills and supporting resources adapt mattpocock/skills revision b0618bc436ad893b3c5e84e55fba86586d34a404:
-https://github.com/mattpocock/skills/tree/b0618bc436ad893b3c5e84e55fba86586d34a404/skills
+27 active engineering/productivity skills and supporting resources adapt mattpocock/skills revision 4ae2317ddb22b046e26455e4f9c9b3aaaf62212d:
+https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills
 
 GOLD adds DSH invocation/tool and authorization contracts, artifact policy, working-tree review coverage, optional disclosure handling, and disables unsafe wizard persistence/remote helpers. User-only invocation flags are retained. Foreign agent metadata and experimental/frozen collections are excluded. Per-file upstream paths and hashes ship in the setup skill upstream-manifest.json. No endorsement is implied.
 

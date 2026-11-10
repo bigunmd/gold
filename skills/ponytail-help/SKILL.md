@@ -30,4 +30,4 @@ Say "ponytail lite", "ponytail full", "ponytail ultra", or "ponytail off". "Stop
 
 Updates are explicit GOLD bundle updates through Harness plugin_manager; upstream is pinned, not auto-updated. New sessions receive updated preset revisions; existing sessions retain their starting revision.
 
-Adapted from https://github.com/DietrichGebert/ponytail at revision 9cc65d03aa2da1db7121b912d03596409ee340b8. The MIT license ships in the ponytail resource directory and THIRD_PARTY_NOTICES.md.
+Adapted from https://github.com/DietrichGebert/ponytail at revision 7801d061243d7b753bad0e0b3c057cd250b11755 (v5.3.3). Upstream Claude band commands and session-history imports are not supported in this DSH adaptation. The MIT license ships in the ponytail resource directory and THIRD_PARTY_NOTICES.md.

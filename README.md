@@ -26,13 +26,13 @@ Selected specialty material is adapted from a pinned VoltAgent revision. [Third-
 
 ## Ponytail integration
 
-All five GOLD presets bundle `ponytail`, `ponytail-review`, `ponytail-audit`, `ponytail-debt`, `ponytail-gain` and `ponytail-help`, adapted from upstream revision `9cc65d03aa2da1db7121b912d03596409ee340b8`. Coding tasks load the core skill on demand in full mode; reviews and audits load their respective skills. GOLD scope, collaboration, authorization, verification and C4 requirements remain authoritative.
+All five GOLD presets bundle `ponytail`, `ponytail-review`, `ponytail-audit`, `ponytail-debt`, `ponytail-gain` and `ponytail-help`, adapted from upstream revision `7801d061243d7b753bad0e0b3c057cd250b11755` (Ponytail v5.3.3, selectively adapted; no Claude band UI/hooks). Coding tasks load the core skill on demand in full mode; reviews and audits load their respective skills. GOLD scope, collaboration, authorization, verification and C4 requirements remain authoritative.
 
 Use the Harness skill picker or ask by name. Say “ponytail lite/full/ultra/off” to change conversation-local guidance. No upstream lifecycle hooks, global mode settings or automatic updates are installed. Debt reports remain read-only unless persistence is approved; local ledgers default to `.gold/`. Gain figures are upstream benchmark claims, not measured GOLD/DSH savings. Existing sessions retain their preset revision; start a new GOLD session after updating.
 
 ## Matt Pocock skills integration
 
-All five presets also bundle the 27 active engineering/productivity skills from [mattpocock/skills](https://github.com/mattpocock/skills/tree/b0618bc436ad893b3c5e84e55fba86586d34a404), pinned at `b0618bc436ad893b3c5e84e55fba86586d34a404`. Experimental, deprecated and frozen miscellaneous skills are excluded. Complete supporting references/templates are retained; foreign agent metadata is excluded.
+All five presets also bundle the 27 active engineering/productivity skills from [mattpocock/skills](https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d), pinned at `4ae2317ddb22b046e26455e4f9c9b3aaaf62212d`. Experimental, deprecated and frozen miscellaneous skills are excluded. Complete supporting references/templates are retained; foreign agent metadata is excluded.
 
 Reusable disciplines load on demand: `tdd`, `diagnosing-bugs`, `codebase-design`, `domain-modeling`, `research`, `code-review`, `pr`, `prototype`, `wizard`, `grilling`, `writing-for-agents`. The 16 user-only entry points preserve their invocation flags: `ask-matt`, `grill-with-docs`, `triage`, `improve-codebase-architecture`, `setup-matt-pocock-skills`, `to-spec`, `to-tickets`, `implement`, `implement-spec`, `wayfinder`, `retro`, `grill-me`, `handoff`, `teach`, `to-questionnaire`, `wait-what`. Invoke these through the Harness skill picker; they are intentionally absent from model discovery/loading.
 

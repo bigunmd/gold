@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/mattpocock/skills",
-  "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+  "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
   "files": [
     {
       "source": "skills/engineering/ask-matt/PHASE-BOUNDARIES.md",
@@ -15,7 +15,7 @@
     {
       "source": "skills/engineering/code-review/SKILL.md",
       "target": "skills/code-review/SKILL.md",
-      "upstreamSha256": "09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357"
+      "upstreamSha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd"
     },
     {
       "source": "skills/engineering/codebase-design/DEEPENING.md",
@@ -30,7 +30,7 @@
     {
       "source": "skills/engineering/codebase-design/DESIGN-IT-TWICE.md",
       "target": "skills/codebase-design/DESIGN-IT-TWICE.md",
-      "upstreamSha256": "52b52e75655a27aea59c6966b410bac82448968ad46ef1ebb9f07c274e3ae010"
+      "upstreamSha256": "c222ab5a82e0405672eb9062d62496139a08828e45d07fc5f18e4952c10fac1a"
     },
     {
       "source": "skills/engineering/diagnosing-bugs/SKILL.md",
@@ -70,12 +70,12 @@
     {
       "source": "skills/engineering/implement-spec/SKILL.md",
       "target": "skills/implement-spec/SKILL.md",
-      "upstreamSha256": "7a22dd2e60b8fcece478ced9d2533582adf3520d695acd3ab715341535c9e56d"
+      "upstreamSha256": "1993a473cec40ac85d081c112cdffdc63ec3267c2e412055ad09e013a2f623d1"
     },
     {
       "source": "skills/engineering/improve-codebase-architecture/SKILL.md",
       "target": "skills/improve-codebase-architecture/SKILL.md",
-      "upstreamSha256": "552240a5ab5cec6b67c15dd1ad6e9f6962b1bca6ce870059a8c2713760c20392"
+      "upstreamSha256": "35b03a3db61e0f5aa333ea59b54963e45a3d2ace6649b2ef4f9576603e2582a6"
     },
     {
       "source": "skills/engineering/improve-codebase-architecture/HTML-REPORT.md",
@@ -110,7 +110,7 @@
     {
       "source": "skills/engineering/research/SKILL.md",
       "target": "skills/research/SKILL.md",
-      "upstreamSha256": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4"
+      "upstreamSha256": "1f629e18ab899412683bc6a1c4efb4339999e27c2fdac328f26ee10a8c031d33"
     },
     {
       "source": "skills/engineering/retro/SKILL.md",
@@ -130,7 +130,7 @@
     {
       "source": "skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
       "target": "skills/setup-matt-pocock-skills/issue-tracker-github.md",
-      "upstreamSha256": "f0653fe106dd8ee7b33be27bd7fe3104b40555896cb45f61997aed20467020c3"
+      "upstreamSha256": "6fdb3e9b00b7b0b115ecac3b1c00e3790f637f190abf598815368722c0a94692"
     },
     {
       "source": "skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md",
@@ -140,12 +140,12 @@
     {
       "source": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
       "target": "skills/setup-matt-pocock-skills/SKILL.md",
-      "upstreamSha256": "f148858ffb7f63c03c06fca06e6fdb1d91a35c6b293244b8fdfacd5f4cc028c4"
+      "upstreamSha256": "b01e05bfe8c323171275c6ceec78b12f1bd4c62dfd26c2cfe8be806d3883f1ed"
     },
     {
       "source": "skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md",
       "target": "skills/setup-matt-pocock-skills/issue-tracker-gitlab.md",
-      "upstreamSha256": "591a9e7057382aaccdfbed3f7ea3f2ad07e0cd29f012d18b82ee4e485fd81e24"
+      "upstreamSha256": "947602d33a80f98f939fb990995b8f95a3459b114b919c4221d08bd75d7cffe0"
     },
     {
       "source": "skills/engineering/tdd/tests.md",
@@ -190,12 +190,12 @@
     {
       "source": "skills/engineering/wayfinder/SKILL.md",
       "target": "skills/wayfinder/SKILL.md",
-      "upstreamSha256": "9be7b478c389605a24517d27752f278933588da97a1b5921b165f455edf4c5b7"
+      "upstreamSha256": "0c9fa96791aebf3b7d654cf35c6aadde97d81f57c17b07d13b27c14d9c46561f"
     },
     {
       "source": "skills/engineering/wizard/template.sh",
       "target": "skills/wizard/template.sh",
-      "upstreamSha256": "7c70da7da1b0cab497c469411aa92b5650d43ef24e6b88728eb3a19a63ee8be7"
+      "upstreamSha256": "6566f147299bc6f1d941e64591ed04385416d543e11f96f564c7228f5018d0ed"
     },
     {
       "source": "skills/engineering/wizard/SKILL.md",
@@ -210,7 +210,7 @@
     {
       "source": "skills/productivity/grilling/SKILL.md",
       "target": "skills/grilling/SKILL.md",
-      "upstreamSha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15"
+      "upstreamSha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2"
     },
     {
       "source": "skills/productivity/handoff/SKILL.md",

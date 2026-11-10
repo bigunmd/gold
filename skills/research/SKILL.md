@@ -17,7 +17,7 @@ GOLD governs this skill and all supporting resources. Preserve approved scope, c
 The contract above takes precedence over conflicting steps in the adapted upstream text and referenced resources.
 
 
-Spin up a **background agent** to do the research, so you keep working while it reads.
+Spin up a **background agent** to do the research, so you keep working while it reads. Start it with a fresh context window using Harness subagent (not subagent_fork), with a self-contained brief covering scope, constraints and context pointers.
 
 Its job:
 

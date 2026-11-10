@@ -36,7 +36,7 @@ Look at the current repo to understand its starting state. Read whatever exists;
 
 - `git remote -v` and `.git/config`: is this a GitHub repo? Which one?
 - `AGENTS.md` and `CLAUDE.md` at the repo root: does either exist? Is there already an `## Agent skills` section in either?
-- `GLOSSARY.md` and `GLOSSARY-MAP.md` at the repo root
+- `GLOSSARY.md` and `GLOSSARY-MAP.md` at the repo root, and legacy `CONTEXT.md` / `CONTEXT-MAP.md`. If a legacy file exists, offer a rename to its `GLOSSARY` name and corresponding updates in `docs/agents/domain.md`; do not move files or change Git state without explicit approval.
 - `docs/adr/` and any `src/*/docs/adr/` directories
 - `docs/agents/`: does this skill's prior output already exist?
 - `.scratch/`: a sign that a local-markdown issue tracker convention is already in use
@@ -61,6 +61,8 @@ Default posture: these skills were designed for GitHub. If a `git remote` points
 - **Other** (Jira, Linear, etc.): ask the user to describe the workflow in one paragraph; the skill will record it as freeform prose
 
 Record the choice in `docs/agents/issue-tracker.md`. The GitHub and GitLab templates carry a "PRs as a request surface" flag, defaulted **off**. Leave it off and don't raise it: a user who wants external PRs in the triage queue can flip the flag in the file later.
+
+A GitHub or GitLab tracker needs a reachable repository. If no remote points at the selected host, ask for the intended repository URL and propose the missing setup; do not automatically initialize Git, add/change remotes or authenticate. Obtain explicit action/target approval and load GOLD Git policy before any Git mutation. Verify the selected target with read-only `gh repo view` / `glab repo view` from this directory; if unavailable or mismatched, stop and report what is missing.
 
 **Section B: Triage label vocabulary.** Skip this section entirely if the `triage` skill isn't installed (exploration told you), since an uninstalled skill needs no labels.
 
