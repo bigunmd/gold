@@ -4,12 +4,19 @@ User-visible changes are recorded here. Unreleased entries are not a published t
 
 ## Unreleased
 
+## 1.5.0
+
+- Add selective Web UI routing to all five presets: Anthropic Frontend Design, UI/UX Pro Max, Taste, Vercel Web Interface Guidelines and Impeccable. Shared foundations cover typography/color/layout, accessibility, responsive states and motion; evidence guidance separates source/browser/visual/automated/manual checks.
+- Bundle pinned Pro Max standard-library Python search and CSV data, with stdout-only generation and persistence disabled. Include source/hash manifests, full licenses and regression coverage. Python 3 is optional for lookup users and required for the integration tests.
+- Preserve existing brand/system and GOLD gates; no new preset/plugin, active-profile activation, browser tooling, Taste/Impeccable engine/hooks/telemetry or automatic install. Static tests and local searches do not establish fresh-session model behavior or product accessibility conformance.
+
 - Integrate change-driven project glossary maintenance into all five GOLD/DSH presets: canonical discovery, approved-scope updates, Term / Definition / Distinction tables, lifecycle impact reporting and compatible existing-glossary consumption. No new plugin, background process or permission change; local installation and fresh-session behavior remain separate verification steps.
 
 - Refresh the six existing Ponytail integrations to stable v5.3.3 (`7801d061243d7b753bad0e0b3c057cd250b11755`): explicit conversation-local `off`, ignore-aware debt scanning and corrected one-shot wording. Claude band UI, history imports and hooks are not installed.
 - Refresh the existing 27 Matt Pocock skills and supporting resources to `4ae2317ddb22b046e26455e4f9c9b3aaaf62212d`: fresh-context delegation, tracker target/blocker/CLI corrections, legacy glossary migration proposals and safer wizard parsing/fallbacks. New upstream collections are excluded.
 - Preserve GOLD approval/artifact contracts, user-only entry points and disabled wizard persistence/remote writes; refresh provenance and regression coverage. No preset identities, dependencies or runtime permissions change. The eight VoltAgent definitions were checked and are unchanged upstream; their original provenance pin remains.
-- These are source-checkout updates, not a release or live-profile installation. Static instruction checks do not establish model compliance or reproduce upstream benchmark results.
+- Support explicitly bounded hoisted DSH dependencies in the maintainer Loader gate via `--dependency-root`, retaining strict defaults and real-path escape rejection. No installed-runtime or profile mutation is needed.
+- Static instruction checks do not establish model compliance or reproduce upstream benchmark results. Tag publication does not install or activate the bundle; mounted fresh-session behavior remains separately unverified.
 
 ## 1.4.1
 

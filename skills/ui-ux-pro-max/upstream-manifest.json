@@ -1,0 +1,262 @@
+{
+  "repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+  "revision": "6ae86f61f520d6ca229d2f40e070410638c908c5",
+  "license": "MIT; complete upstream LICENSE is included unchanged.",
+  "scope": "Four standard-library Python runtime scripts and all 35 CSV data files required for 12 search domains, 22 stacks and design-system generation. No installer, refresh scripts, premium features, fonts, SVG assets or network runtime.",
+  "adaptations": [
+    "Reject all persistence flags before searching; remove persistence dispatch/status output and describe stdout-only use.",
+    "Reject persistence parameters in the Python API; remove all persistence, page/master formatters and their unused imports. Preserve local generation and ASCII/Markdown/JSON output."
+  ],
+  "excluded": "Upstream tests/templates/validator/installer and catalog refresh/provenance JSON metadata are not required by the local runtime and are not vendored. google-fonts.csv and icons.csv contain searchable metadata, not font binaries or SVG assets.",
+  "securityReview": [
+    "Reviewed runtime imports and local I/O: no network client, subprocess, dynamic code execution, package installation or external model calls.",
+    "Upstream optional persistence defaults to cwd, accepts arbitrary output roots and can follow pre-existing directory symlinks. Persistence is disabled in CLI/API and its file-writing implementation removed.",
+    "Use python3 -B to suppress interpreter bytecode writes. Search opens only configured CSV files relative to the vendored script; queries are data, not paths or executable expressions.",
+    "Recommendations may include third-party URLs, font CSS imports and example code as inert text. Do not fetch, execute, install or apply them without separate authorization and review.",
+    "Pinned upstream version assertions, accessibility claims, ranking and recommendations are guidance, not verified application behavior or current dependency compatibility."
+  ],
+  "files": [
+    {
+      "source": "LICENSE",
+      "target": "skills/ui-ux-pro-max/LICENSE",
+      "upstreamSha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014",
+      "vendoredSha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/app-interface.csv",
+      "target": "skills/ui-ux-pro-max/data/app-interface.csv",
+      "upstreamSha256": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08",
+      "vendoredSha256": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/charts.csv",
+      "target": "skills/ui-ux-pro-max/data/charts.csv",
+      "upstreamSha256": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a",
+      "vendoredSha256": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/colors.csv",
+      "target": "skills/ui-ux-pro-max/data/colors.csv",
+      "upstreamSha256": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c",
+      "vendoredSha256": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/google-fonts.csv",
+      "target": "skills/ui-ux-pro-max/data/google-fonts.csv",
+      "upstreamSha256": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03",
+      "vendoredSha256": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/icons.csv",
+      "target": "skills/ui-ux-pro-max/data/icons.csv",
+      "upstreamSha256": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc",
+      "vendoredSha256": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/landing.csv",
+      "target": "skills/ui-ux-pro-max/data/landing.csv",
+      "upstreamSha256": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0",
+      "vendoredSha256": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/motion.csv",
+      "target": "skills/ui-ux-pro-max/data/motion.csv",
+      "upstreamSha256": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb",
+      "vendoredSha256": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/products.csv",
+      "target": "skills/ui-ux-pro-max/data/products.csv",
+      "upstreamSha256": "5756125e2b0e0d2360926f175d0975c8cd846c7589e5e2ce02631ff645e66361",
+      "vendoredSha256": "5756125e2b0e0d2360926f175d0975c8cd846c7589e5e2ce02631ff645e66361"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/react-performance.csv",
+      "target": "skills/ui-ux-pro-max/data/react-performance.csv",
+      "upstreamSha256": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734",
+      "vendoredSha256": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/angular.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/angular.csv",
+      "upstreamSha256": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553",
+      "vendoredSha256": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/astro.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/astro.csv",
+      "upstreamSha256": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6",
+      "vendoredSha256": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/avalonia.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/avalonia.csv",
+      "upstreamSha256": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258",
+      "vendoredSha256": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/flutter.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/flutter.csv",
+      "upstreamSha256": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0",
+      "vendoredSha256": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "upstreamSha256": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee",
+      "vendoredSha256": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/javafx.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/javafx.csv",
+      "upstreamSha256": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869",
+      "vendoredSha256": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+      "upstreamSha256": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a",
+      "vendoredSha256": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/laravel.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/laravel.csv",
+      "upstreamSha256": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9",
+      "vendoredSha256": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "upstreamSha256": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4",
+      "vendoredSha256": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "upstreamSha256": "9c0179d559abe39ad63b958b54cb29c82be1dd20706430476096ea8967bfa328",
+      "vendoredSha256": "9c0179d559abe39ad63b958b54cb29c82be1dd20706430476096ea8967bfa328"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "upstreamSha256": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176",
+      "vendoredSha256": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/react-native.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/react-native.csv",
+      "upstreamSha256": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5",
+      "vendoredSha256": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/react.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/react.csv",
+      "upstreamSha256": "4dd176a9787e5c6306b5df94158d75955adcdc6edab41ce5286641a5842303c1",
+      "vendoredSha256": "4dd176a9787e5c6306b5df94158d75955adcdc6edab41ce5286641a5842303c1"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "upstreamSha256": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51",
+      "vendoredSha256": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/svelte.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/svelte.csv",
+      "upstreamSha256": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db",
+      "vendoredSha256": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "upstreamSha256": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623",
+      "vendoredSha256": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/threejs.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/threejs.csv",
+      "upstreamSha256": "155d583b9c64da0df4b6c6cb060c02eab222505e0734d6353da02c9e2b5d982b",
+      "vendoredSha256": "155d583b9c64da0df4b6c6cb060c02eab222505e0734d6353da02c9e2b5d982b"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/uno.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/uno.csv",
+      "upstreamSha256": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48",
+      "vendoredSha256": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/uwp.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/uwp.csv",
+      "upstreamSha256": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c",
+      "vendoredSha256": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/vue.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/vue.csv",
+      "upstreamSha256": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95",
+      "vendoredSha256": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/winui.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/winui.csv",
+      "upstreamSha256": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85",
+      "vendoredSha256": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/stacks/wpf.csv",
+      "target": "skills/ui-ux-pro-max/data/stacks/wpf.csv",
+      "upstreamSha256": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7",
+      "vendoredSha256": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/styles.csv",
+      "target": "skills/ui-ux-pro-max/data/styles.csv",
+      "upstreamSha256": "a9b6cadbd1cb9e7cb8398a3b445e0691d01e42ed5e5efa60a5d0c08c99c8100d",
+      "vendoredSha256": "a9b6cadbd1cb9e7cb8398a3b445e0691d01e42ed5e5efa60a5d0c08c99c8100d"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/typography.csv",
+      "target": "skills/ui-ux-pro-max/data/typography.csv",
+      "upstreamSha256": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8",
+      "vendoredSha256": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/ui-reasoning.csv",
+      "target": "skills/ui-ux-pro-max/data/ui-reasoning.csv",
+      "upstreamSha256": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a",
+      "vendoredSha256": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a"
+    },
+    {
+      "source": "src/ui-ux-pro-max/data/ux-guidelines.csv",
+      "target": "skills/ui-ux-pro-max/data/ux-guidelines.csv",
+      "upstreamSha256": "d63dc39439cf615cdccfdf7acd2301e0c3ce5e1e56a89b60617fa190f7511512",
+      "vendoredSha256": "d63dc39439cf615cdccfdf7acd2301e0c3ce5e1e56a89b60617fa190f7511512"
+    },
+    {
+      "source": "src/ui-ux-pro-max/scripts/core.py",
+      "target": "skills/ui-ux-pro-max/scripts/core.py",
+      "upstreamSha256": "caf92bdcf2579c9a7d6af4f53c54ee9d3c8f05472cfab77aaec38bef120ec63e",
+      "vendoredSha256": "caf92bdcf2579c9a7d6af4f53c54ee9d3c8f05472cfab77aaec38bef120ec63e"
+    },
+    {
+      "source": "src/ui-ux-pro-max/scripts/design_system.py",
+      "target": "skills/ui-ux-pro-max/scripts/design_system.py",
+      "upstreamSha256": "e7d1c94c4b2eada17c5551157668362659ccf9626d34dbd58e68142410f90103",
+      "vendoredSha256": "88db8b9385a055c3322b3d9b71f1633e9c369739102939de3875c3983630c6cc",
+      "adaptation": "Reject persistence parameters in the Python API; remove all persistence, page/master formatters and their unused imports. Preserve local generation and ASCII/Markdown/JSON output."
+    },
+    {
+      "source": "src/ui-ux-pro-max/scripts/reasoning_contract.py",
+      "target": "skills/ui-ux-pro-max/scripts/reasoning_contract.py",
+      "upstreamSha256": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913",
+      "vendoredSha256": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913"
+    },
+    {
+      "source": "src/ui-ux-pro-max/scripts/search.py",
+      "target": "skills/ui-ux-pro-max/scripts/search.py",
+      "upstreamSha256": "9fd5acc991142fd43c3afe7be0f6720911b668f3988b34e74b5cbc41d58e7947",
+      "vendoredSha256": "902312a3cfc8b30662420c3734338288a975463dd3ee784c9b72f3ad9287edaf",
+      "adaptation": "Reject all persistence flags before searching; remove persistence dispatch/status output and describe stdout-only use."
+    }
+  ]
+}

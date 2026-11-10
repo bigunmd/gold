@@ -23,11 +23,11 @@ export function parseArgs(args) {
   const result = {};
   for (let i = 0; i < args.length; i += 2) {
     const key = args[i];
-    requireThat(['--runtime', '--package'].includes(key) && !Object.hasOwn(result, key.slice(2)), `Unknown or duplicate argument: ${key}`);
+    requireThat(['--runtime', '--package', '--dependency-root'].includes(key) && !Object.hasOwn(result, key.slice(2)), `Unknown or duplicate argument: ${key}`);
     requireThat(typeof args[i + 1] === 'string' && isAbsolute(args[i + 1]), `${key} requires an explicit absolute directory`);
     result[key.slice(2)] = args[i + 1];
   }
-  requireThat(result.runtime && result.package, 'Usage: node scripts/check-runtime.mjs --runtime /installed/dsh/root --package /extracted/package/root');
+  requireThat(result.runtime && result.package, 'Usage: node scripts/check-runtime.mjs --runtime /installed/dsh/root --package /extracted/package/root [--dependency-root /installed/root]');
   return result;
 }
 
@@ -152,6 +152,9 @@ export function probeParser(boot, loader, scratch) {
 export async function checkRuntime(options) {
   requireThat(typeof options.runtime === 'string' && isAbsolute(options.runtime) && typeof options.package === 'string' && isAbsolute(options.package), 'Explicit absolute runtime and package roots are required');
   const runtimeRoot = realpathSync(options.runtime);
+  requireThat(options['dependency-root'] === undefined || (typeof options['dependency-root'] === 'string' && isAbsolute(options['dependency-root'])), 'Dependency root must be an explicit absolute directory');
+  const dependencyRoot = options['dependency-root'] === undefined ? runtimeRoot : realpathSync(options['dependency-root']);
+  requireThat(statSync(dependencyRoot).isDirectory() && inside(dependencyRoot, runtimeRoot), 'Runtime must be inside the explicit dependency root');
   const packageRoot = realpathSync(options.package);
   const runtimeManifest = validateManifest(json(join(runtimeRoot, 'package.json')), 'runtime');
   const manifestPath = join(packageRoot, 'package.json');
@@ -161,7 +164,7 @@ export async function checkRuntime(options) {
   const runtimeRequire = createRequire(join(runtimeRoot, 'package.json'));
   const resolveRuntime = name => {
     const path = realpathSync(runtimeRequire.resolve(name));
-    requireThat(inside(runtimeRoot, path) && statSync(path).isFile(), `${name}: resolved outside explicit installed runtime`);
+    requireThat(inside(dependencyRoot, path) && statSync(path).isFile(), `${name}: resolved outside explicit installed runtime dependency root`);
     return path;
   };
   const bootPath = resolveRuntime('@deepseek-ai/dsh-app-boot');
@@ -191,7 +194,7 @@ export async function checkRuntime(options) {
     }
     return {
       status: 'passed', level: 'parse-expression-resolution', mounted: false,
-      node: process.version, runtime: {root: runtimeRoot, version: runtimeManifest.version, bootPath, loaderPath},
+      node: process.version, runtime: {root: runtimeRoot, dependencyRoot, version: runtimeManifest.version, bootPath, loaderPath},
       package: {root: packageRoot, version: manifest.version, manifestSha256: digest(manifestPath), patchSha256: digest(patchPath)},
       presetIds: contract.presetIds, expressionCount: contract.expressions.length,
       platformsChecked: ['linux', 'darwin', 'win32'], resolvedModules, skillRoot,

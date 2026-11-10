@@ -1,0 +1,12 @@
+# Scoped polish and hardening
+
+Modified from Impeccable's polish guidance: no detector/storage hooks, automatic artifacts or implicit shipment. Preserve the approved scope and established design.
+
+1. **Establish the system.** Read representative tokens, components, neighboring flows and existing design documentation. Classify drift: missing reusable token, avoidable one-off implementation, conceptual mismatch or local defect. Fix at the narrowest correct level; ask before changing a binding principle.
+2. **Gather current evidence.** Identify source/build/route, primary flow, supported sizes, states, content lengths and input methods. Use actual browser/screenshots when available and authorized. Prior findings are leads, not current proof; compare target/content identity before reuse.
+3. **Triage.** First blocked tasks, data loss, misleading state and inaccessible paths; then missing loading/empty/error/success/permission states; then hierarchy/responsive/system drift; finally visual/motion inconsistencies. A conceptual mismatch may require proposed redesign rather than concealed polish.
+4. **Refine the whole path.** Align grid, optical spacing and type roles; test wrapping, localization, zoom and font loading. Keep semantic color meanings and coherent icons; verify contrast and image dimensions/alternatives. Preserve focus/order/labels and touch alternatives. Connect arrival, transition, recovery and confirmation states. Motion stays interruptible, purposeful and reduced-motion-aware.
+5. **Keep content and code honest.** Match established terminology/casing and factual copy; ask before changing claims. Reuse shared primitives where they own the pattern, but do not invent an abstraction for a local exception. Remove only churn/dead code created by or necessary to this approved pass, not unrelated cleanup.
+6. **Verify and report.** Repeat the primary flow with available mouse/keyboard/touch coverage, representative layouts, content extremes and state changes. Record console/layout-shift/latency observations only when measured. Review the source diff, list remaining limitations and present current evidence for acceptance. No automatic commit, publication or closure of upstream critique snapshots.
+
+Use GOLD Web UI's [verification contract](../../gold-web-ui/references/verification.md). A clean automated scan is not visual quality, full accessibility or user acceptance; an attractive screenshot is not a completed interaction test.

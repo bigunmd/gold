@@ -1,10 +1,10 @@
 # GOLD engineering presets
 
-Installable Cordis bundle `@local/dsh-gold-preset`: one shared engineering core, selectable specialties, and adaptive collaboration. Version **1.4.1** fixes prompt assembly on newer DSH by removing the retired `{{cwd}}` suffix. Version **1.4.0** adds six Ponytail and 27 Matt Pocock skills with GOLD/DSH safeguards, alongside the reliable execution contracts and empirical evaluation tooling introduced in 1.3.0. All five existing preset identities remain compatible.
+Installable Cordis bundle `@local/dsh-gold-preset`: one shared engineering core, selectable specialties, and adaptive collaboration. Version **1.5.0** adds five selectively routed Web UI skill families, project glossary maintenance and refreshed Ponytail/Matt Pocock guidance. It retains the **1.4.1** prompt-assembly fix removing the retired `{{cwd}}` suffix. Version **1.4.0** adds six Ponytail and 27 Matt Pocock skills with GOLD/DSH safeguards, alongside the reliable execution contracts and empirical evaluation tooling introduced in 1.3.0. All five existing preset identities remain compatible.
 
 ## Documentation
 
-Start with the [user guide](https://github.com/bigunmd/gold/blob/v1.3.0/docs/README.md), [quick start](https://github.com/bigunmd/gold/blob/v1.3.0/docs/user-guide/quick-start.md), or [six task recipes](https://github.com/bigunmd/gold/blob/v1.3.0/docs/user-guide/recipes.md). See [validation and limitations](https://github.com/bigunmd/gold/blob/v1.3.0/docs/validation.md), the [changelog](https://github.com/bigunmd/gold/blob/v1.3.0/CHANGELOG.md), and the [release checklist](https://github.com/bigunmd/gold/blob/v1.3.0/docs/maintainers/releases.md).
+Start with the [user guide](https://github.com/bigunmd/gold/blob/v1.5.0/docs/README.md), [quick start](https://github.com/bigunmd/gold/blob/v1.5.0/docs/user-guide/quick-start.md), or [six task recipes](https://github.com/bigunmd/gold/blob/v1.5.0/docs/user-guide/recipes.md). See [validation and limitations](https://github.com/bigunmd/gold/blob/v1.5.0/docs/validation.md), the [changelog](https://github.com/bigunmd/gold/blob/v1.5.0/CHANGELOG.md), and the [release checklist](https://github.com/bigunmd/gold/blob/v1.5.0/docs/maintainers/releases.md).
 
 These links target version-pinned documentation. In a source checkout, the same guides are under `docs/`. Guides are hosted in the repository rather than bundled into the runtime package.
 
@@ -16,7 +16,7 @@ These links target version-pinned documentation. In a source checkout, the same 
 - Real-model behavioral evaluation cases capture tool events, workspace differences, duration and provider-reported token usage. The initial adapter uses Codex CLI, **not mounted DSH sessions**; heuristics and sandbox effects require transcript review.
 - Git fixture isolation, packaged Markdown-link validation and an opt-in exact-package/runtime Loader gate. No new runtime plugins, permissions, or automatic agents.
 
-See [reliable execution](https://github.com/bigunmd/gold/blob/v1.3.0/docs/user-guide/reliable-execution.md), [behavioral evaluations](https://github.com/bigunmd/gold/blob/v1.3.0/docs/maintainers/behavior-evals.md), and [runtime gate](https://github.com/bigunmd/gold/blob/v1.3.0/docs/maintainers/runtime-check.md).
+See [reliable execution](https://github.com/bigunmd/gold/blob/v1.5.0/docs/user-guide/reliable-execution.md), [behavioral evaluations](https://github.com/bigunmd/gold/blob/v1.5.0/docs/maintainers/behavior-evals.md), and [runtime gate](https://github.com/bigunmd/gold/blob/v1.5.0/docs/maintainers/runtime-check.md).
 
 ## Version 1.2.0: Git discipline and domain specialties
 
@@ -24,11 +24,21 @@ This source revision adds precise Conventional Commit/branch guidance, no-model-
 
 Selected specialty material is adapted from a pinned VoltAgent revision. [Third-party notices](THIRD_PARTY_NOTICES.md) ship with the runtime package. Required legal attribution and explicitly approved human coauthors are distinct from prohibited model authorship. These additions are included in v1.2.0, not in the earlier v1.1.0 tag.
 
-## Project glossary integration (unreleased)
+## Project glossary integration (1.5.0)
 
 All five presets read the project's canonical glossary before relevant work and maintain affected terms within approved delivery scope. Existing locations, formats and context maps are preserved; new glossaries default to `docs/glossary.md` with **Term | Definition | Distinction**, optional context headings and Naming notes. Uncertain meanings and contradictions are surfaced, not silently made authoritative. Read-only tasks propose changes only.
 
 The packaged [domain-modeling skill](skills/domain-modeling/SKILL.md) owns maintenance and [discovery rules](skills/domain-modeling/GLOSSARY-DISCOVERY.md); the [format](skills/domain-modeling/GLOSSARY-FORMAT.md) includes an example. Install/update this candidate through DSH's supported Plugins UI or plugin manager, then start a new GOLD session. Building this checkout alone does not activate it. No background synchronization, new plugin or permission change is introduced.
+
+## Web UI integration (1.5.0)
+
+All five presets selectively route web design, frontend implementation, interface review and polish through [GOLD Web UI](skills/gold-web-ui/SKILL.md). Choose one design lead: [Frontend Design](skills/frontend-design/SKILL.md) by default, or [Taste](skills/design-taste-frontend/SKILL.md) for a suitable company/marketing site. [UI/UX Pro Max](skills/ui-ux-pro-max/SKILL.md) supports local lookup; [Web Design Guidelines](skills/web-design-guidelines/SKILL.md) supports read-only review; [Impeccable](skills/impeccable/SKILL.md) supports focused critique/refinement. Existing brand/system, approved scope and accessibility take precedence over style heuristics.
+
+Shared [foundations](skills/gold-web-ui/references/foundations.md) cover typography, color, layout, WCAG 2.2 AA as the proposed target, responsiveness and reduced-motion-aware interaction. [Verification](skills/gold-web-ui/references/verification.md) distinguishes source review, actual browser/screenshot checks, automated accessibility and manual keyboard/AT coverage. Missing browser capability is reported, not disguised as a passing audit.
+
+Pro Max bundles pinned standard-library Python search/design-system scripts and CSVs. **Python 3 is optional for users, required for the Python integration tests**; run with `python3 -B` and the installed skill resource path. It is stdout-only: persistence/overwrite options are disabled, and stack guidance uses a separate query from design-system mode. No npm CLI, font/image assets, new runtime plugin, browser binaries or Python dependencies are installed. Taste/Impeccable engines, hooks, detectors, telemetry and live editing are deliberately excluded.
+
+These are selective pinned adaptations with [guidance provenance](skills/gold-web-ui/upstream-manifest.json), [search provenance](skills/ui-ux-pro-max/upstream-manifest.json) and packaged licenses, not upstream feature parity. Building this checkout does not install or activate the candidate; use supported installation separately and start a new GOLD session. Static tests do not prove model compliance or any product UI's accessibility.
 
 ## Ponytail integration
 
@@ -96,7 +106,7 @@ Local records are a cache, not proof of approval. They do not travel through Git
 
 Use the Harness `plugin_manager` tool: `action: install_bundle`, `target` set to the absolute directory containing the reviewed bundle. Do not hand-edit profile manifests or install dependencies in the profile. Select the desired GOLD preset in a **new session** after activation; existing sessions retain their preset revision. Restart DSH when needed after package replacement.
 
-For GitHub distribution, install `github:bigunmd/gold#v1.4.1` from https://github.com/bigunmd/gold. The older `github:bigunmd/gold#v1.0.0` does not contain this adaptive update. There is no automatic Git synchronization; `private: true` prevents accidental npm publication, not Git installation.
+For GitHub distribution, install `github:bigunmd/gold#v1.5.0` from https://github.com/bigunmd/gold. The older `github:bigunmd/gold#v1.0.0` does not contain this adaptive update. There is no automatic Git synchronization; `private: true` prevents accidental npm publication, not Git installation.
 
 Local installations can link directly to the source directory. Keep that directory in place, and develop changes in an isolated workspace rather than accidentally modifying the installed source. Integration and activation are separate authorized actions. Skill paths resolve from the installed package identity, not an author's workstation path.
 
@@ -131,7 +141,7 @@ The [1.3.0 evidence record](https://github.com/bigunmd/gold/blob/v1.3.0/docs/rel
 
 ## Community and license
 
-GOLD is available under the [MIT license](LICENSE). See the [contributing guidelines](https://github.com/bigunmd/gold/blob/v1.3.0/CONTRIBUTING.md), [Code of Conduct](https://github.com/bigunmd/gold/blob/v1.3.0/CODE_OF_CONDUCT.md), [security policy](https://github.com/bigunmd/gold/blob/v1.3.0/SECURITY.md), and [accessibility statement](https://github.com/bigunmd/gold/blob/v1.3.0/ACCESSIBILITY.md). Use GitHub's bug/feature forms for public reports; report vulnerabilities and conduct concerns through the private contacts in the policies.
+GOLD is available under the [MIT license](LICENSE). See the [contributing guidelines](https://github.com/bigunmd/gold/blob/v1.5.0/CONTRIBUTING.md), [Code of Conduct](https://github.com/bigunmd/gold/blob/v1.5.0/CODE_OF_CONDUCT.md), [security policy](https://github.com/bigunmd/gold/blob/v1.5.0/SECURITY.md), and [accessibility statement](https://github.com/bigunmd/gold/blob/v1.5.0/ACCESSIBILITY.md). Use GitHub's bug/feature forms for public reports; report vulnerabilities and conduct concerns through the private contacts in the policies.
 
 ## Rollback
 

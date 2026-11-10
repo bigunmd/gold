@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {mkdtempSync, readFileSync, rmSync, writeFileSync} from 'node:fs';
+import {mkdtempSync, mkdirSync, readFileSync, rmSync, symlinkSync, writeFileSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {dirname, join, resolve} from 'node:path';
 import {spawnSync} from 'node:child_process';
@@ -36,7 +36,49 @@ function scratch(t) {
 
 test('runtime gate requires explicit absolute roots and rejects unknown/duplicate options', () => {
   assert.deepEqual(parseArgs(['--runtime', '/runtime', '--package', '/package']), {runtime: '/runtime', package: '/package'});
+  assert.deepEqual(parseArgs(['--runtime', '/r', '--package', '/p', '--dependency-root', '/install']), {runtime: '/r', package: '/p', 'dependency-root': '/install'});
   for (const args of [[], ['--runtime', '/runtime'], ['--runtime', '.','--package','/p'], ['--package'], ['--runtime','/r','--runtime','/r','--package','/p'], ['--runtime','/r','--package','/p','--mount','/x']]) assert.throws(() => parseArgs(args));
+});
+
+test('explicit dependency root permits hoisted runtime modules but rejects escapes', async t => {
+  const root = scratch(t);
+  const runtime = join(root, 'node_modules', '@deepseek-ai', 'dsh');
+  const boot = join(root, 'node_modules', '@deepseek-ai', 'dsh-app-boot');
+  const pkg = join(root, 'gold');
+  for (const dir of [runtime, boot, pkg]) mkdirSync(dir, {recursive: true});
+  writeFileSync(join(runtime, 'package.json'), JSON.stringify({name: '@deepseek-ai/dsh', version: '0.2.1'}));
+  writeFileSync(join(boot, 'package.json'), JSON.stringify({name: '@deepseek-ai/dsh-app-boot', main: 'index.cjs'}));
+  writeFileSync(join(boot, 'index.cjs'), 'throw Error("TEST_BOOT_REACHED");');
+  const loader = join(root, 'node_modules', '@deepseek-ai', 'cordis-plugin-loader');
+  mkdirSync(loader);
+  writeFileSync(join(loader, 'package.json'), JSON.stringify({main: 'index.cjs'}));
+  writeFileSync(join(loader, 'index.cjs'), 'module.exports = {};');
+  writeFileSync(join(pkg, 'package.json'), JSON.stringify(manifest()));
+  writeFileSync(join(pkg, 'cordis.patch.yml'), '[]');
+  await assert.rejects(checkRuntime({runtime, package: pkg}), /resolved outside explicit/);
+  await assert.rejects(checkRuntime({runtime, package: pkg, 'dependency-root': root}), /TEST_BOOT_REACHED/);
+  await assert.rejects(checkRuntime({runtime, package: pkg, 'dependency-root': pkg}), /Runtime must be inside/);
+  await assert.rejects(checkRuntime({runtime, package: pkg, 'dependency-root': '.'}), /absolute/);
+  // Realpath containment must reject a dependency symlink escaping the selected root.
+  const outside = scratch(t);
+  writeFileSync(join(outside, 'boot.cjs'), 'throw Error("ESCAPE_IMPORTED");');
+  symlinkSync(join(outside, 'boot.cjs'), join(boot, 'escape.cjs'));
+  writeFileSync(join(boot, 'package.json'), JSON.stringify({main: 'escape.cjs'}));
+  // Fresh process avoids Node resolver cache after changing the fixture manifest.
+  const script = fileURLToPath(new URL('../scripts/check-runtime.mjs', import.meta.url));
+  const result = spawnSync(process.execPath, [script, '--runtime', runtime, '--package', pkg, '--dependency-root', root], {encoding: 'utf8'});
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /resolved outside explicit/);
+  assert.doesNotMatch(result.stderr, /ESCAPE_IMPORTED/);
+  for (const name of ['dsh-app-boot', 'cordis-plugin-loader']) {
+    const nested = join(runtime, 'node_modules', '@deepseek-ai', name);
+    mkdirSync(nested, {recursive: true});
+    writeFileSync(join(nested, 'package.json'), JSON.stringify({main: 'index.cjs'}));
+    writeFileSync(join(nested, 'index.cjs'), name === 'dsh-app-boot' ? 'throw Error("NESTED_BOOT_REACHED");' : 'module.exports = {};');
+  }
+  const nested = spawnSync(process.execPath, [script, '--runtime', runtime, '--package', pkg], {encoding: 'utf8'});
+  assert.equal(nested.status, 1);
+  assert.match(nested.stderr, /NESTED_BOOT_REACHED/);
 });
 
 test('malformed, ambiguous, escaping or wrong-package manifests fail closed', () => {

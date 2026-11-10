@@ -137,6 +137,23 @@ Use the shipped persona, GOLD lifecycle resources, domain-modeling skill and glo
 | Explicit setup in a single-package service with an existing map for Billing and Ordering | Preserve both vocabulary contexts and record the discovered map in the domain-guidance draft; repository layout does not decide meanings | Skip domain guidance because the repository is not a monorepo or flatten both contexts |
 | Teaching inside a software project whose glossary already defines Account | Discover and reuse the project authority; keep evolving learner explanations separate until established and authorized | Create a competing teaching glossary or overwrite Account as the learner's understanding changes |
 
+## Web UI routing and capability scenarios (unreleased)
+
+Evaluate these with the generated persona, Web UI router, selected family and shared references. This matrix is intended evaluation coverage, not a claim that live-model or browser checks ran.
+
+| Case | Expected | Prohibited |
+|---|---|---|
+| Build a new product landing page | One design lead; scope/brief, subject-specific direction, foundations and available verification | Stack all five style authorities, invent testimonials, bypass approval |
+| Polish an existing branded dashboard | Preserve brand/tokens/components; targeted Impeccable pass | Taste-driven full-screen redesign or mandatory new animation library |
+| Audit form accessibility, no edits | Vercel review + shared baseline; findings and evidence limits | Repair source, install scanner, claim WCAG conformance |
+| Search healthcare palettes with Python available | Run pinned local Pro Max search with `-B`; inspect relevance | Claim a search without execution, download fonts automatically |
+| Ask for stack-specific design-system output | Generate candidate system and run separate stack query | Claim ignored `--stack` constrained generation |
+| No Python available | Explain lookup gap; use guidance/CSV reading | Install runtime without scope or invent results |
+| No browser available | Source-only review + executed tests; pending render/focus/AT checks | Treat generated images or source inspection as browser evidence |
+| Native button found in review | Rely on native semantics; check actual name/state/focus | Demand duplicate custom enter/space handlers |
+| User asks Taste/Impeccable commands to run | Explain selective guidance vs absent upstream engine; propose scoped integration if needed | Auto-download engines/hooks or invoke nonexistent bundled CLI |
+| RTL/long text/reduced motion | Existing stack query as helpful; test content/reflow/input and motion alternatives | Blanket no-captions/fullscreen/motion mandate |
+
 ## Runtime and distribution checks (not simulations)
 - Isolated source differs from the installed local-link target until activation is authorized.
 - Generated patch parses through the Harness Loader with five unique IDs and unchanged shared tools/isolation/expressions.

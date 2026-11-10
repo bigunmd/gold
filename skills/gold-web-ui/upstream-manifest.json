@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "adaptation": "GOLD selective rewrites: scope and evidence gates, existing-system precedence, contextual accessibility/style rules. No upstream hooks, engines, binaries, telemetry, asset tooling or report writers. Vercel rules adapted directly, not agent-skills wrapper. Full licenses retained unchanged. These targets are adaptations, not byte-identical upstream copies.",
+  "sources": [
+    {
+      "repository": "https://github.com/anthropics/skills",
+      "revision": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+      "licenseType": "Apache-2.0",
+      "license": "skills/frontend-design/LICENSE.txt",
+      "inputs": [
+        {
+          "path": "skills/frontend-design/SKILL.md",
+          "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
+        },
+        {
+          "path": "skills/frontend-design/LICENSE.txt",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        }
+      ],
+      "targets": [
+        {
+          "path": "skills/frontend-design/SKILL.md",
+          "sha256": "7eba21747cfdd29a61c36c6b161b31749143d0ad2daa1d6657f297be1345f819"
+        },
+        {
+          "path": "skills/frontend-design/LICENSE.txt",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/Leonxlnx/taste-skill",
+      "revision": "f6b76575f949707b4e3c37cd86cb44b0b98643e8",
+      "licenseType": "MIT",
+      "license": "skills/design-taste-frontend/LICENSE",
+      "inputs": [
+        {
+          "path": "skills/taste-skill/SKILL.md",
+          "sha256": "0c7a5852a5217be79cab422c6d58329b776f0c25bd6da8a7a01707ce75be6206"
+        },
+        {
+          "path": "README.md",
+          "sha256": "f044ee75b88772dc957b9526bde5d5229eccaca8d3caf4a3e6a4aab0c349c237"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df"
+        }
+      ],
+      "targets": [
+        {
+          "path": "skills/design-taste-frontend/SKILL.md",
+          "sha256": "346cf6836282a7329eccfe013862d1f91623cd0c250fe22602c50e5631d20405"
+        },
+        {
+          "path": "skills/design-taste-frontend/LICENSE",
+          "sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/vercel-labs/web-interface-guidelines",
+      "revision": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "licenseType": "MIT",
+      "license": "skills/web-design-guidelines/LICENSE",
+      "inputs": [
+        {
+          "path": "command.md",
+          "sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2"
+        }
+      ],
+      "targets": [
+        {
+          "path": "skills/web-design-guidelines/SKILL.md",
+          "sha256": "dfc72046dbeb1c8616b03784ebef089f6a8d218a00c8d066b7f7d4dbc44e0fbb"
+        },
+        {
+          "path": "skills/web-design-guidelines/references/review.md",
+          "sha256": "10ee12a1d187b41ee68d68f765c8aa832b302981f27a19a1aaedcb48a5bbbe98"
+        },
+        {
+          "path": "skills/web-design-guidelines/LICENSE",
+          "sha256": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/pbakaus/impeccable",
+      "revision": "ebe9c265f416f7f9b83ed424ed5b9bd0d2684536",
+      "licenseType": "Apache-2.0",
+      "license": "skills/impeccable/LICENSE",
+      "inputs": [
+        {
+          "path": ".dsh/skills/impeccable/SKILL.md",
+          "sha256": "37f571b9fb8babf6a8d899a70bca99dba888618d7aa67102aad693fa831a1744"
+        },
+        {
+          "path": "skill/reference/critique.md",
+          "sha256": "92d455c62f2855c524cf0642ae4b4b6014c40697031bfd1ef6c8c3807ee589a1"
+        },
+        {
+          "path": "skill/reference/audit.md",
+          "sha256": "9d938428e5b0309b99fbc34c105a1a48ea09c709d99d828b9ffd7d542648f70f"
+        },
+        {
+          "path": "skill/reference/polish.md",
+          "sha256": "c504e12ea076fd1a57b8c9ece79fbb532c54226b2b6298c5c62fa889ae1dd34d"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812"
+        }
+      ],
+      "targets": [
+        {
+          "path": "skills/impeccable/SKILL.md",
+          "sha256": "f2040487c49b5e39e29b5a116fcffdbb1f87e9b8c79724fe4a21850c2b0d6cd8"
+        },
+        {
+          "path": "skills/impeccable/references/polish.md",
+          "sha256": "775722ae9c2168d12fc71927996e66395c15ce29ec6998dd56f4702d37ce0ec9"
+        },
+        {
+          "path": "skills/impeccable/LICENSE",
+          "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812"
+        }
+      ]
+    }
+  ]
+}
