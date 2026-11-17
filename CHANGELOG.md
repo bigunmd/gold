@@ -4,6 +4,8 @@ User-visible changes are recorded here. Unreleased entries are not a published t
 
 ## Unreleased
 
+- Default all GOLD presets and portable host startup instructions to concise technical prose. Keep progress updates event-driven and retain scope, decision rationale, evidence, risks and next authorized actions in handoffs; collaboration style and approval gates remain unchanged. No new skill, dependency or automatic runtime update.
+
 ## 1.6.0
 
 - Simplify the README with human installation steps, an agent installation prompt and version-independent release selection.

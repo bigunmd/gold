@@ -33,6 +33,8 @@ for (const [host, instructions, skills] of [['codex','AGENTS.md','.agents/skills
     assert.ok(startup.startsWith(before));
     assert.match(startup,/explicit approval of scope/);
     assert.match(startup,/Entry point: GOLD Auto/);
+    assert.match(startup,/Lead with the result or recommendation/);
+    assert.match(startup,/gold-standard-development's references\/collaboration\.md/);
     assert.doesNotMatch(startup,/\{\{model\}\}|Harness|subagent_fork/);
     assert.ok(existsSync(join(target,skills,'gold-standard-development/references/develop.md')));
     assert.ok(existsSync(join(target,'.gold-host/THIRD_PARTY_NOTICES.md')));

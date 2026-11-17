@@ -24,6 +24,12 @@ Auto routes across planning, development, investigation, issue resolution, revie
 
 Illustrative selection: “Use GOLD Auto, Balanced. Plan and implement the approved local changes; no publication or deployment.” The implementation approach and acceptance criteria still need to be presented and approved if they have not been.
 
+## Response detail
+
+All presets default to concise technical prose, independent of collaboration style. Progress updates focus on meaningful changes and blockers; final reports retain verification, limits, risks and acceptance. Detailed handoff context stays in authorized records, with essential facts included inline when the recipient cannot access them. See the [communication policy](../../skills/gold-standard-development/references/collaboration.md#concise-communication).
+
+Ask “explain the trade-offs” or “show the evidence” when you need more detail. Brevity does not weaken scope approval, testing or delivery acceptance. This is instruction guidance, not a hard word limit or a measured token-saving guarantee. Updated source reaches a host only after its normal authorized installation/update and fresh-session discovery; existing sessions are not silently reconfigured.
+
 ## Change style without restarting
 
 > Switch to Delegated for the rest of this approved task. Keep the same scope and test obligations; ask if a material assumption changes.

@@ -40,6 +40,15 @@ test('all skill resources are bounded and local markdown references resolve',()=
   }
  }
 });
+test('concise communication preserves evidence and resumable context',()=>{
+ const persona=readFileSync(new URL('../../preset-src/core-persona.txt',root),'utf8');
+ assert.match(persona,/Lead with the result or recommendation/);
+ assert.match(persona,/plain words, active voice, exact identifiers/);
+ assert.match(persona,/risk, complexity or the user/);
+ assert.match(persona,/collaboration\.md/);
+ const c=read('references/collaboration.md');
+ for(const re of [/## Concise communication/,/all collaboration styles/,/1–3 sentences/,/routine tool narration/,/approval provenance/,/decisions and reasons/,/content identity/,/uncertainty/,/next authorized action/,/read-only.*chat/i,/acceptance/]) assert.match(c,re);
+});
 test('execution resources and templates are discoverable on demand',()=>{
  const s=read('SKILL.md');
  for (const n of ['execution','delegation','evidence']) {
