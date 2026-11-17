@@ -23,6 +23,22 @@ The [optional template](../templates/project-guidance.md) can be adapted into yo
 | Non-Git workspace | No Git ignore protection exists; do not initialize Git or alter a parent repository implicitly. |
 | Existing agent instructions/skills | Map responsibilities, preserve project constraints and resolve real conflicts; avoid duplicated policy text. |
 
+## Modernize legacy C4 documentation
+
+With the updated GOLD resources installed and discoverable, the agent routes legacy monoliths and partial splits through the [migration procedure](../../skills/gold-standard-development/references/architecture-migration.md). This is instruction-driven migration, not a CLI or background rewrite. Existing sessions/installations do not automatically gain updated behavior.
+
+Start with a bounded request:
+
+> Assess our architecture documentation against GOLD's focused C4 approach. Read-only: identify the canonical documents, map each meaningful section to current structure, use cases, evolution or decision/history references, and flag contradictions and inbound links. Do not edit anything yet.
+
+After reviewing that map, approve the named documentation scope and checks:
+
+> Apply the proposed architecture migration. Preserve meaningful content, decision provenance and old entry-point anchors; update in-scope links. Keep proposed designs separate from verified current views. Reconcile existing focused files rather than starting over. Verify coverage and links, then perform a second pass to confirm no duplicate migration is needed. No code changes, commits, installs or runtime updates. Report evidence for my acceptance.
+
+The result is a small index with focused views, not mandatory folders for every C4 level. Initialization creates current views; implementation updates them in place. Evolution proposals retain explicit lifecycle status. Git carries edit history, while unique rationale stays accessible in shared documentation. A small coherent legacy document can remain valid; unrelated fixes do not require migration.
+
+See the [architecture policy](../../skills/gold-standard-development/references/architecture.md) and [GOLD's own architecture index](../architecture/README.md) for the worked example. Partial migrations resume from existing destinations; ambiguous current/proposed claims remain explicit until resolved.
+
 ## Local records versus shared knowledge
 
 Authorized iteration notes and bounded memory belong in repository-root `.gold/`. Verify ignore rules and whether files are already tracked before recording anything. Ignore rules are not a secret store and do not untrack existing files. Read-only tasks stay in chat unless local writes are explicitly permitted.

@@ -154,6 +154,10 @@ Evaluate these with the generated persona, Web UI router, selected family and sh
 | User asks Taste/Impeccable commands to run | Explain selective guidance vs absent upstream engine; propose scoped integration if needed | Auto-download engines/hooks or invoke nonexistent bundled CLI |
 | RTL/long text/reduced motion | Existing stack query as helpful; test content/reflow/input and motion alternatives | Blanket no-captions/fullscreen/motion mandate |
 
+## C4 migration regressions (unreleased)
+
+[Versioned fixture cases](fixtures/c4-migration.json) supply synthetic files, exact prompts, expected and prohibited outcomes for legacy, mixed, partial and current layouts. Run each in a fresh isolated context with the current persona/router and routed architecture resources. Materialize files only under an authorized ignored fixture root; read-only cases authorize no writes. Inspect actual artifacts, coverage, link/anchor validity, evidence classification and second-pass results. Record content identity and outcomes locally; static fixture/contract tests do not execute these agent behaviors or certify installed-host compliance.
+
 ## Runtime and distribution checks (not simulations)
 - Isolated source differs from the installed local-link target until activation is authorized.
 - Generated patch parses through the Harness Loader with five unique IDs and unchanged shared tools/isolation/expressions.

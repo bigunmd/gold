@@ -37,6 +37,10 @@ for (const [host, instructions, skills] of [['codex','AGENTS.md','.agents/skills
     assert.match(startup,/gold-standard-development's references\/collaboration\.md/);
     assert.doesNotMatch(startup,/\{\{model\}\}|Harness|subagent_fork/);
     assert.ok(existsSync(join(target,skills,'gold-standard-development/references/develop.md')));
+    assert.match(read(join(target,skills,'gold-standard-development/SKILL.md')), /legacy.*references\/architecture-migration\.md/i);
+    for (const resource of ['references/architecture.md', 'references/architecture-migration.md', 'templates/c4-architecture.md', 'templates/c4-view.md', 'templates/c4-evolution.md']) {
+      assert.equal(read(join(target,skills,'gold-standard-development',resource)), read(join(root,'skills/gold-standard-development',resource)));
+    }
     assert.ok(existsSync(join(target,'.gold-host/THIRD_PARTY_NOTICES.md')));
     assert.deepEqual(installHost({host,target,apply:true}).changes,[]);
     const manifest = JSON.parse(read(join(target,'.gold-host/manifest.json')));

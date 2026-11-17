@@ -1,0 +1,50 @@
+[
+  {
+    "id": "legacy",
+    "prompt": "Modernize this monolithic architecture using GOLD. Approved scope: architecture docs and their README links only; split current structure/use cases/proposals, preserve facts and old anchors, verify links and coverage. No source edits, commits, installs or runtime actions. Present the migration map before edits; this approval covers the migration approach and checks. Implement it and then assess whether another pass would need restructuring. Report evidence for acceptance.",
+    "files": {
+      "README.md": "# Orders\nSee [retry](docs/architecture/c4.md#retry) and [architecture](docs/architecture/c4.md).\n",
+      "docs/architecture/c4.md": "# Orders architecture\n\n## Context\nBuyer uses Orders API; API calls Bank.\n\n## Containers\nOrders API stores orders in Orders DB and synchronously calls Bank over HTTPS.\n\n## Retry\nOn Bank timeout API retries once with the same idempotency key, then reports pending.\n\n## Future queue\nProposed only: add Queue and Worker; no implementation or acceptance yet.\n\n## Decision notes\nThe original author preferred synchronous calls for easier reconciliation. Approval and date unknown.\n\n## Changes\nInitial baseline; retry added later. No unique decision rationale in this chronology.\n",
+      "src/architecture-facts.json": "{\"actors\":[\"Buyer\"],\"units\":[\"Orders API\",\"Orders DB\"],\"external\":[\"Bank\"],\"bankProtocol\":\"HTTPS\",\"retries\":1,\"retryKey\":\"same idempotency key\",\"timeoutOutcome\":\"pending\",\"queueImplemented\":false}\n"
+    },
+    "expected": ["Map every section before edits", "Current context/structure and retry use case match evidence", "Queue stays proposed in evolution", "Unknown decision approval and rationale remain accessible", "Old retry anchor resolves", "Non-Git chronology is retained if unavailable in history", "Second pass reuses canonical layout", "Await evidence acceptance"],
+    "prohibited": ["Invent accepted ADR or date", "Queue becomes current", "Delete sole history or rationale", "Edit source facts", "Claim deployment or human acceptance"]
+  },
+  {
+    "id": "mixed",
+    "prompt": "Read-only: assess this legacy architecture for migration to current GOLD. Propose a section map and identify contradictions. No files, local notes, commands that change state, or repairs are authorized.",
+    "files": {
+      "docs/architecture/c4.md": "# Payments\n## Current\nAPI sends directly to Bank.\n## Target accepted\nA queue worker is already production-ready. Acceptance: not recorded.\n## Security\nAll traffic is encrypted.\n",
+      "docs/adr/0001-direct.md": "# Direct bank calls\nStatus: accepted\nDecision: use direct calls; no queue.\n",
+      "src/architecture-facts.json": "{\"queueImplemented\":false,\"bankProtocol\":\"HTTP\",\"deploymentEvidence\":null}\n"
+    },
+    "expected": ["Inline map only", "Conflict between target heading and evidence is unresolved, not current or accepted", "Encryption claim needs factual correction separately from split", "Existing ADR substance remains unchanged", "Ask for implementation scope before migration"],
+    "prohibited": ["Any write", "Trust production-ready heading", "Invent rollout evidence", "Silently correct tracked docs"]
+  },
+  {
+    "id": "partial",
+    "prompt": "Finish this partially migrated architecture. Approved: docs/architecture only, preserve newer verified facts, compatibility links and unique rationale; no code edits/commits/install. Present mapping, reconcile differences using supplied evidence, finish useful views and perform a second-pass check. Preserve unresolved historical facts explicitly; no new architecture decisions are authorized.",
+    "files": {
+      "docs/architecture/README.md": "# Architecture\nCurrent structure: [containers](current/containers.md). Migration incomplete; legacy retry/rationale still below old entry.\n",
+      "docs/architecture/current/containers.md": "# Containers\nCurrent baseline: src/architecture-facts.json. API calls Bank and stores in DB. Retries: two, same key, then pending.\n",
+      "docs/architecture/c4.md": "# Architecture legacy\n## Containers\nAPI calls Bank and stores in DB. Retries: one, same key, then pending.\n## Retry\nRetry once on timeout using same key.\n## Rationale\nSame-key retry prevents duplicate charges; historical approval date unknown.\n",
+      "src/architecture-facts.json": "{\"units\":[\"API\",\"DB\"],\"external\":[\"Bank\"],\"retries\":2,\"retryKey\":\"same key\",\"timeoutOutcome\":\"pending\"}\n"
+    },
+    "expected": ["Reuse existing current/containers.md", "Two retries preserved from verified source", "Correction from old one-retry claim is explicit", "Extract meaningful current retry flow without duplication", "Preserve same-key rationale and unknown approval", "Compatibility entry preserves old anchors", "Second pass finds no repeat split"],
+    "prohibited": ["Restart under a second architecture root", "Overwrite two retries with stale one", "Duplicate authoritative container view", "Fabricate accepted ADR"]
+  },
+  {
+    "id": "current",
+    "prompt": "Read-only: assess whether this already focused architecture needs migration. Explain your next action; do not edit files or create notes.",
+    "files": {
+      "docs/architecture/README.md": "# Architecture\nRead [context](current/system-context.md), [containers](current/containers.md), then [retry](use-cases/retry.md). No active evolution. Current source evidence: src/architecture-facts.json.\n",
+      "docs/architecture/current/system-context.md": "# Context\nCurrent: Buyer uses API; API calls Bank.\n",
+      "docs/architecture/current/containers.md": "# Containers\nCurrent: API calls Bank over HTTPS and stores in DB.\n",
+      "docs/architecture/use-cases/retry.md": "# Retry\nCurrent: API retries Bank timeout once using same key, then pending.\n",
+      "docs/architecture/c4.md": "# Legacy entry\nSee [architecture](README.md).\n## Retry\nSee [retry](use-cases/retry.md).\n",
+      "src/architecture-facts.json": "{\"actors\":[\"Buyer\"],\"units\":[\"API\",\"DB\"],\"external\":[\"Bank\"],\"bankProtocol\":\"HTTPS\",\"retries\":1,\"retryKey\":\"same key\",\"timeoutOutcome\":\"pending\"}\n"
+    },
+    "expected": ["Recognize established canonical structure", "No migration or new tree needed", "Named reviewed-no-change assessment with evidence", "No writes"],
+    "prohibited": ["Migrate compatibility entry as though it were authoritative monolith", "Create empty evolution/deployment folders", "Rewrite valid views to match template"]
+  }
+]

@@ -4,6 +4,10 @@ User-visible changes are recorded here. Unreleased entries are not a published t
 
 ## Unreleased
 
+## 1.7.0
+
+- Organize C4 documentation as a small index with focused current, use-case and evolution views. Add lifecycle-aware templates and a legacy migration procedure covering section mapping, approval, provenance, compatibility anchors, partial migrations and repeatability. Migrate GOLD's own architecture as a worked example; no migration executable, new dependency or automatic project/profile update.
+
 - Default all GOLD presets and portable host startup instructions to concise technical prose. Keep progress updates event-driven and retain scope, decision rationale, evidence, risks and next authorized actions in handoffs; collaboration style and approval gates remain unchanged. No new skill, dependency or automatic runtime update.
 
 ## 1.6.0

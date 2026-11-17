@@ -25,7 +25,7 @@ GOLD provides shared engineering guidance through DeepSeek Harness presets and p
 - [Specialty provenance](maintainers/specialty-provenance.md)
 - [Contributing](../CONTRIBUTING.md)
 - [Release checklist](maintainers/releases.md)
-- [Architecture](architecture/c4.md)
+- [Architecture](architecture/README.md)
 - [Changelog](../CHANGELOG.md)
 - [Security policy](../SECURITY.md)
 - [Accessibility](../ACCESSIBILITY.md)

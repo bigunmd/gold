@@ -16,7 +16,9 @@ Location/terms, changes or no-change reason, pending domain decisions: <...>
 
 ## C4 assessment
 Status: updated | reviewed-no-change | not-applicable | update-required/deferred
-Reason/evidence and affected shared views: <...>
+Assessed views: <named current structure, use cases, deployment and active evolution where relevant>
+Reason/evidence and per-view outcome: <changed views or specific no-change/N/A reasons; current vs proposed vs deployed>
+Migration if applicable: <coverage, legacy links/anchors, unresolved items and second-pass result>
 Diagram validation: <rendered/syntax/manual-only; limitations>
 Deferred correction and explicit acceptance: <... if applicable>
 

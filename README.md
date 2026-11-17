@@ -118,12 +118,12 @@ For implementation, approve a concrete scope first, then review the reported ver
 
 ## Documentation and contributing
 
-- [User guide](https://github.com/bigunmd/gold/blob/v1.6.0/docs/README.md): task recipes, collaboration, troubleshooting and project adoption.
-- [Validation and limitations](https://github.com/bigunmd/gold/blob/v1.6.0/docs/validation.md): what checks establish—and what they do not.
-- [Changelog](https://github.com/bigunmd/gold/blob/v1.6.0/CHANGELOG.md) and [contributing](https://github.com/bigunmd/gold/blob/v1.6.0/CONTRIBUTING.md).
-- [Security policy](https://github.com/bigunmd/gold/blob/v1.6.0/SECURITY.md) for reporting vulnerabilities.
+- [User guide](https://github.com/bigunmd/gold/blob/v1.7.0/docs/README.md): task recipes, collaboration, troubleshooting and project adoption.
+- [Validation and limitations](https://github.com/bigunmd/gold/blob/v1.7.0/docs/validation.md): what checks establish—and what they do not.
+- [Changelog](https://github.com/bigunmd/gold/blob/v1.7.0/CHANGELOG.md) and [contributing](https://github.com/bigunmd/gold/blob/v1.7.0/CONTRIBUTING.md).
+- [Security policy](https://github.com/bigunmd/gold/blob/v1.7.0/SECURITY.md) for reporting vulnerabilities.
 
-These hosted links are pinned to this version. For external adapter details, read the [portable-host guide](https://github.com/bigunmd/gold/blob/v1.6.0/docs/user-guide/portable-hosts.md) or the same guide in your checkout. From a checkout, maintainers can run `npm test`, `npm run check:docs` and `npm run check:package`; these do not perform live model checks.
+These hosted links are pinned to this version. For external adapter details, read the [portable-host guide](https://github.com/bigunmd/gold/blob/v1.7.0/docs/user-guide/portable-hosts.md) or the same guide in your checkout. From a checkout, maintainers can run `npm test`, `npm run check:docs` and `npm run check:package`; these do not perform live model checks.
 
 ## License
 

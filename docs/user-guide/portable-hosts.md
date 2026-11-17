@@ -67,4 +67,4 @@ Use a disposable fixture and explicitly scope any state-changing test. Authentic
 - [OpenCode skills, discovery and permissions](https://opencode.ai/docs/skills/)
 - [OpenCode project instructions](https://opencode.ai/docs/instructions/)
 
-Related: [architecture](../architecture/c4.md), [project terms](../glossary.md), [DSH quick start](quick-start.md). Distribution packages/plugins, global installs, native role selectors and automated authenticated host checks are deferred.
+Related: [architecture](../architecture/README.md), [project terms](../glossary.md), [DSH quick start](quick-start.md). Distribution packages/plugins, global installs, native role selectors and automated authenticated host checks are deferred.

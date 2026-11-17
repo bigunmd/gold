@@ -16,7 +16,7 @@ Choose the scenario from the user's intended outcome. State it briefly; ask only
 | Explain a failure, reproduce it, identify root cause; no repair requested | `references/debug.md` |
 | Deliver a resolution for a reported bug/ticket | `references/resolve-issue.md` |
 
-Read paths relative to this skill's resource base using the file-read tool. Before persisting work read `references/artifacts.md`. Before implementation read `references/quality.md`. At baseline/adoption and closure read `references/architecture.md`. Load only these relevant resources, not every past record.
+Read paths relative to this skill's resource base using the file-read tool. Before persisting work read `references/artifacts.md`. Before implementation read `references/quality.md`. At architecture work, baseline/adoption and closure read `references/architecture.md`. For legacy monoliths, mixed current/proposed documentation or partial splits, also read `references/architecture-migration.md`; discovery alone does not authorize migration. Load only these relevant resources, not every past record.
 
 Work types (`feature | fix | refactor | spike | release`) are separate from scenario. A diagnosis can be inconclusive and still be a useful report; it is not a repaired issue. Internal debugging during approved delivery stays in that iteration unless scope changes. One active delivery iteration per workstream; do not overwrite another session's records.
 
@@ -60,7 +60,9 @@ Planning, review and test-execution reports can be delivered without claiming an
 - `templates/iteration.md`: closure, DoD and C4 assessment.
 - `templates/memory-index.md`: small verified-memory index.
 - `templates/adr.md`: consequential shared decisions.
-- `templates/c4-architecture.md`: shared baseline architecture.
+- `templates/c4-architecture.md`: small shared architecture index.
+- `templates/c4-view.md`: focused current structural, use-case or deployment view.
+- `templates/c4-evolution.md`: explicit target/transition lifecycle, separate from current views.
 
 ## Common failures
 - “It's obviously a one-line fix”: still obtain repair scope approval; diagnosis is not delivery.
