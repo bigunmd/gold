@@ -16,7 +16,11 @@ test('27 active Matt Pocock skills retain discovery metadata and invocation spli
   for (const entry of entries) {
     const skill = text(entry.target);
     assert.match(skill, /^---\nname: [a-z0-9-]+\ndescription:/);
-    assert.match(skill, /## GOLD \/ DSH integration contract/);
+    assert.match(skill, /## GOLD integration contract/);
+    assert.match(skill, /host's available skill-loading mechanism/);
+    assert.match(skill, /User-only skills \(`disable-model-invocation: true`\) stay user-invoked/);
+    assert.match(skill, /If delegation is unavailable/);
+    assert.doesNotMatch(skill, /Harness|subagent_fork|ask_user_question/);
     assert.match(skill, /Never automatically commit, push, merge, reset/);
     assert.match(skill, /read-only requests get inline reports/);
     if (/disable-model-invocation: true/.test(skill.split('\n---')[0])) userOnly++;
@@ -24,6 +28,17 @@ test('27 active Matt Pocock skills retain discovery metadata and invocation spli
   assert.equal(userOnly, 16);
   for (const entry of manifest.files) assert.ok(existsSync(new URL(entry.target, root)), entry.target);
   assert.match(text('THIRD_PARTY_NOTICES.md'), /Copyright \(c\) 2026 Matt Pocock/);
+});
+test('portable skill mechanics and help disclose host-dependent behavior', () => {
+  const mechanics = text('skills/writing-for-agents/SKILL-MECHANICS.md');
+  assert.match(mechanics, /metadata enforcement depend on the host and adapter/);
+  assert.match(mechanics, /visibility never grants invocation permission/);
+  assert.match(mechanics, /zero context load is not portable/);
+  const help = text('skills/ponytail-help/SKILL.md');
+  assert.match(help, /Updates are explicit and host-specific/);
+  for (const host of ['DSH', 'Codex', 'Claude Code', 'OpenCode']) assert.ok(help.includes(host));
+  assert.match(help, /Start a fresh session after updating/);
+  assert.doesNotMatch(help, /Harness|plugin_manager/);
 });
 test('all five personas retain Ponytail and add on-demand Matt routing', () => {
   const patch = text('cordis.patch.yml');
@@ -36,7 +51,8 @@ test('all five personas retain Ponytail and add on-demand Matt routing', () => {
 test('updated skills require fresh contexts and explicit setup targets', () => {
   for (const name of ['code-review', 'implement-spec', 'improve-codebase-architecture', 'research', 'wayfinder', 'grilling']) {
     assert.match(text(`skills/${name}/SKILL.md`), /fresh context window/);
-    assert.match(text(`skills/${name}/SKILL.md`), /not subagent_fork/);
+    assert.match(text(`skills/${name}/SKILL.md`), /not inherited conversation context/);
+    assert.match(text(`skills/${name}/SKILL.md`), /do not claim fresh-context independence/);
   }
   assert.match(text('skills/codebase-design/DESIGN-IT-TWICE.md'), /fresh context window/);
   const setup = text('skills/setup-matt-pocock-skills/SKILL.md');

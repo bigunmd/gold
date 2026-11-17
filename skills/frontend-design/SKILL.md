@@ -7,7 +7,7 @@ license: Apache-2.0; see LICENSE.txt
 
 Modified from Anthropic's Frontend Design: condensed guidance, GOLD authorization/evidence boundaries, no implied fictional client brief. Source pin and modification provenance: [manifest](../gold-web-ui/upstream-manifest.json). [License](LICENSE.txt).
 
-## GOLD / DSH integration contract
+## GOLD integration contract
 Use [gold-web-ui](../gold-web-ui/SKILL.md), its foundations and capability-aware verification. Choose this as the single design lead unless another lead was selected; Pro Max may support lookup, Vercel review and Impeccable targeted refinement. Approved scope, existing brand/design system, accessibility and GOLD gates win over stylistic preferences. Planning/review is not implementation permission. No automatic installs, Git actions or publication. Keep authorized local notes in ignored `.gold/`; do not create project design documents by default.
 
 ## Ground the direction

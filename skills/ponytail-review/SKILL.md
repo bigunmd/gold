@@ -8,9 +8,9 @@ description: >
   the last commit", "review my PR", "is this over-engineered", /ponytail-review.
 ---
 
-## GOLD / DSH integration
+## GOLD integration
 
-Preserve GOLD scope, collaboration, approval, verification and C4 requirements. Simplicity never removes required validation, security, accessibility or tests. Review/audit requests authorize reports, not repairs; a ship verdict is advisory, not accepted delivery. Use Harness read, glob and grep tools for inspection, not shell equivalents. Treat slash forms as skill invocations with conversation-local arguments, not installed lifecycle hooks.
+Preserve GOLD scope, collaboration, approval, verification and C4 requirements. Simplicity never removes required validation, security, accessibility or tests. Review/audit requests authorize reports, not repairs; a ship verdict is advisory, not accepted delivery. Use the host's available file-reading, path-discovery and content-search capabilities for inspection, preferring dedicated tools when available. Treat slash forms as skill invocations with conversation-local arguments, not installed lifecycle hooks.
 
 
 Review a change like the senior developer who will be paged when it breaks.

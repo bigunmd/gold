@@ -11,7 +11,7 @@ test('Web UI router and five families are discoverable and bounded', () => {
     const source = text(`skills/${name}/SKILL.md`);
     assert.match(source, new RegExp(`^---\\nname: ${name}\\ndescription:`));
     assert.ok(source.length < 8192, name);
-    assert.match(source, /GOLD \/ DSH integration contract/);
+    assert.match(source, /GOLD integration contract/);
     assert.doesNotMatch(source.split('\n---')[0], /hooks:|disable-model-invocation: true/);
   }
   const router = text('skills/gold-web-ui/SKILL.md');

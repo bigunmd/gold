@@ -4,7 +4,7 @@ Goal: get a useful repository overview without accidentally authorizing changes.
 
 ## 1. Install the intended version
 
-The `v1.0.0` tag contains the original single GOLD Development preset. Auto and preset entry points were added in 1.1.0. Version 1.2.0 adds Git discipline and eight on-demand domain specialties; use `github:bigunmd/gold#v1.2.0` as the installation target. Do not assume an old release tag contains the latest documentation's features.
+Choose the latest compatible version from [GitHub Releases](https://github.com/bigunmd/gold/releases), then use `github:bigunmd/gold#<release-tag>` with its exact published tag. Do not use the placeholder literally or assume an old tag contains the latest documentation's features. Auto and the specialist preset entry points require version 1.1.0 or later.
 
 Clone or obtain a reviewed checkout, then ask a management-enabled Harness agent:
 

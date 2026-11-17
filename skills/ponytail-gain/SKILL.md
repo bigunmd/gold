@@ -6,9 +6,9 @@ description: >
   "ponytail impact".
 ---
 
-## GOLD / DSH integration
+## GOLD integration
 
-Preserve GOLD scope, collaboration, approval, verification and C4 requirements. Simplicity never removes required validation, security, accessibility or tests. Review/audit requests authorize reports, not repairs; a ship verdict is advisory, not accepted delivery. Use Harness read, glob and grep tools for inspection, not shell equivalents. Treat slash forms as skill invocations with conversation-local arguments, not installed lifecycle hooks.
+Preserve GOLD scope, collaboration, approval, verification and C4 requirements. Simplicity never removes required validation, security, accessibility or tests. Review/audit requests authorize reports, not repairs; a ship verdict is advisory, not accepted delivery. Use the host's available file-reading, path-discovery and content-search capabilities for inspection, preferring dedicated tools when available. Treat slash forms as skill invocations with conversation-local arguments, not installed lifecycle hooks.
 
 
 # Ponytail Gain
@@ -22,7 +22,7 @@ React repo, bug fixes, security and privacy cases, small apps), 5 runs each,
 against the same agent without the skill. 18 of the tasks have hidden checks
 for correctness and safety. Each figure is the geometric mean of the per-task
 medians. They are measured, not computed from the current repo.
-Source: https://github.com/DietrichGebert/ponytail/blob/9cc65d03aa2da1db7121b912d03596409ee340b8/benchmarks/results/2026-10-07-agentic.md . Attribute these figures to upstream; they have not been independently reproduced or measured in GOLD/DSH.
+Source: https://github.com/DietrichGebert/ponytail/blob/9cc65d03aa2da1db7121b912d03596409ee340b8/benchmarks/results/2026-10-07-agentic.md . Attribute these figures to upstream; they have not been independently reproduced or measured in this GOLD integration.
 
 ## Scoreboard
 

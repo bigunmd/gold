@@ -7,7 +7,7 @@ license: MIT; see LICENSE
 
 This GOLD wrapper adapts the MIT-licensed Vercel Web Interface Guidelines rules directly; it does not copy the separately published agent-skills wrapper. [Provenance](../gold-web-ui/upstream-manifest.json); [license](LICENSE).
 
-## GOLD / DSH integration contract
+## GOLD integration contract
 Use [gold-web-ui](../gold-web-ui/SKILL.md) and its shared foundations/verification. Review-only means no repairs, report files, tool installs or state-changing tests without approval. Current evidence is not acceptance of delivery. No automatic Git actions, servers or publication; authorized local records belong in ignored `.gold/`. Existing brand and stack outrank optional upstream style preferences; accessibility/correctness remain required.
 
 Resolve the requested files/components/route and scope. Read the connected code and shared primitives, not just the diff. Use the [pinned local review checklist](references/review.md); do not fetch mutable latest rules at invocation. For substantial accessibility questions also load GOLD's accessibility specialty.

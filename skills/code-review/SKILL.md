@@ -3,16 +3,16 @@ name: code-review
 description: "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\"."
 ---
 
-## GOLD / DSH integration contract
+## GOLD integration contract
 
 GOLD governs this skill and all supporting resources. Preserve approved scope, collaboration style, runtime plan mode, authorization, current verification evidence and C4 assessment. A conversational answer settles a design choice; it is not permission to implement, publish or bypass plan mode. Reuse valid approval rather than adding duplicate gates.
 
-- Invoke reusable skills through the Harness skill tool. User-only skills (`disable-model-invocation: true`) stay user-invoked through the skill picker; suggest them instead of auto-loading them. Slash names denote skills, not installed native commands.
-- Use Harness read, glob and grep tools for file inspection and ask_user_question for user-owned decisions. Use available subagent tools for delegation, with scoped briefs, ownership and parent verification; never assume Claude Task tools, worktrees, browser tools, tracker CLIs or credentials are available. If delegation is unavailable, disclose it and perform bounded independent passes.
+- Invoke reusable skills through the host's available skill-loading mechanism, or read their installed instructions when no loader exists. User-only skills (`disable-model-invocation: true`) stay user-invoked; suggest them instead of auto-loading them, even when the host cannot enforce that metadata. Slash names denote skills, not guaranteed native commands.
+- Use the host's available file-reading, path-discovery and content-search capabilities for inspection, and its question interface or ordinary conversation for user-owned decisions. Delegate only with available capabilities, scoped briefs, ownership and parent verification; never assume agents, worktrees, browser tools, tracker CLIs or credentials are available. If delegation is unavailable, disclose it and perform bounded independent passes; do not claim fresh-context independence without actual context isolation.
 - Never automatically commit, push, merge, reset, delete worktrees, create/publish PRs, change labels, close tickets or deploy. Obtain explicit action/target approval and load GOLD Git policy before Git mutations. Prepare drafts or proposals when publication is not authorized. Review findings do not authorize repairs.
 - File writes, instrumentation, experiments and setup edits require scope covering their effects. Local plans, investigations, specs/tickets, research, handoffs and learning state default to gitignored repository-root .gold/ (not .scratch/, OS temp or tracked notes); read-only requests get inline reports. Shared ADRs, glossary and runbooks may stay tracked when explicitly approved. Preserve existing approved project conventions and never force-add local records or store secrets in them.
 - Read existing project tracker/domain configuration when relevant. If missing, suggest setup-matt-pocock-skills and clarify the target; do not auto-run setup, invent a GitHub default, authenticate or create labels. Integration installation does not configure any project.
-- Ponytail governs simplicity, not completeness: retain required tests and validation; deep modules and design alternatives must solve a demonstrated problem, not add speculative layers. Present HTML artifacts through Harness present; do not spawn replacement GUI servers or assume OS open commands work.
+- Ponytail governs simplicity, not completeness: retain required tests and validation; deep modules and design alternatives must solve a demonstrated problem, not add speculative layers. Present HTML artifacts through the host's artifact interface when available, otherwise provide a file link/path and explain the limitation; do not spawn replacement GUI servers or assume OS open commands work.
 
 The contract above takes precedence over conflicting steps in the adapted upstream text and referenced resources.
 
@@ -22,7 +22,7 @@ Two-axis review of the diff between `HEAD` and a fixed point the user supplies:
 - **Standards**: does the code conform to this repo's documented coding standards?
 - **Spec**: does the code faithfully implement the originating issue / spec?
 
-Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings. Start every sub-agent with a fresh context window using Harness subagent (not subagent_fork), supplying a self-contained brief with scope, constraints and context pointers.
+Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings. Start every sub-agent with a fresh context window using fresh-context delegation (not inherited conversation context), supplying a self-contained brief with scope, constraints and context pointers.
 
 The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.
 
@@ -32,7 +32,7 @@ The issue tracker should have been provided to you. If not, tell the user to run
 
 Whatever the user said is the fixed point (a commit SHA, branch name, tag, `main`, `HEAD~5`, etc.). If they didn't specify one, ask for it.
 
-For work-in-progress requests, include staged and unstaged diffs (`git diff --cached` and `git diff`), plus explicitly scoped untracked source files inspected with Harness tools. Record HEAD and content identities for the complete review surface and give the same snapshot to both reviewers. Do not report an empty HEAD-only diff as a clean working tree. Recheck identities before finalizing; disclose intervening changes.
+For work-in-progress requests, include staged and unstaged diffs (`git diff --cached` and `git diff`), plus explicitly scoped untracked source files inspected with the host's available file tools. Record HEAD and content identities for the complete review surface and give the same snapshot to both reviewers. Do not report an empty HEAD-only diff as a clean working tree. Recheck identities before finalizing; disclose intervening changes.
 
 Capture the committed diff command once: `git diff <fixed-point>...HEAD` (three-dot, so the comparison is against the merge-base). Also note the list of commits via `git log <fixed-point>..HEAD --oneline`.
 

@@ -20,7 +20,7 @@
       "targets": [
         {
           "path": "skills/frontend-design/SKILL.md",
-          "sha256": "7eba21747cfdd29a61c36c6b161b31749143d0ad2daa1d6657f297be1345f819"
+          "sha256": "17e4e82c3c9a403ce572e2a5d3b432d6becc909023db8375e17278da21eeeba0"
         },
         {
           "path": "skills/frontend-design/LICENSE.txt",
@@ -50,7 +50,7 @@
       "targets": [
         {
           "path": "skills/design-taste-frontend/SKILL.md",
-          "sha256": "346cf6836282a7329eccfe013862d1f91623cd0c250fe22602c50e5631d20405"
+          "sha256": "6fc884e8c78b7f7cbcf55aafeeb5664b39b9eb19fed44634c02662a8973d78ab"
         },
         {
           "path": "skills/design-taste-frontend/LICENSE",
@@ -76,7 +76,7 @@
       "targets": [
         {
           "path": "skills/web-design-guidelines/SKILL.md",
-          "sha256": "dfc72046dbeb1c8616b03784ebef089f6a8d218a00c8d066b7f7d4dbc44e0fbb"
+          "sha256": "03085fbc91f9a17316b6b3d570d9c6b6113fb92c3c12b9849dfe8720ce58c2bd"
         },
         {
           "path": "skills/web-design-guidelines/references/review.md",
@@ -118,7 +118,7 @@
       "targets": [
         {
           "path": "skills/impeccable/SKILL.md",
-          "sha256": "f2040487c49b5e39e29b5a116fcffdbb1f87e9b8c79724fe4a21850c2b0d6cd8"
+          "sha256": "bc339b80bbaee22267e8d706bb17021f57c25548124d0ef515b4377bf082d2b5"
         },
         {
           "path": "skills/impeccable/references/polish.md",

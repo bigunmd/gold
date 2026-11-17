@@ -7,7 +7,7 @@ license: MIT; see LICENSE
 
 Selective guidance from Leonxlnx/taste-skill, not the upstream executable toolkit. [Source pin and modifications](../gold-web-ui/upstream-manifest.json); [license](LICENSE).
 
-## GOLD / DSH integration contract
+## GOLD integration contract
 Use [gold-web-ui](../gold-web-ui/SKILL.md) and its foundations/verification. This is an alternative **single design lead**, not another set of absolute rules layered on Frontend Design. The approved brief, existing brand/system, accessibility, content and GOLD gates win. Review does not authorize fixes; polish does not authorize redesign. No automatic Git, installs, servers or publication; authorized local notes stay in ignored `.gold/`.
 
 No Stop hooks, finish-gate scripts, asset downloaders, browser checkers, upstream CSS/HTML kits or project-state writers are bundled. Do not invoke missing upstream commands or infer that installing this skill installs Chrome/Node/ffmpeg. Any later executable/asset integration needs separate inspection, licensing and action scope. Never bypass browser/tool permissions.

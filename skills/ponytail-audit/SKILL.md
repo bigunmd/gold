@@ -8,9 +8,9 @@ description: >
   "find bloat", "what can I delete", /ponytail-audit.
 ---
 
-## GOLD / DSH integration
+## GOLD integration
 
-Preserve GOLD scope, collaboration, approval, verification and C4 requirements. Simplicity never removes required validation, security, accessibility or tests. Review/audit requests authorize reports, not repairs; a ship verdict is advisory, not accepted delivery. Use Harness read, glob and grep tools for inspection, not shell equivalents. Treat slash forms as skill invocations with conversation-local arguments, not installed lifecycle hooks.
+Preserve GOLD scope, collaboration, approval, verification and C4 requirements. Simplicity never removes required validation, security, accessibility or tests. Review/audit requests authorize reports, not repairs; a ship verdict is advisory, not accepted delivery. Use the host's available file-reading, path-discovery and content-search capabilities for inspection, preferring dedicated tools when available. Treat slash forms as skill invocations with conversation-local arguments, not installed lifecycle hooks.
 
 
 Audit the whole repo like the senior developer who just inherited it and

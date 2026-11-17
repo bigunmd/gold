@@ -4,6 +4,14 @@ User-visible changes are recorded here. Unreleased entries are not a published t
 
 ## Unreleased
 
+## 1.6.0
+
+- Simplify the README with human installation steps, an agent installation prompt and version-independent release selection.
+- Extract host-neutral GOLD policy and skill mechanics with explicit DSH bindings; preserve all five preset identities, tools and invocation classifications.
+- Add a dependency-free, source-checkout project-local installer for Codex, Claude Code and OpenCode. Preview is default; explicit apply preserves surrounding instructions, rejects collisions/modified resources/symlink paths, and records version/content hashes with legal notices.
+- Map Codex user-only metadata and retain Claude flags; conservatively omit all 16 user-only skills from OpenCode. One external adapter per project; global installs, plugin distribution, native role selectors and live authenticated checks are not included.
+- Add fixture safety/resource tests, portable installation/recovery guidance, project vocabulary and architecture updates. No live host compatibility certification, publication or active-profile update is implied.
+
 ## 1.5.0
 
 - Add selective Web UI routing to all five presets: Anthropic Frontend Design, UI/UX Pro Max, Taste, Vercel Web Interface Guidelines and Impeccable. Shared foundations cover typography/color/layout, accessibility, responsive states and motion; evidence guidance separates source/browser/visual/automated/manual checks.

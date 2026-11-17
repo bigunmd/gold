@@ -4,7 +4,7 @@ description: Route web UI design, frontend implementation, responsive/accessibil
 ---
 # GOLD Web UI
 
-## GOLD / DSH integration contract
+## GOLD integration contract
 Load gold-standard-development and select the outcome scenario first. This skill changes focus, not tools or permissions. Reuse approved scope; no extra gate for an internal design/review phase. Review-only requests do not authorize edits, local reports, installs or browser actions with side effects. Local authorized notes/screenshots belong in ignored `.gold/`; approved shared design docs stay in the project's established location. No automatic Git, publication, servers, profile changes or dependency installation. User acceptance still follows current verification evidence.
 
 ## Route selectively

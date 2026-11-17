@@ -1,8 +1,10 @@
 # GOLD documentation
 
-GOLD provides engineering presets for DeepSeek Harness. Start with the user guides; maintainers should also read the release guidance. The adaptive presets are included in version 1.1.0, not in the older `v1.0.0` tag.
+GOLD provides shared engineering guidance through DeepSeek Harness presets and project-local Codex, Claude Code and OpenCode adapters. External adapters are currently source-checkout integrations; see their compatibility limits. Start with the user guides; maintainers should also read the release guidance. The adaptive presets are included in version 1.1.0, not in the older `v1.0.0` tag.
 
 ## Use GOLD
+- [Portable hosts](user-guide/portable-hosts.md): preview/install GOLD Auto in Codex, Claude Code or OpenCode.
+- [GOLD project terms](glossary.md): canonical vocabulary for the core, adapters and delivery gates.
 - [Quick start](user-guide/quick-start.md): install the intended revision and get a safe first result.
 - [Choose a preset and style](user-guide/choosing.md): specialty, collaboration and authorization are different choices.
 - [Six task recipes](user-guide/recipes.md): copyable prompts, expected outputs and checkpoints.

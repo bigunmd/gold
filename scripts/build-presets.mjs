@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 
-export function renderPatch({ roles, corePersona, sharedTools }) {
+export function renderPatch({ roles, corePersona, sharedTools, adapter = '' }) {
   if (!Array.isArray(roles) || roles.length === 0) throw new TypeError('At least one role is required');
   if (typeof corePersona !== 'string' || !corePersona.trim()) throw new TypeError('Core persona is required');
   if (typeof sharedTools !== 'string' || !sharedTools.startsWith('          - id: ')) throw new TypeError('Shared tools require ten-space list indentation');
@@ -30,7 +30,7 @@ export function renderPatch({ roles, corePersona, sharedTools }) {
     '            config:',
     // DSH supplies the working directory as runtime context; cwd is no longer a prompt variable.
     '              suffix: ""',
-    `              prefix: ${quote(corePersona.trim() + '\n' + r.focus)}`,
+    `              prefix: ${quote([corePersona.trim(), adapter.trim(), r.focus].filter(Boolean).join('\n'))}`,
     sharedTools.trimEnd(),
   ].join('\n')).join('\n') + '\n';
 }
@@ -42,7 +42,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     if (args.length > 1 || (args.length === 1 && args[0] !== '--check')) throw new Error('Usage: node scripts/build-presets.mjs [--check]');
     const { roles } = await import('../preset-src/roles.mjs');
     const read = path => readFileSync(new URL(path, import.meta.url), 'utf8');
-    const output = renderPatch({roles, corePersona:read('../preset-src/core-persona.txt'), sharedTools:read('../preset-src/shared-tools.yml')});
+    const output = renderPatch({roles, corePersona:read('../preset-src/core-persona.txt'), adapter:read('../preset-src/dsh-adapter.txt'), sharedTools:read('../preset-src/shared-tools.yml')});
     const target = new URL('../cordis.patch.yml', import.meta.url);
     if (args[0] === '--check') {
       if (readFileSync(target, 'utf8') !== output) throw new Error('Generated preset is stale; run npm run build:presets');

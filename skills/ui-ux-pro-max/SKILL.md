@@ -7,11 +7,11 @@ license: MIT; see LICENSE
 
 Pinned standard-library Python scripts and CSV data from nextlevelbuilder/ui-ux-pro-max-skill. [Source/adaptation manifest](upstream-manifest.json); [license](LICENSE). This integration does not install the upstream npm CLI or fetch live catalogs, fonts or assets.
 
-## GOLD / DSH integration contract
+## GOLD integration contract
 Use [gold-web-ui](../gold-web-ui/SKILL.md) and its foundations/verification. Lookup supports the selected design lead; recommendations are not project requirements, verified accessibility, licensed assets or factual claims. Preserve the existing brand, tokens, components and framework; do not default every project to Tailwind. GOLD scope/acceptance, no automatic Git/install/publication and read-only boundaries apply. Authorized local notes go in ignored `.gold/`; project design docs require approved scope.
 
 ## Run local searches
-Python 3 is required (tested version is documented in delivery evidence). Resolve this skill's installed resource base from the skill tool; do not assume it lives in the target project's working directory. Substitute the actual absolute resource path below. Use `-B` to avoid writing bytecode caches into the installed package; quote paths and queries. No Python packages or network are required.
+Python 3 is required (tested version is documented in delivery evidence). Resolve this skill's installed resource base from the host's skill loader or installed skill location; do not assume it lives in the target project's working directory. Substitute the actual absolute resource path below. Use `-B` to avoid writing bytecode caches into the installed package; quote paths and queries. No Python packages or network are required.
 
 ```sh
 python3 -B "<skill-base>/scripts/search.py" "healthcare calm trust" --domain color --json

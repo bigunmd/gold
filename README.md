@@ -1,148 +1,130 @@
-# GOLD engineering presets
+# GOLD
 
-Installable Cordis bundle `@local/dsh-gold-preset`: one shared engineering core, selectable specialties, and adaptive collaboration. Version **1.5.0** adds five selectively routed Web UI skill families, project glossary maintenance and refreshed Ponytail/Matt Pocock guidance. It retains the **1.4.1** prompt-assembly fix removing the retired `{{cwd}}` suffix. Version **1.4.0** adds six Ponytail and 27 Matt Pocock skills with GOLD/DSH safeguards, alongside the reliable execution contracts and empirical evaluation tooling introduced in 1.3.0. All five existing preset identities remain compatible.
+**Shared engineering guidance for AI coding agents.** Use GOLD with DeepSeek Harness (DSH), Claude Code, Codex or OpenCode.
 
-## Documentation
+GOLD helps an agent agree on scope, choose a practical approach, implement and test changes, and present evidence for your acceptance. It includes guidance for architecture, debugging, code review, UI design and delivery. **GOLD is instructions and skills—not a model, runtime or permission sandbox.**
 
-Start with the [user guide](https://github.com/bigunmd/gold/blob/v1.5.0/docs/README.md), [quick start](https://github.com/bigunmd/gold/blob/v1.5.0/docs/user-guide/quick-start.md), or [six task recipes](https://github.com/bigunmd/gold/blob/v1.5.0/docs/user-guide/recipes.md). See [validation and limitations](https://github.com/bigunmd/gold/blob/v1.5.0/docs/validation.md), the [changelog](https://github.com/bigunmd/gold/blob/v1.5.0/CHANGELOG.md), and the [release checklist](https://github.com/bigunmd/gold/blob/v1.5.0/docs/maintainers/releases.md).
+## Choose your host
 
-These links target version-pinned documentation. In a source checkout, the same guides are under `docs/`. Guides are hosted in the repository rather than bundled into the runtime package.
-
-## Version 1.3.0: reliable execution
-
-- On-demand assignment/result contracts with parent integration checks, bounded execution budgets and explicit milestone policies.
-- Resume and closure reconcile outstanding children/jobs and uncertain effects before restarting work or claiming completion.
-- Verification ties acceptance criteria to content identities, including repeated uncommitted edits; maintainer fingerprint tooling excludes ignored inputs explicitly.
-- Real-model behavioral evaluation cases capture tool events, workspace differences, duration and provider-reported token usage. The initial adapter uses Codex CLI, **not mounted DSH sessions**; heuristics and sandbox effects require transcript review.
-- Git fixture isolation, packaged Markdown-link validation and an opt-in exact-package/runtime Loader gate. No new runtime plugins, permissions, or automatic agents.
-
-See [reliable execution](https://github.com/bigunmd/gold/blob/v1.5.0/docs/user-guide/reliable-execution.md), [behavioral evaluations](https://github.com/bigunmd/gold/blob/v1.5.0/docs/maintainers/behavior-evals.md), and [runtime gate](https://github.com/bigunmd/gold/blob/v1.5.0/docs/maintainers/runtime-check.md).
-
-## Version 1.2.0: Git discipline and domain specialties
-
-This source revision adds precise Conventional Commit/branch guidance, no-model-authorship rules and eight on-demand specialties: Git & Release, Security, API & Contracts, Database & Migrations, Performance, Documentation, Accessibility, and Incident Investigation. They do not add presets, permissions or automatic agents. See the repository's specialty and Git-conventions guides under `docs/`. Candidate Git metadata checks are available with `npm run check:git -- --base BASE_SHA --head HEAD_SHA`; branch naming is advisory in CI, and unknown identities/consent cannot be mechanically proven.
-
-Selected specialty material is adapted from a pinned VoltAgent revision. [Third-party notices](THIRD_PARTY_NOTICES.md) ship with the runtime package. Required legal attribution and explicitly approved human coauthors are distinct from prohibited model authorship. These additions are included in v1.2.0, not in the earlier v1.1.0 tag.
-
-## Project glossary integration (1.5.0)
-
-All five presets read the project's canonical glossary before relevant work and maintain affected terms within approved delivery scope. Existing locations, formats and context maps are preserved; new glossaries default to `docs/glossary.md` with **Term | Definition | Distinction**, optional context headings and Naming notes. Uncertain meanings and contradictions are surfaced, not silently made authoritative. Read-only tasks propose changes only.
-
-The packaged [domain-modeling skill](skills/domain-modeling/SKILL.md) owns maintenance and [discovery rules](skills/domain-modeling/GLOSSARY-DISCOVERY.md); the [format](skills/domain-modeling/GLOSSARY-FORMAT.md) includes an example. Install/update this candidate through DSH's supported Plugins UI or plugin manager, then start a new GOLD session. Building this checkout alone does not activate it. No background synchronization, new plugin or permission change is introduced.
-
-## Web UI integration (1.5.0)
-
-All five presets selectively route web design, frontend implementation, interface review and polish through [GOLD Web UI](skills/gold-web-ui/SKILL.md). Choose one design lead: [Frontend Design](skills/frontend-design/SKILL.md) by default, or [Taste](skills/design-taste-frontend/SKILL.md) for a suitable company/marketing site. [UI/UX Pro Max](skills/ui-ux-pro-max/SKILL.md) supports local lookup; [Web Design Guidelines](skills/web-design-guidelines/SKILL.md) supports read-only review; [Impeccable](skills/impeccable/SKILL.md) supports focused critique/refinement. Existing brand/system, approved scope and accessibility take precedence over style heuristics.
-
-Shared [foundations](skills/gold-web-ui/references/foundations.md) cover typography, color, layout, WCAG 2.2 AA as the proposed target, responsiveness and reduced-motion-aware interaction. [Verification](skills/gold-web-ui/references/verification.md) distinguishes source review, actual browser/screenshot checks, automated accessibility and manual keyboard/AT coverage. Missing browser capability is reported, not disguised as a passing audit.
-
-Pro Max bundles pinned standard-library Python search/design-system scripts and CSVs. **Python 3 is optional for users, required for the Python integration tests**; run with `python3 -B` and the installed skill resource path. It is stdout-only: persistence/overwrite options are disabled, and stack guidance uses a separate query from design-system mode. No npm CLI, font/image assets, new runtime plugin, browser binaries or Python dependencies are installed. Taste/Impeccable engines, hooks, detectors, telemetry and live editing are deliberately excluded.
-
-These are selective pinned adaptations with [guidance provenance](skills/gold-web-ui/upstream-manifest.json), [search provenance](skills/ui-ux-pro-max/upstream-manifest.json) and packaged licenses, not upstream feature parity. Building this checkout does not install or activate the candidate; use supported installation separately and start a new GOLD session. Static tests do not prove model compliance or any product UI's accessibility.
-
-## Ponytail integration
-
-All five GOLD presets bundle `ponytail`, `ponytail-review`, `ponytail-audit`, `ponytail-debt`, `ponytail-gain` and `ponytail-help`, adapted from upstream revision `7801d061243d7b753bad0e0b3c057cd250b11755` (Ponytail v5.3.3, selectively adapted; no Claude band UI/hooks). Coding tasks load the core skill on demand in full mode; reviews and audits load their respective skills. GOLD scope, collaboration, authorization, verification and C4 requirements remain authoritative.
-
-Use the Harness skill picker or ask by name. Say “ponytail lite/full/ultra/off” to change conversation-local guidance. No upstream lifecycle hooks, global mode settings or automatic updates are installed. Debt reports remain read-only unless persistence is approved; local ledgers default to `.gold/`. Gain figures are upstream benchmark claims, not measured GOLD/DSH savings. Existing sessions retain their preset revision; start a new GOLD session after updating.
-
-## Matt Pocock skills integration
-
-All five presets also bundle the 27 active engineering/productivity skills from [mattpocock/skills](https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d), pinned at `4ae2317ddb22b046e26455e4f9c9b3aaaf62212d`. Experimental, deprecated and frozen miscellaneous skills are excluded. Complete supporting references/templates are retained; foreign agent metadata is excluded.
-
-Reusable disciplines load on demand: `tdd`, `diagnosing-bugs`, `codebase-design`, `domain-modeling`, `research`, `code-review`, `pr`, `prototype`, `wizard`, `grilling`, `writing-for-agents`. The 16 user-only entry points preserve their invocation flags: `ask-matt`, `grill-with-docs`, `triage`, `improve-codebase-architecture`, `setup-matt-pocock-skills`, `to-spec`, `to-tickets`, `implement`, `implement-spec`, `wayfinder`, `retro`, `grill-me`, `handoff`, `teach`, `to-questionnaire`, `wait-what`. Invoke these through the Harness skill picker; they are intentionally absent from model discovery/loading.
-
-GOLD/DSH contracts precede upstream instructions: no automatic Git/remote mutations, setup, ticket closure, repairs or notes on read-only tasks. Local artifacts default to ignored `.gold/`; approved shared glossary/ADRs stay tracked. Working-tree reviews include staged/unstaged/untracked scope. Wizard persistence/remote-write helpers are disabled until explicitly scoped safe helpers are authored; scripts are handed to humans, not run interactively through DSH. These are instruction-driven safeguards, not sandbox enforcement.
-
-For configured tracker workflows, explicitly invoke `setup-matt-pocock-skills` once per target project to review tracker, labels and domain-doc choices. Installing the bundle does not configure projects or authenticate tools. Existing GOLD/Ponytail routing remains intact. No upstream plugin hooks, automatic updates or replacement runtime tools are added.
-
-## Choose a starting point
-
-| Preset | ID | Use for |
+| Host | Installation | Entry point |
 |---|---|---|
-| **GOLD Auto** (recommended) | `gold-auto` | Route by your requested outcome and propose useful phases |
-| **GOLD Development** | `gold` | Development, fixes and refactoring; preserves the existing identity |
-| **GOLD Architect** | `gold-architect` | Requirements, architecture, trade-offs and planning |
-| **GOLD Reviewer / QA** | `gold-reviewer` | Evidence-backed review, test strategy and validation |
-| **GOLD DevOps** | `gold-devops` | CI/CD, infrastructure, releases and operations |
+| **DeepSeek Harness** | Profile bundle through Plugins or `plugin_manager` | GOLD Auto, plus four specialist presets |
+| **Claude Code** | Project-local source-checkout installer | GOLD Auto |
+| **Codex CLI / IDE** | Project-local source-checkout installer | GOLD Auto |
+| **OpenCode** | Project-local source-checkout installer | GOLD Auto; user-only skills omitted |
 
-A specialty is an initial focus, not a hard role wall. You can ask an Architect to move to implementation after approving its scope. Changing focus inside a session does not remount a preset or change tools/permissions. This bundle does not change your Harness default preset.
+**Availability:** DSH uses the installable bundle. External adapters require the **v1.6.0 or later source tree**; they are not included in the DSH npm bundle. Use a trusted checkout containing the installer below. Live external-host discovery and model behavior are not yet verified.
 
-## Choose how to collaborate
+## Install: for humans
 
-| Style | How GOLD works |
-|---|---|
-| **Guided** | Explains options and asks at consequential decisions; small meaningful stages |
-| **Balanced** (default) | Recommends an approach, handles routine approved details, asks on material changes |
-| **Delegated** | Resolves routine details within approved boundaries; reports milestones and escalates exceptions |
+Install your coding host separately. GOLD does not install or authenticate it.
 
-Examples:
-- “Design this service with GOLD Architect, guided. No implementation.”
-- “Implement this in Balanced style; local code and tests only.”
-- “Switch to Delegated for the approved plan; no deployment.”
-- “Review only. Report findings; don't fix anything.”
+### DeepSeek Harness
 
-For substantial work, GOLD proposes a style with the scope question if you have not already chosen one. It asks at meaningful decisions, not on timers or every few messages. Phases already covered by an approved complete brief do not trigger repeated approval. Pure questions stay lightweight. Delegated does **not** require subagents, remove acceptance gates, or authorize production actions.
+1. Open the intended DSH profile's **Plugins** UI.
+2. Install the GOLD bundle from one of these trusted sources:
+   - Released DSH bundle: choose the latest compatible release from [GitHub Releases](https://github.com/bigunmd/gold/releases), then use `github:bigunmd/gold#<release-tag>`. Replace `<release-tag>` with the exact published tag; do not use the placeholder literally.
+   - Current source: the absolute path to your reviewed GOLD checkout.
+3. Review compatibility warnings before approving installation. Do not grant version exemptions automatically.
+4. Follow any runtime restart instructions, then start a **new session** and select **GOLD Auto**.
 
-Task preferences override session/project style preferences, but safety constraints remain constraints. Task overrides expire; preferences never prove action approval. This version uses conversation context and authorized local records, not global settings; no cross-session preference persistence is promised.
+The other presets are **Development** (`gold`), **Architect** (`gold-architect`), **Reviewer / QA** (`gold-reviewer`) and **DevOps** (`gold-devops`). They change initial focus, not permissions. Installing GOLD does not change the default preset.
 
-## Scenarios and engineering guidelines
+Prefer an agent-assisted install? Use the prompt under [Install: for agents](#install-for-agents). Do not manually edit DSH profile manifests or install dependencies inside the profile. A local bundle may link to its source directory: keep that directory in place and avoid editing the active installation accidentally.
 
-The packaged `gold-standard-development` skill routes Plan/Design, Develop, Debug/Investigate, Resolve issue, Review/Audit, Test/Validate and Release/Operate. Architecture/planning, software development, testing/QA, DevOps/reliability and security/privacy references load only when relevant.
+### Claude Code, Codex and OpenCode
 
-Planning, diagnosis, review and test-execution reports do not imply repair permission or accepted delivery. Tests can change state: GOLD inspects their side effects and target before running them. Release preparation, publication, deployment and recovery are distinct scopes.
+**Prerequisites:** Node.js **22.16.0+**, a trusted GOLD checkout containing the installer, and an existing target project. No `npm install` is needed for this installer.
 
-Optional process skills supplement the self-contained quality core but cannot impose automatic Git actions or committed planning artifacts. Project skills may shadow bundled resources; critical persona constraints remain in force and genuine conflicts must be surfaced.
-
-## Artifacts and boundaries
-
-Local briefs, progress, investigations, evidence and bounded memory live in repository-root `.gold/`, ignored with `/.gold/`. Shared ADRs, C4 and runbooks stay tracked. Every closure assesses C4; update actual changes/proven inaccuracies, not diagrams or ADRs for ceremony.
-
-Local records are a cache, not proof of approval. They do not travel through Git/worktrees. Ignore rules do not protect already tracked files or secrets. Read-only requests do not authorize notes files or `.gitignore` edits; non-Git workspaces have no ignore protection. Handoffs carry scope/provenance, revision/dirty state, decisions/evidence, risks and next authorized action.
-
-**Instruction-driven, not enforced isolation:** Architect and Reviewer retain tools such as shell and are not read-only sandboxes. Runtime permission policy and explicit action scope remain authoritative. No preset or style grants publication, deployment, destructive recovery or remote issue closure permission.
-
-## Install and update
-
-Use the Harness `plugin_manager` tool: `action: install_bundle`, `target` set to the absolute directory containing the reviewed bundle. Do not hand-edit profile manifests or install dependencies in the profile. Select the desired GOLD preset in a **new session** after activation; existing sessions retain their preset revision. Restart DSH when needed after package replacement.
-
-For GitHub distribution, install `github:bigunmd/gold#v1.5.0` from https://github.com/bigunmd/gold. The older `github:bigunmd/gold#v1.0.0` does not contain this adaptive update. There is no automatic Git synchronization; `private: true` prevents accidental npm publication, not Git installation.
-
-Local installations can link directly to the source directory. Keep that directory in place, and develop changes in an isolated workspace rather than accidentally modifying the installed source. Integration and activation are separate authorized actions. Skill paths resolve from the installed package identity, not an author's workstation path.
-
-If an upgraded DSH reports `unknown prompt variable "{{cwd}}"`, reinstall this updated bundle and start a new GOLD session. All five presets now clear the legacy working-directory suffix; DSH supplies directory context itself. This follows the [upstream prompt compatibility guidance](https://github.com/deepseek-ai/deepseek-harness/blob/master/packages/core/system-prompt/README.md#contribute-a-prompt-variable). If the error persists, remove the same legacy clause from home/profile/invocation `personaSuffix` settings or other custom preset `suffix` fields, preserving unrelated text.
-
-## Development and verification
-
-Maintainers edit `preset-src/core-persona.txt`, `preset-src/roles.mjs` and `preset-src/shared-tools.yml`; generate the declarative artifact with:
+Run **one** of these previews from the GOLD checkout. Replace the example target with your project's absolute path:
 
 ```sh
-npm run build:presets
-npm test
-npm run check:presets
-npm run check:docs
-npm run check:package
-npm pack --dry-run --json
+# Claude Code
+node scripts/install-host.mjs --host claude --target /absolute/path/to/project
+
+# Codex CLI / IDE
+node scripts/install-host.mjs --host codex --target /absolute/path/to/project
+
+# OpenCode
+node scripts/install-host.mjs --host opencode --target /absolute/path/to/project
 ```
 
-`cordis.patch.yml` is generated and checked for freshness. Runtime consumers need only the generated artifact and packaged skills; generator inputs/scripts/tests and `.gold/` do not ship. There are no install scripts, new dependencies, custom host plugins or native preset-inheritance assumptions. Shared Standard tool composition and planning/compaction/delegation isolation are preserved; compare against current Standard when upgrading Harness.
+The preview writes nothing. Review its destination paths, then repeat **your chosen command** with `--apply`:
 
-Tests cover generation behavior, stale checks, package contracts, bounded resources and relative links. `tests/scenarios.md` defines instruction evaluation cases. Distinguish structural tests, static consumer simulations and fresh-session runtime evidence: none alone proves model compliance or enforcement.
+```sh
+# Example: apply the Claude Code installation you just reviewed.
+node scripts/install-host.mjs --host claude --target /absolute/path/to/project --apply
+```
 
-The [1.3.0 evidence record](https://github.com/bigunmd/gold/blob/v1.3.0/docs/releases/1.3.0.md) separates structural/runtime parsing checks from 28 repeated Codex-adapter model/tool runs. Strict regrading passed 11/14 runs for both baseline and initial candidate; semantic review retains command-scope and causal-RED gaps rather than claiming perfect compliance. Mounted DSH fresh-session behavior remains unverified. Historical evidence and current limitations are distinct.
+| Host | Startup instructions created or extended | Installed skills |
+|---|---|---|
+| Claude Code | `CLAUDE.md` | `.claude/skills` — all 40 skills |
+| Codex | `AGENTS.md` | `.agents/skills` — all 40 skills |
+| OpenCode | `AGENTS.md` | `.opencode/skills` — 24 skills |
 
-### Fresh-session smoke checklist after authorized activation
-1. Verify five selectable GOLD entries and no change to the global default.
-2. In a new session for each entry, load `gold-standard-development` and verify packaged resource discovery.
-3. Ask Auto to plan substantial work without selecting a style; expect a Balanced proposal combined with scope clarification.
-4. Choose Guided, then Delegated within approved local-only scope; expect meaningful checkpoints without an automatic team or production permission.
-5. Ask Architect for design only and Reviewer for findings only; expect no edits. Ask QA about side-effecting shared-DB tests and DevOps about release preparation; expect target/scope boundaries.
-6. Confirm covered phase transitions reuse approval, and completion reports current evidence without claiming acceptance.
+OpenCode conservatively excludes the 16 user-only skills because equivalent invocation controls have not been established. Claude retains native user-only flags; Codex adds native implicit-invocation controls.
 
-## Community and license
+**Use one external adapter per project.** The installer preserves text outside its managed GOLD block, refuses collisions, modified managed files and symlink paths, and records version/content hashes. It does not change global configuration, permissions or hooks, or run Git commands. Check global/ancestor instructions and skill conflicts separately.
 
-GOLD is available under the [MIT license](LICENSE). See the [contributing guidelines](https://github.com/bigunmd/gold/blob/v1.5.0/CONTRIBUTING.md), [Code of Conduct](https://github.com/bigunmd/gold/blob/v1.5.0/CODE_OF_CONDUCT.md), [security policy](https://github.com/bigunmd/gold/blob/v1.5.0/SECURITY.md), and [accessibility statement](https://github.com/bigunmd/gold/blob/v1.5.0/ACCESSIBILITY.md). Use GitHub's bug/feature forms for public reports; report vulnerabilities and conduct concerns through the private contacts in the policies.
+Stop other writers before applying. Interrupted writes can leave partial state; there is no automatic rollback or uninstall. Keep a backup, and never delete the manifest or user files just to bypass a refusal. For updates and recovery, read this guide in the same source checkout:
 
-## Rollback
+```text
+docs/user-guide/portable-hosts.md
+```
 
-List bundles for the exact identifier, then disable `@local/dsh-gold-preset` with `plugin_manager` `set_bundle`, or remove it with `remove_bundle`, only when authorized. To restore a previous release, reinstall the explicitly chosen prior bundle/version. Existing sessions may retain loaded revisions. Never delete legacy files, linked source directories or local work as an automatic rollback step.
+## Install: for agents
+
+Copy this prompt into a management-capable coding agent and fill in the placeholders:
+
+```text
+Help me install GOLD using its README.
+
+Host: <DSH | Claude Code | Codex | OpenCode>
+Trusted GOLD checkout or verified DSH release: <absolute path or release target>
+Destination: <DSH profile name | absolute path to an existing project>
+
+First inspect the source and confirm the host, revision, destination and
+available installation tools. Report conflicts and compatibility limits.
+Do not install anything yet.
+
+For DSH: use plugin_manager when available. Propose install_bundle with the
+exact source target and confirm the active destination profile. If the tool
+is unavailable, give me Plugins UI steps instead. Do not edit profile
+manifests, grant version exemptions or change the default preset.
+
+For Claude Code, Codex or OpenCode: use the source checkout's
+scripts/install-host.mjs with --host claude, codex or opencode and an
+explicit --target. Run only the read-only preview first. Show its changes;
+after I approve that host and target, repeat with --apply.
+
+Preserve existing instructions. Stop on collisions or modified resources;
+do not force, delete or overwrite them. Do not fetch code, install host tools,
+change global configuration, commit, publish or run authenticated model
+checks without separate approval.
+
+Report the actual result, then explain how to start a fresh session and
+verify GOLD discovery. Do not claim that file installation proves behavior.
+```
+
+## Start using GOLD
+
+Open a **fresh session** in your target project. In DSH, select **GOLD Auto**. Confirm that the host loads GOLD's startup guidance and can find `gold-standard-development`; installing skills alone is not enough.
+
+Try a bounded first request:
+
+> Inspect this repository and explain its architecture and development commands. Use Balanced style. Read-only: do not edit files, install dependencies or run tests.
+
+For implementation, approve a concrete scope first, then review the reported verification evidence. Choose **Guided** for more discussion, **Balanced** (default) for practical checkpoints, or **Delegated** for fewer routine questions. None authorizes commits, deployment or other out-of-scope actions.
+
+## Documentation and contributing
+
+- [User guide](https://github.com/bigunmd/gold/blob/v1.6.0/docs/README.md): task recipes, collaboration, troubleshooting and project adoption.
+- [Validation and limitations](https://github.com/bigunmd/gold/blob/v1.6.0/docs/validation.md): what checks establish—and what they do not.
+- [Changelog](https://github.com/bigunmd/gold/blob/v1.6.0/CHANGELOG.md) and [contributing](https://github.com/bigunmd/gold/blob/v1.6.0/CONTRIBUTING.md).
+- [Security policy](https://github.com/bigunmd/gold/blob/v1.6.0/SECURITY.md) for reporting vulnerabilities.
+
+These hosted links are pinned to this version. For external adapter details, read the [portable-host guide](https://github.com/bigunmd/gold/blob/v1.6.0/docs/user-guide/portable-hosts.md) or the same guide in your checkout. From a checkout, maintainers can run `npm test`, `npm run check:docs` and `npm run check:package`; these do not perform live model checks.
+
+## License
+
+[MIT](<LICENSE>). Adapted skills retain their licenses and [third-party notices](<THIRD_PARTY_NOTICES.md>).

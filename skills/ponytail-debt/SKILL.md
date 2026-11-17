@@ -6,9 +6,9 @@ description: >
   shortcuts", /ponytail-debt.
 ---
 
-## GOLD / DSH integration
+## GOLD integration
 
-Preserve GOLD scope, collaboration, approval, verification and C4 requirements. Simplicity never removes required validation, security, accessibility or tests. Review/audit requests authorize reports, not repairs; a ship verdict is advisory, not accepted delivery. Use Harness read, glob and grep tools for inspection, not shell equivalents. Treat slash forms as skill invocations with conversation-local arguments, not installed lifecycle hooks.
+Preserve GOLD scope, collaboration, approval, verification and C4 requirements. Simplicity never removes required validation, security, accessibility or tests. Review/audit requests authorize reports, not repairs; a ship verdict is advisory, not accepted delivery. Use the host's available file-reading, path-discovery and content-search capabilities for inspection, preferring dedicated tools when available. Treat slash forms as skill invocations with conversation-local arguments, not installed lifecycle hooks.
 
 
 Every deliberate ponytail shortcut is marked with a `shortcut:` comment naming
@@ -19,7 +19,7 @@ can't quietly become permanent.
 
 Scan the repo for comment markers, respecting all `.gitignore` rules (including nested rules and negations), not just common dependency/build directories. Never scan `.git` metadata.
 
-Use the Harness grep tool with pattern `(#|//|/[*]) ?(shortcut|ponytail):` on scoped source directories. Do not assume the tool excludes ignored files: establish the eligible paths with read-only `git ls-files --cached --others --exclude-standard`, and filter ignored paths with `git check-ignore --no-index --stdin` (including tracked-but-ignored files). Inspect content only on eligible paths. Outside a Git repo, read applicable ignore rules with Harness tools; disclose any coverage limitation rather than claiming a clean repo-wide ledger. Add comment prefixes for the project's stack.
+Use the host's available content-search capability with pattern `(#|//|/[*]) ?(shortcut|ponytail):` on scoped source directories. Do not assume the tool excludes ignored files: establish the eligible paths with read-only `git ls-files --cached --others --exclude-standard`, and filter ignored paths with `git check-ignore --no-index --stdin` (including tracked-but-ignored files). Inspect content only on eligible paths. Outside a Git repo, read applicable ignore rules with available file tools; disclose any coverage limitation rather than claiming a clean repo-wide ledger. Add comment prefixes for the project's stack.
 
 If the user names their own marker word (`/ponytail-debt TODO`), grep for that word instead.
 

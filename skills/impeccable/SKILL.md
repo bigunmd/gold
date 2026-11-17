@@ -7,7 +7,7 @@ license: Apache-2.0; see LICENSE
 
 Modified from Paul Bakaus's Impeccable (which builds on Anthropic Frontend Design). This is selective guidance, **not the upstream CLI**, full command suite or detector. [Source pin/modifications](../gold-web-ui/upstream-manifest.json); [license](LICENSE).
 
-## GOLD / DSH integration contract
+## GOLD integration contract
 Use [gold-web-ui](../gold-web-ui/SKILL.md), its foundations and evidence ladder. A critique/audit produces findings, not repairs or persistent reports by default. A polish/hardening request needs approved change scope and preserves the incumbent design; do not smuggle in a redesign. Current verification and human acceptance remain separate. No automatic Git actions, servers or publication. Authorized local notes go in ignored `.gold/`; consume existing project design docs without imposing PRODUCT.md or DESIGN.md.
 
 No engine downloads, deterministic detector, browser overlay, live Apply, catalog fetches, telemetry, lifecycle hooks or approval-bypassing subprocesses are included. Do not call absent `impeccable` commands or report detector scores. Optional future integrations need explicit scope/security review; do not auto-install them. Delegation is proportional under GOLD, not a mandatory two-agent/detector ceremony.
