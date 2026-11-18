@@ -5,6 +5,7 @@ Start with read-only inspection. Do not delete profile state, reset Git, reinsta
 | Symptom | Check | Safe next action |
 |---|---|---|
 | Preset missing from selector | Installed bundle/revision, enabled state, activation diagnostics and runtime compatibility | List exact identifiers; resolve reported activation error before changing configuration. `v1.0.0` has only Development. |
+| Preset reports “never started” with `ERR_PACKAGE_PATH_NOT_EXPORTED` for `dsh-tool-subagent-control/list-agents` | GOLD and DSH versions; the separate export was retired in the DSH 0.2.2 plugin layout | On DSH 0.2.2, install GOLD v1.7.1 or later through Plugins/plugin management, then start a fresh session. Until updated, use built-in Standard. This is not an approval-policy failure. GOLD v1.7.0 retains the separate plugin required by DSH 0.2.1-rc.5. |
 | GOLD skill not found | Installed package resources and `customSkillDirs`; project skills shadowing bundled names | Inspect discovery diagnostics and selected preset; do not hardcode the author's filesystem path. |
 | New behavior seems ignored | Existing session's preset revision, actual package/link target, applicable project instructions | Start a new session after authorized activation; distinguish on-demand resource reads from retained preset definition. |
 | Too many approval questions | Selected style, actual approved brief, unresolved assumptions | State style and reference the approved scope. Report a reproducible duplicate gate; do not disable safety boundaries wholesale. |

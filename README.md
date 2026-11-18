@@ -21,6 +21,8 @@ Install your coding host separately. GOLD does not install or authenticate it.
 
 ### DeepSeek Harness
 
+**DSH compatibility:** GOLD v1.7.1 targets the DSH 0.2.2 plugin layout, where the main subagent-control plugin supplies `list_agents`. DSH 0.2.1-rc.5 requires the older separate plugin; stay on GOLD v1.7.0 for that runtime or explicitly upgrade DSH first. Installing GOLD does not upgrade DSH.
+
 1. Open the intended DSH profile's **Plugins** UI.
 2. Install the GOLD bundle from one of these trusted sources:
    - Released DSH bundle: choose the latest compatible release from [GitHub Releases](https://github.com/bigunmd/gold/releases), then use `github:bigunmd/gold#<release-tag>`. Replace `<release-tag>` with the exact published tag; do not use the placeholder literally.
@@ -118,12 +120,12 @@ For implementation, approve a concrete scope first, then review the reported ver
 
 ## Documentation and contributing
 
-- [User guide](https://github.com/bigunmd/gold/blob/v1.7.0/docs/README.md): task recipes, collaboration, troubleshooting and project adoption.
-- [Validation and limitations](https://github.com/bigunmd/gold/blob/v1.7.0/docs/validation.md): what checks establish—and what they do not.
-- [Changelog](https://github.com/bigunmd/gold/blob/v1.7.0/CHANGELOG.md) and [contributing](https://github.com/bigunmd/gold/blob/v1.7.0/CONTRIBUTING.md).
-- [Security policy](https://github.com/bigunmd/gold/blob/v1.7.0/SECURITY.md) for reporting vulnerabilities.
+- [User guide](https://github.com/bigunmd/gold/blob/v1.7.1/docs/README.md): task recipes, collaboration, troubleshooting and project adoption.
+- [Validation and limitations](https://github.com/bigunmd/gold/blob/v1.7.1/docs/validation.md): what checks establish—and what they do not.
+- [Changelog](https://github.com/bigunmd/gold/blob/v1.7.1/CHANGELOG.md) and [contributing](https://github.com/bigunmd/gold/blob/v1.7.1/CONTRIBUTING.md).
+- [Security policy](https://github.com/bigunmd/gold/blob/v1.7.1/SECURITY.md) for reporting vulnerabilities.
 
-These hosted links are pinned to this version. For external adapter details, read the [portable-host guide](https://github.com/bigunmd/gold/blob/v1.7.0/docs/user-guide/portable-hosts.md) or the same guide in your checkout. From a checkout, maintainers can run `npm test`, `npm run check:docs` and `npm run check:package`; these do not perform live model checks.
+These hosted links are pinned to this version. For external adapter details, read the [portable-host guide](https://github.com/bigunmd/gold/blob/v1.7.1/docs/user-guide/portable-hosts.md) or the same guide in your checkout. From a checkout, maintainers can run `npm test`, `npm run check:docs` and `npm run check:package`; these do not perform live model checks.
 
 ## License
 

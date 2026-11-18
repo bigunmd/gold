@@ -4,6 +4,11 @@ User-visible changes are recorded here. Unreleased entries are not a published t
 
 ## Unreleased
 
+## 1.7.1
+
+- Fix preset loading on DSH 0.2.2 by removing the retired `@deepseek-ai/dsh-tool-subagent-control/list-agents` plugin declaration from the shared source and all five generated presets. Keep the main `tool-subagent-control` plugin, which supplies `list_agents` on that runtime line; add regression coverage.
+- Target the DSH 0.2.2 plugin layout. DSH 0.2.1-rc.5 still needs the separate plugin for `list_agents`; use GOLD 1.7.0 on that older runtime or explicitly upgrade DSH before installing this release. No automatic runtime/profile update or approval-policy change.
+
 ## 1.7.0
 
 - Organize C4 documentation as a small index with focused current, use-case and evolution views. Add lifecycle-aware templates and a legacy migration procedure covering section mapping, approval, provenance, compatibility anchors, partial migrations and repeatability. Migrate GOLD's own architecture as a worked example; no migration executable, new dependency or automatic project/profile update.
